@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="page-title">Game Title - LavaCloud Parkour</title>
+    <title id="page-title">Game Title - LavaCloud Games</title>
     <meta name="description" id="page-desc" content="">
     <meta name="keywords" id="page-keywords" content="">
     <meta property="og:title" id="og-title" content="">
@@ -15,61 +15,91 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         :root {
-            --primary-blue: #007AFF;
-            --primary-hover: #0051D5;
+            --brand-primary: #6366F1;
+            --brand-secondary: #F97316;
+            --surface-950: #020617;
+            --surface-900: #0F172A;
+            --surface-800: #1E293B;
+            --surface-700: #334155;
+            --text-muted: #94A3B8;
+        }
+
+        body {
+            background-color: var(--surface-950);
+            color: #E2E8F0;
         }
 
         .game-preview {
             aspect-ratio: 16/9;
             width: 100%;
-            max-width: 800px;
+            max-width: 900px;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid rgba(148, 163, 184, 0.12);
+            box-shadow: 0 30px 60px rgba(2, 6, 23, 0.45);
         }
 
         .difficulty-badge {
             display: inline-block;
-            padding: 4px 12px;
-            border-radius: 6px;
-            font-size: 0.875rem;
+            padding: 4px 14px;
+            border-radius: 999px;
+            font-size: 0.75rem;
             font-weight: 600;
+            letter-spacing: 0.04em;
         }
 
-        .difficulty-easy { background: #34C759; color: white; }
-        .difficulty-medium { background: #FF9500; color: white; }
-        .difficulty-hard { background: #FF3B30; color: white; }
+        .difficulty-easy { background: rgba(34, 197, 94, 0.18); color: #4ADE80; }
+        .difficulty-medium { background: rgba(249, 115, 22, 0.18); color: #F97316; }
+        .difficulty-hard { background: rgba(248, 113, 113, 0.2); color: #F87171; }
 
         .tag-badge {
             display: inline-block;
             padding: 4px 12px;
-            border-radius: 6px;
-            font-size: 0.875rem;
-            background: #F2F2F7;
-            color: #1C1C1E;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            letter-spacing: 0.04em;
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            background: rgba(15, 23, 42, 0.75);
+            color: #E2E8F0;
         }
 
         .control-item {
             display: flex;
-            align-items: center;
-            padding: 12px;
-            background: #F9FAFB;
-            border-radius: 8px;
-            margin-bottom: 8px;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 16px;
+            background: rgba(15, 23, 42, 0.65);
+            border-radius: 12px;
+            border: 1px solid rgba(148, 163, 184, 0.15);
+            margin-bottom: 12px;
+        }
+
+        .control-item span {
+            font-size: 0.95rem;
+            color: #E2E8F0;
         }
 
         .related-game-card {
-            transition: transform 0.2s;
+            transition: transform 0.2s, border-color 0.2s, background 0.2s;
+            border: 1px solid rgba(148, 163, 184, 0.15);
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 16px;
+            padding: 18px;
         }
 
         .related-game-card:hover {
             transform: translateY(-4px);
+            border-color: rgba(99, 102, 241, 0.45);
+            background: rgba(15, 23, 42, 0.8);
         }
 
         .ad-placeholder {
-            background: linear-gradient(135deg, #F2F2F7 0%, #E5E5EA 100%);
-            border: 2px dashed #C7C7CC;
-            border-radius: 12px;
-            padding: 40px 20px;
+            border-radius: 18px;
+            border: 1px dashed rgba(148, 163, 184, 0.4);
+            background: rgba(15, 23, 42, 0.55);
+            padding: 36px 24px;
             text-align: center;
-            color: #8E8E93;
+            color: var(--text-muted);
         }
     </style>
 
@@ -100,118 +130,121 @@
     }
     </script>
 </head>
-<body class="bg-gray-50">
+<body class="bg-slate-950 text-slate-100">
     <!-- Navigation -->
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="bg-slate-950/90 backdrop-blur border-b border-slate-800 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
-                    <a href="/" class="text-2xl font-bold text-[#007AFF]">LavaCloud Parkour</a>
+                    <a href="/" class="text-xl font-semibold tracking-tight text-white">LavaCloud Games</a>
                 </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="/" class="text-gray-700 hover:text-[#007AFF] transition">Home</a>
-                    <a href="/#collections" class="text-gray-700 hover:text-[#007AFF] transition">Collections</a>
-                    <a href="/#all-games" class="text-gray-700 hover:text-[#007AFF] transition">All Games</a>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="/" class="text-slate-300 hover:text-white transition">Home</a>
+                    <a href="/#collections" class="text-slate-300 hover:text-white transition">Collections</a>
+                    <a href="/#all-games" class="text-slate-300 hover:text-white transition">Game Library</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Breadcrumb -->
-    <div class="bg-white border-b">
+    <div class="bg-slate-950 border-b border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-            <nav class="text-sm">
-                <a href="/" class="text-[#007AFF] hover:underline">Home</a>
-                <span class="mx-2 text-gray-400">/</span>
-                <a href="/#all-games" class="text-[#007AFF] hover:underline">Games</a>
-                <span class="mx-2 text-gray-400">/</span>
-                <span id="breadcrumb-title" class="text-gray-600">Game</span>
+            <nav class="text-xs uppercase tracking-wide text-slate-400">
+                <a href="/" class="text-slate-300 hover:text-white transition">Home</a>
+                <span class="mx-2 text-slate-600">/</span>
+                <a href="/#all-games" class="text-slate-300 hover:text-white transition">Game Library</a>
+                <span class="mx-2 text-slate-600">/</span>
+                <span id="breadcrumb-title" class="text-slate-500">Game</span>
             </nav>
         </div>
     </div>
 
     <!-- Main Content -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div class="grid lg:grid-cols-3 gap-12">
             <!-- Left Column: Main Content -->
             <div class="lg:col-span-2">
                 <!-- Game Header -->
-                <div class="mb-8">
-                    <div class="flex items-start justify-between mb-4">
-                        <h1 id="game-title" class="text-4xl md:text-5xl font-bold text-gray-900">Game Title</h1>
+                <div class="mb-10">
+                    <div class="flex flex-wrap items-start justify-between gap-4 mb-6">
+                        <h1 id="game-title" class="text-4xl md:text-5xl font-semibold text-white leading-tight">Game Title</h1>
                         <span id="difficulty-badge" class="difficulty-badge">Medium</span>
                     </div>
-                    <p id="game-short-desc" class="text-xl text-gray-600 mb-4"></p>
+                    <p id="game-short-desc" class="text-lg text-slate-300 mb-4 max-w-3xl leading-relaxed"></p>
                     <div class="flex flex-wrap gap-2 mb-6" id="tags-container"></div>
-                    <div class="flex gap-4">
-                        <a id="play-now-btn" href="#" class="bg-[#007AFF] hover:bg-[#0051D5] text-white px-8 py-3 rounded-lg font-semibold text-lg transition inline-block">
-                            ▶ Play Now
+                    <div class="flex flex-wrap gap-4">
+                        <a id="play-now-btn" href="#" class="group inline-flex items-center justify-center gap-3 px-10 py-5 rounded-2xl bg-gradient-to-br from-orange-500 via-orange-600 to-red-600 text-white font-bold text-lg shadow-2xl shadow-orange-500/40 hover:shadow-orange-500/60 transition-all duration-300 hover:scale-105 hover:brightness-110 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+                            <svg class="w-6 h-6 relative z-10" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                            <span class="relative z-10">Start Game</span>
                         </a>
-                        <a id="guide-btn" href="#" class="border-2 border-[#007AFF] text-[#007AFF] hover:bg-[#007AFF] hover:text-white px-8 py-3 rounded-lg font-semibold text-lg transition inline-block">
-                            📖 Strategy Guide
+                        <a id="guide-btn" href="#" class="group inline-flex items-center justify-center gap-3 px-10 py-5 rounded-2xl bg-gradient-to-br from-purple-600/20 to-fuchsia-600/20 border-2 border-purple-500/60 text-white font-bold text-lg hover:bg-gradient-to-br hover:from-purple-600/30 hover:to-fuchsia-600/30 hover:border-purple-400 transition-all duration-300 hover:scale-105 relative overflow-hidden backdrop-blur-sm">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            <span>Strategy Guide</span>
                         </a>
                     </div>
                 </div>
 
                 <!-- Game Preview -->
                 <div class="mb-8">
-                    <div class="game-preview bg-gray-900 rounded-xl overflow-hidden mx-auto relative">
+                    <div class="game-preview mx-auto relative">
                         <img id="game-image" src="" alt="" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
                     </div>
-                    <p class="text-center text-sm text-gray-500 mt-4">Click "Play Now" to start the game</p>
+                    <p class="text-center text-xs uppercase tracking-wide text-slate-500 mt-4">Open the play surface to launch the embedded experience.</p>
                 </div>
 
                 <!-- Ad Placeholder 1 -->
-                <div class="ad-placeholder mb-8">
-                    <p class="font-semibold">Advertisement Space</p>
-                    <p class="text-sm">Responsive Ad Unit (728x90 / 336x280)</p>
-                </div>
+                <!-- <div class="ad-placeholder mb-8">
+                    <p class="text-sm font-semibold text-slate-200">Ad Placement: Hero Follow-Up</p>
+                    <p class="text-xs uppercase tracking-wide mt-2">Recommended units — 728x90 · 970x250 · responsive</p>
+                </div> -->
 
                 <!-- Game Description -->
-                <section class="bg-white rounded-xl p-8 shadow-md mb-8">
-                    <h2 class="text-2xl font-bold text-gray-900 mb-4">About This Game</h2>
-                    <p id="game-full-desc" class="text-gray-700 leading-relaxed"></p>
+                <section class="bg-slate-900/80 border border-slate-800 rounded-3xl p-10 mb-8">
+                    <h2 class="text-2xl font-semibold text-white mb-4">Overview</h2>
+                    <p id="game-full-desc" class="text-slate-300 leading-relaxed"></p>
                 </section>
 
                 <!-- How to Play -->
-                <section class="bg-white rounded-xl p-8 shadow-md mb-8">
-                    <h2 class="text-2xl font-bold text-gray-900 mb-6">How to Play</h2>
+                <section class="bg-slate-900/80 border border-slate-800 rounded-3xl p-10 mb-8">
+                    <h2 class="text-2xl font-semibold text-white mb-6">Gameplay Breakdown</h2>
 
                     <div class="mb-6">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-3">🎯 Objective</h3>
-                        <p id="how-objective" class="text-gray-700"></p>
-                    </div>
-
-                    <div class="mb-6">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-3">🎮 Controls</h3>
-                        <p id="how-controls" class="text-gray-700 mb-3"></p>
-                        <div id="controls-list"></div>
+                        <h3 class="text-sm uppercase tracking-wide text-slate-400 mb-3">Core Objective</h3>
+                        <p id="how-objective" class="text-slate-300"></p>
                     </div>
 
                     <div>
-                        <h3 class="text-lg font-semibold text-gray-900 mb-3">💡 Tips</h3>
-                        <ul id="tips-list" class="space-y-2"></ul>
+                        <h3 class="text-sm uppercase tracking-wide text-slate-400 mb-3">Control Scheme</h3>
+                        <p id="how-controls" class="text-slate-300 mb-3"></p>
+                        <div id="controls-list"></div>
                     </div>
                 </section>
 
                 <!-- Strategy Guide Preview -->
-                <section class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-8 shadow-md mb-8">
-                    <h2 class="text-2xl font-bold text-gray-900 mb-4">Strategy Guide</h2>
+                <section class="bg-gradient-to-br from-indigo-500/10 via-slate-900/70 to-slate-950 border border-slate-800 rounded-3xl p-10 mb-10">
+                    <h2 class="text-2xl font-semibold text-white mb-4">Strategy Snapshot</h2>
 
                     <div class="space-y-4 mb-6">
                         <div>
-                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Basic Strategy</h3>
-                            <p id="guide-basics" class="text-gray-700"></p>
+                            <h3 class="text-sm uppercase tracking-wide text-slate-400 mb-2">Baseline Approach</h3>
+                            <p id="guide-basics" class="text-slate-200"></p>
                         </div>
 
                         <div>
-                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Scoring System</h3>
-                            <p id="guide-scoring" class="text-gray-700"></p>
+                            <h3 class="text-sm uppercase tracking-wide text-slate-400 mb-2">Scoring Model</h3>
+                            <p id="guide-scoring" class="text-slate-200"></p>
                         </div>
                     </div>
 
-                    <a id="full-guide-link" href="#" class="inline-block bg-[#007AFF] hover:bg-[#0051D5] text-white px-6 py-3 rounded-lg font-semibold transition">
-                        View Full Strategy Guide →
+                    <a id="full-guide-link" href="#" class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-indigo-500 hover:bg-indigo-400 text-white font-semibold transition">
+                        Open detailed guide
                     </a>
                 </section>
             </div>
@@ -219,41 +252,41 @@
             <!-- Right Sidebar -->
             <div class="lg:col-span-1">
                 <!-- Game Info Card -->
-                <div class="bg-white rounded-xl p-6 shadow-md mb-6">
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Game Info</h3>
-                    <div class="space-y-3">
-                        <div class="flex justify-between">
-                            <span class="text-gray-600">🎮 Theme</span>
-                            <span id="info-theme" class="font-semibold text-gray-900"></span>
+                <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 mb-6">
+                    <h3 class="text-lg font-semibold text-white mb-4">Game Metrics</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between text-slate-300">
+                            <span class="text-slate-400">Theme</span>
+                            <span id="info-theme" class="font-semibold text-slate-200"></span>
                         </div>
-                        <div class="flex justify-between">
-                            <span class="text-gray-600">🎯 Difficulty</span>
-                            <span id="info-difficulty" class="font-semibold text-gray-900"></span>
+                        <div class="flex justify-between text-slate-300">
+                            <span class="text-slate-400">Difficulty</span>
+                            <span id="info-difficulty" class="font-semibold text-slate-200"></span>
                         </div>
-                        <div class="flex justify-between">
-                            <span class="text-gray-600">⚡ Speed</span>
-                            <span id="info-speed" class="font-semibold text-gray-900"></span>
+                        <div class="flex justify-between text-slate-300">
+                            <span class="text-slate-400">Speed Profile</span>
+                            <span id="info-speed" class="font-semibold text-slate-200"></span>
                         </div>
-                        <div class="flex justify-between">
-                            <span class="text-gray-600">📱 Mobile</span>
-                            <span id="info-mobile" class="font-semibold text-gray-900"></span>
+                        <div class="flex justify-between text-slate-300">
+                            <span class="text-slate-400">Mobile Ready</span>
+                            <span id="info-mobile" class="font-semibold text-slate-200"></span>
                         </div>
-                        <div class="flex justify-between">
-                            <span class="text-gray-600">⭐ Popularity</span>
-                            <span id="info-popularity" class="font-semibold text-gray-900"></span>
+                        <div class="flex justify-between text-slate-300">
+                            <span class="text-slate-400">Popularity</span>
+                            <span id="info-popularity" class="font-semibold text-slate-200"></span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Ad Placeholder 2 -->
-                <div class="ad-placeholder mb-6">
-                    <p class="font-semibold">Advertisement</p>
-                    <p class="text-sm">300x250 / 336x280</p>
-                </div>
+                <!-- <div class="ad-placeholder mb-6">
+                    <p class="text-sm font-semibold text-slate-200">Ad Placement: Sidebar</p>
+                    <p class="text-xs uppercase tracking-wide mt-2">Suggested units — 300x250 · 336x280 · responsive</p>
+                </div> -->
 
                 <!-- Related Games -->
-                <div class="bg-white rounded-xl p-6 shadow-md">
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Related Games</h3>
+                <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6">
+                    <h3 class="text-lg font-semibold text-white mb-4">Related Titles</h3>
                     <div id="related-games" class="space-y-4"></div>
                 </div>
             </div>
@@ -261,25 +294,36 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12 mt-16">
+    <footer class="bg-slate-950 border-t border-slate-800 py-12 mt-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-8 mb-8">
+            <div class="grid md:grid-cols-2 gap-10 mb-10">
                 <div>
-                    <h3 class="text-xl font-bold mb-4">🎮 LavaCloud Parkour</h3>
-                    <p class="text-gray-400">The ultimate destination for endless runner and parkour games. Play free online, no download required!</p>
-                    <p class="text-gray-400 mt-3">🔥 18+ Premium Games | ⚡ Instant Play | 📱 Mobile Friendly</p>
+                    <h3 class="text-lg font-semibold text-white mb-3">LavaCloud Games</h3>
+                    <p class="text-sm text-slate-400 max-w-md">
+                        A dedicated hub for high-quality endless runner experiences.
+                    </p>
                 </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="../index.html" class="hover:text-white transition">🏠 Home</a></li>
-                        <li><a href="../index.html#collections" class="hover:text-white transition">📂 Collections</a></li>
-                        <li><a href="../index.html#all-games" class="hover:text-white transition">🎯 All Games</a></li>
-                    </ul>
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-white uppercase tracking-wide mb-3">Navigate</h4>
+                        <ul class="space-y-2 text-sm text-slate-400">
+                            <li><a href="../index.html" class="hover:text-white transition">Home</a></li>
+                            <li><a href="../index.html#collections" class="hover:text-white transition">Theme Collections</a></li>
+                            <li><a href="../index.html#all-games" class="hover:text-white transition">Game Library</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-white uppercase tracking-wide mb-3">Resources</h4>
+                        <ul class="space-y-2 text-sm text-slate-400">
+                            <li><a href="../ARCHITECTURE.md" class="hover:text-white transition">Architecture Guide</a></li>
+                            <li><a href="../DEPLOYMENT.md" class="hover:text-white transition">Deployment Checklist</a></li>
+                            <li><a href="../generate-pages.js" class="hover:text-white transition">Static Generator</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 LavaCloud Parkour. All rights reserved.</p>
+            <div class="border-t border-slate-800 pt-6 text-center text-sm text-slate-500">
+                <p>&copy; 2024 LavaCloud Games. Embedded content served via official partners.</p>
             </div>
         </div>
     </footer>
@@ -312,10 +356,10 @@
 
         function renderGamePage(game, allGames) {
             // Update page meta
-            document.getElementById('page-title').textContent = `${game.title} - Play Free Online | LavaCloud Parkour`;
-            document.getElementById('page-desc').setAttribute('content', game.shortDesc);
-            document.getElementById('page-keywords').setAttribute('content', `${game.title}, ${game.tags.join(', ')}, endless runner, parkour game`);
-            document.getElementById('og-title').setAttribute('content', `${game.title} - LavaCloud Parkour`);
+            document.getElementById('page-title').textContent = `${game.title} - Play Free Online | LavaCloud Games`;
+            document.getElementById('page-desc').setAttribute('content', `Play ${game.title} instantly on LavaCloud Games. ${game.shortDesc}`);
+            document.getElementById('page-keywords').setAttribute('content', `${game.title}, ${game.tags.join(', ')}, endless runner, LavaCloud Games, browser parkour`);
+            document.getElementById('og-title').setAttribute('content', `${game.title} - LavaCloud Games`);
             document.getElementById('og-desc').setAttribute('content', game.shortDesc);
             document.getElementById('og-url').setAttribute('content', `https://lavacloud.online/game/${game.slug}`);
             document.getElementById('canonical-url').setAttribute('href', `https://lavacloud.online/game/${game.slug}`);
@@ -371,17 +415,9 @@
             const controlsList = document.getElementById('controls-list');
             controlsList.innerHTML = game.controls.map(control =>
                 `<div class="control-item">
-                    <span class="text-2xl mr-3">🎮</span>
-                    <span class="text-gray-700">${control}</span>
+                    <span class="inline-flex h-2.5 w-2.5 rounded-full bg-indigo-400 mt-2"></span>
+                    <span>${control}</span>
                 </div>`
-            ).join('');
-
-            const tipsList = document.getElementById('tips-list');
-            tipsList.innerHTML = game.howToPlay.tips.map(tip =>
-                `<li class="flex items-start">
-                    <span class="text-[#007AFF] mr-2">✓</span>
-                    <span class="text-gray-700">${tip}</span>
-                </li>`
             ).join('');
 
             // Update guide preview
@@ -392,19 +428,19 @@
             document.getElementById('info-theme').textContent = game.theme.charAt(0).toUpperCase() + game.theme.slice(1);
             document.getElementById('info-difficulty').textContent = game.difficulty.charAt(0).toUpperCase() + game.difficulty.slice(1);
             document.getElementById('info-speed').textContent = game.speed.charAt(0).toUpperCase() + game.speed.slice(1);
-            document.getElementById('info-mobile').textContent = game.mobileFriendly ? 'Yes ✓' : 'No ✗';
+            document.getElementById('info-mobile').textContent = game.mobileFriendly ? 'Yes' : 'No';
             document.getElementById('info-popularity').textContent = `${game.popularity}%`;
 
             // Update related games
             const relatedGames = allGames.filter(g => game.relatedGames.includes(g.slug)).slice(0, 4);
             const relatedContainer = document.getElementById('related-games');
             relatedContainer.innerHTML = relatedGames.map(g => `
-                <a href="${g.slug}.html" class="related-game-card block bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition">
-                    <h4 class="font-semibold text-gray-900 mb-1">${g.title}</h4>
-                    <p class="text-sm text-gray-600 mb-2">${g.shortDesc.slice(0, 60)}...</p>
-                    <div class="flex items-center justify-between">
-                        <span class="text-xs text-gray-500">${g.theme}</span>
-                        <span class="text-[#007AFF] text-sm">→</span>
+                <a href="${g.slug}.html" class="related-game-card block transition">
+                    <h4 class="text-sm font-semibold text-white mb-1">${g.title}</h4>
+                    <p class="text-xs text-slate-400 mb-2">${g.shortDesc.slice(0, 70)}...</p>
+                    <div class="flex items-center justify-between text-xs uppercase tracking-wide text-slate-500">
+                        <span>${g.theme}</span>
+                        <span class="text-indigo-300 font-semibold">Open</span>
                     </div>
                 </a>
             `).join('');

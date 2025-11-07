@@ -1,10 +1,10 @@
 #!/bin/bash
 
-echo "🚀 Starting LavaCloud Parkour Development Server..."
+echo "🚀 Starting LavaCloud Games Development Server..."
 echo ""
 echo "📍 Server will run at: http://localhost:8000"
 echo ""
-echo "🎮 Access your website:"
+echo "🎮 Access the arcade:"
 echo "   Homepage:     http://localhost:8000"
 echo "   Game Page:    http://localhost:8000/game/snow-rider-3d.html"
 echo "   Play Page:    http://localhost:8000/play/snow-rider-3d.html"

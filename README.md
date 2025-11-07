@@ -1,10 +1,10 @@
-# LavaCloud Parkour - Endless Runner Games Collection
+# LavaCloud Games - Endless Runner Games Collection
 
 A comprehensive, SEO-optimized website featuring 18 premium endless runner and parkour games, organized into 4 thematic collections.
 
 ## 🎮 Project Overview
 
-LavaCloud Parkour is a data-driven gaming portal that provides:
+LavaCloud Games is a data-driven gaming portal that provides:
 - **18 curated games** from authorized platforms (Y8, Gamezop, OnlineGames.io)
 - **4 thematic collections** (Snow & Ice, Tunnel & Space, Forest & Mountain, City & Traffic)
 - **Complete game guides** with strategies, tips, and FAQs
@@ -222,7 +222,7 @@ All game content is embedded from authorized platforms:
 - Gamezop
 - OnlineGames.io
 
-Website code: Copyright © 2024 LavaCloud Parkour
+Website code: Copyright © 2024 LavaCloud Games
 
 ## 🤝 Credits
 

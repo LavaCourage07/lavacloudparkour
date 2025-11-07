@@ -1,5 +1,5 @@
 /**
- * Static Page Generator for LavaCloud Parkour
+ * Static Page Generator for LavaCloud Games
  * Generates all game detail, play, guide, and collection pages
  */
 

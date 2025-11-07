@@ -1,4 +1,4 @@
-# LavaCloud Parkour - Deployment Guide
+# LavaCloud Games - Deployment Guide
 
 ## ✅ Pre-Deployment Checklist
 

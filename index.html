@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LavaCloud Parkour - Best Endless Runner Games Collection | Free Online</title>
-    <meta name="description" content="Play the best endless parkour games online for free! Featuring high-speed tunnel runners, snowy skiing adventures, forest parkour, and urban challenges. Test your reflexes with 18+ premium games.">
-    <meta name="keywords" content="endless runner games, parkour games, tunnel rush, skiing games, free online games, reaction games, infinite games, arcade games">
-    <meta property="og:title" content="LavaCloud Parkour - Best Endless Runner Games Collection">
-    <meta property="og:description" content="Play 18+ premium endless parkour games. High-speed tunnels, snowy slopes, forest adventures, and urban challenges. Free online, no download required!">
+    <title>LavaCloud Games - Endless Runner Arcade | Play Free Online</title>
+    <meta name="description" content="Launch 18+ endless runner and parkour games by theme—snow, tunnel, forest, and city. LavaCloud Games delivers instant browser play, deep guides, and no-download embeds.">
+    <meta name="keywords" content="endless runner games, parkour games, tunnel rush, skiing games, free online games, browser arcade, no download games, lavaCloud games">
+    <meta property="og:title" content="LavaCloud Games - Endless Runner Arcade">
+    <meta property="og:description" content="18+ endless runner and parkour games by theme. Launch instantly in your browser with detailed guides and zero downloads.">
     <meta property="og:image" content="https://lavacloud.online/og-image.png">
     <meta property="og:url" content="https://lavacloud.online">
     <meta property="og:type" content="website">
@@ -15,79 +15,397 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         :root {
-            --primary-blue: #007AFF;
-            --primary-hover: #0051D5;
-            --gray-text: #8E8E93;
+            --brand-primary: #FF6B35;
+            --brand-secondary: #FFD23F;
+            --accent-purple: #9B59B6;
+            --accent-cyan: #00D9FF;
+            --surface-dark: #0A0E27;
+            --surface-darker: #060911;
+            --surface-card: #141B3D;
+            --surface-elevated: #1C2547;
+            --text-primary: #FFFFFF;
+            --text-secondary: #B8C5D6;
+            --text-muted: #6B7A99;
+            --border-subtle: rgba(155, 89, 182, 0.15);
+            --glow-primary: rgba(255, 107, 53, 0.4);
+            --glow-secondary: rgba(0, 217, 255, 0.3);
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--surface-darker) 0%, var(--surface-dark) 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
         }
 
         .game-card {
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: var(--surface-card);
+            border: 1px solid var(--border-subtle);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .game-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .game-card:hover::before {
+            left: 100%;
         }
 
         .game-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px rgba(0, 122, 255, 0.15);
+            transform: translateY(-8px);
+            border-color: var(--brand-primary);
+            box-shadow: 0 20px 40px var(--glow-primary), 0 0 20px var(--glow-primary);
         }
 
         .collection-card {
-            transition: all 0.3s;
-            background: linear-gradient(135deg, rgba(0, 122, 255, 0.05) 0%, rgba(0, 122, 255, 0.02) 100%);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: var(--surface-card);
+            border: 2px solid var(--border-subtle);
+            position: relative;
+            overflow: hidden;
         }
 
         .collection-card:hover {
-            background: linear-gradient(135deg, rgba(0, 122, 255, 0.1) 0%, rgba(0, 122, 255, 0.05) 100%);
-            transform: scale(1.02);
+            transform: translateY(-6px) scale(1.02);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 15px 35px var(--glow-secondary);
         }
 
         .badge {
             display: inline-block;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            font-weight: 600;
+            padding: 4px 14px;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            border: 1px solid;
         }
 
-        .badge-easy { background: #34C759; color: white; }
-        .badge-medium { background: #FF9500; color: white; }
-        .badge-hard { background: #FF3B30; color: white; }
+        .badge-easy {
+            background: rgba(52, 211, 153, 0.15);
+            color: #34D399;
+            border-color: rgba(52, 211, 153, 0.3);
+        }
+        .badge-medium {
+            background: rgba(255, 210, 63, 0.15);
+            color: #FFD23F;
+            border-color: rgba(255, 210, 63, 0.3);
+        }
+        .badge-hard {
+            background: rgba(255, 107, 53, 0.15);
+            color: #FF6B35;
+            border-color: rgba(255, 107, 53, 0.3);
+        }
 
         .filter-btn {
-            padding: 8px 16px;
+            padding: 10px 20px;
             border-radius: 8px;
-            background: white;
-            border: 2px solid #E5E5EA;
-            color: #1C1C1E;
+            border: 2px solid var(--border-subtle);
+            color: var(--text-muted);
+            background: var(--surface-card);
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.3s;
+            font-weight: 600;
+            font-size: 0.875rem;
         }
 
         .filter-btn:hover {
-            border-color: var(--primary-blue);
-            color: var(--primary-blue);
+            color: var(--text-primary);
+            border-color: var(--accent-purple);
+            background: var(--surface-elevated);
+            transform: translateY(-2px);
         }
 
         .filter-btn.active {
-            background: var(--primary-blue);
-            border-color: var(--primary-blue);
-            color: white;
-        }
-
-        .hero-gradient {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--brand-primary), var(--accent-purple));
+            border-color: var(--brand-primary);
+            color: var(--text-primary);
+            box-shadow: 0 4px 15px var(--glow-primary);
         }
 
         .search-input {
-            border: 2px solid #E5E5EA;
+            border: 2px solid var(--border-subtle);
             border-radius: 12px;
-            padding: 12px 20px;
+            background: var(--surface-card);
+            padding: 14px 24px;
             width: 100%;
             font-size: 16px;
-            transition: border-color 0.2s;
+            color: var(--text-primary);
+            transition: all 0.3s;
+        }
+
+        .search-input::placeholder {
+            color: var(--text-muted);
         }
 
         .search-input:focus {
             outline: none;
-            border-color: var(--primary-blue);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 0 4px var(--glow-secondary);
+            background: var(--surface-elevated);
+        }
+
+        .hero-panel {
+            position: relative;
+            border-radius: 24px;
+            border: 1px solid rgba(148, 163, 184, 0.15);
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(15, 23, 42, 0.6));
+            box-shadow: 0 45px 80px rgba(2, 6, 23, 0.45);
+        }
+
+        .stat-card {
+            border-radius: 8px;
+            border: 1.5px solid rgba(155, 89, 182, 0.1);
+            background: rgba(20, 27, 61, 0.3);
+            padding: 10px 8px;
+            transition: all 0.3s;
+        }
+
+        .stat-card:hover {
+            border-color: var(--brand-primary);
+            background: rgba(20, 27, 61, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .hero-bullets {
+            margin-top: 24px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .hero-bullets li {
+            position: relative;
+            padding-left: 20px;
+            font-size: 0.95rem;
+            color: #CBD5F5;
+            margin-bottom: 12px;
+        }
+
+        .hero-bullets li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: rgba(99, 102, 241, 0.8);
+        }
+
+        .hero-panel .feature-card {
+            border: 1px solid rgba(148, 163, 184, 0.18);
+            border-radius: 18px;
+            padding: 18px;
+            background: rgba(15, 23, 42, 0.65);
+        }
+
+        .hot-slider {
+            position: relative;
+        }
+
+        .hot-track-wrapper {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hot-track {
+            display: flex;
+            gap: 1.5rem;
+            padding: 0.5rem 0;
+            animation: autoScroll 40s linear infinite;
+        }
+
+        @keyframes autoScroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .hot-track:hover {
+            animation-play-state: paused;
+        }
+
+        .hot-card {
+            min-width: 300px;
+            max-width: 340px;
+            background: var(--surface-card);
+            border: 2px solid var(--border-subtle);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .hot-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 16px;
+            padding: 2px;
+            background: linear-gradient(135deg, var(--brand-primary), var(--accent-purple));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .hot-card:hover::after {
+            opacity: 1;
+        }
+
+        .hot-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px var(--glow-primary);
+        }
+
+        .hot-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+
+        .text-secondary {
+            color: var(--text-secondary);
+        }
+
+        .text-muted {
+            color: var(--text-muted);
+        }
+
+        .bg-surface-card {
+            background-color: var(--surface-card);
+        }
+
+        .bg-surface-elevated {
+            background-color: var(--surface-elevated);
+        }
+
+        .quick-game-card {
+            transition: all 0.3s;
+        }
+
+        /* Hero Carousel Styles */
+        #hero-carousel-track {
+            display: flex;
+            height: 100%;
+        }
+
+        .hero-slide {
+            min-width: 100%;
+            height: 100%;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .hero-slide-bg {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.7s ease-out;
+        }
+
+        .hero-slide:hover .hero-slide-bg {
+            transform: scale(1.1);
+        }
+
+        .hero-slide-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(6, 9, 17, 0.95) 0%, rgba(6, 9, 17, 0.7) 40%, rgba(6, 9, 17, 0.3) 70%, transparent 100%);
+        }
+
+        .hero-slide-content {
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2.5rem;
+            z-index: 10;
+        }
+
+        .hero-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .hero-indicator:hover {
+            background: rgba(255, 255, 255, 0.6);
+            transform: scale(1.2);
+        }
+
+        .hero-indicator.active {
+            background: linear-gradient(135deg, #FF6B35, #9B59B6);
+            border-color: white;
+            width: 32px;
+            border-radius: 6px;
+        }
+
+        @keyframes slideInFromRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-slide.active .hero-slide-content > * {
+            animation: slideInFromRight 0.6s ease-out backwards;
+        }
+
+        .hero-slide.active .hero-slide-content > *:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .hero-slide.active .hero-slide-content > *:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .hero-slide.active .hero-slide-content > *:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .hero-slide.active .hero-slide-content > *:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .animate-pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @media (max-width: 768px) {
+            .hot-nav {
+                display: none;
+            }
         }
     </style>
 
@@ -101,55 +419,173 @@
     </script>
 
     <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
+    <script type="application/ld+json" id="homepage-structured-data">
     {
       "@context": "https://schema.org",
       "@type": "ItemList",
-      "name": "LavaCloud Parkour Games Collection",
+      "name": "LavaCloud Games Collection",
       "description": "Collection of 18+ premium endless parkour and runner games",
       "numberOfItems": 18,
       "itemListElement": []
     }
     </script>
 </head>
-<body class="bg-gray-50">
+<body class="bg-slate-950 text-slate-100">
     <!-- Navigation -->
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="bg-surface-darker/95 backdrop-blur-xl border-b-2 border-purple-900/30 sticky top-0 z-50 shadow-lg shadow-black/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <h1 class="text-2xl font-bold text-[#007AFF]">LavaCloud Parkour</h1>
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-500 to-purple-600 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-black text-white tracking-tight">LavaCloud</h1>
+                        <p class="text-xs text-muted -mt-1">Endless Runner Games</p>
+                    </div>
                 </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#featured" class="text-gray-700 hover:text-[#007AFF] transition">Featured</a>
-                    <a href="#collections" class="text-gray-700 hover:text-[#007AFF] transition">Collections</a>
-                    <a href="#all-games" class="text-gray-700 hover:text-[#007AFF] transition">All Games</a>
+                <div class="hidden md:flex items-center gap-2">
+                    <a href="#featured" class="px-5 py-2.5 rounded-lg text-sm font-bold text-secondary hover:text-white hover:bg-surface-card transition-all">Featured</a>
+                    <a href="#collections" class="px-5 py-2.5 rounded-lg text-sm font-bold text-secondary hover:text-white hover:bg-surface-card transition-all">Collections</a>
+                    <a href="#all-games" class="px-5 py-2.5 rounded-lg text-sm font-bold text-secondary hover:text-white hover:bg-surface-card transition-all">All Games</a>
+                    <a href="#all-games" class="ml-2 px-6 py-2.5 rounded-lg bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold text-sm shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 transition-all hover:scale-105">Play Now</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-gradient text-white py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl md:text-6xl font-bold mb-6">
-                Endless Parkour Adventure Awaits
-            </h2>
-            <p class="text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto">
-                Challenge your reflexes with 18+ premium endless runner games. From high-speed tunnels to snowy slopes, forest trails to urban streets—test your limits now!
-            </p>
-            <a href="#all-games" class="inline-block bg-white text-[#667eea] px-8 py-4 rounded-full font-semibold text-lg hover:bg-opacity-90 transition">
-                Start Playing →
-            </a>
+    <section class="relative flex items-center overflow-hidden py-8" style="min-height: calc(100vh - 80px);">
+        <div class="absolute inset-0 bg-gradient-radial from-purple-900/20 via-transparent to-transparent opacity-50"></div>
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-orange-600/10 to-transparent"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid lg:grid-cols-5 gap-8 items-stretch">
+                <div class="lg:col-span-3 flex flex-col justify-between">
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-orange-500/20 to-purple-500/20 border border-orange-500/30 mb-6">
+                            <span class="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></span>
+                            <span class="text-xs font-bold text-orange-400 uppercase tracking-wider">18+ Premium Games</span>
+                        </div>
+
+                        <h1 class="text-5xl md:text-6xl font-black text-white leading-[1.1] mb-6">
+                        Play Epic<br/>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-purple-500 to-cyan-400">
+                            Endless Runners
+                        </span><br/>
+                        In Your Browser
+                    </h1>
+
+                    <p class="text-lg text-secondary leading-relaxed mb-10 max-w-2xl">
+                        Tunnel dives, slope races, parkour escapes—no downloads, instant action. Choose your challenge from 4 themed collections.
+                    </p>
+
+                        <div class="flex flex-wrap gap-4 mb-12">
+                            <a href="#all-games" class="group relative inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold text-lg shadow-lg shadow-orange-500/50 hover:shadow-xl hover:shadow-orange-500/60 transition-all hover:scale-105">
+                                <span class="relative z-10">Start Playing Now</span>
+                            </a>
+                            <a href="#collections" class="inline-flex items-center justify-center px-8 py-4 rounded-xl border-2 border-purple-500/50 text-white font-bold text-lg hover:bg-purple-500/10 hover:border-purple-400 transition-all hover:scale-105">
+                                Browse Collections
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-4 gap-2.5">
+                        <div class="stat-card text-center">
+                            <p class="text-xl font-black text-white mb-0.5">18+</p>
+                            <p class="text-[9px] text-muted uppercase tracking-wide">Games</p>
+                        </div>
+                        <div class="stat-card text-center">
+                            <p class="text-xl font-black text-white mb-0.5">4</p>
+                            <p class="text-[9px] text-muted uppercase tracking-wide">Themes</p>
+                        </div>
+                        <div class="stat-card text-center">
+                            <p class="text-xl font-black text-white mb-0.5">100%</p>
+                            <p class="text-[9px] text-muted uppercase tracking-wide">Free</p>
+                        </div>
+                        <!-- <div class="stat-card text-center">
+                            <p class="text-xl font-black text-white mb-0.5">0</p>
+                            <p class="text-[9px] text-muted uppercase tracking-wide">Downloads</p>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <!-- Hero Carousel -->
+                    <div class="relative rounded-2xl overflow-hidden border-2 border-purple-500/30 bg-surface-card shadow-2xl shadow-purple-500/20 h-full">
+                        <!-- Carousel Container -->
+                        <div class="relative h-full overflow-hidden">
+                            <!-- Carousel Track -->
+                            <div id="hero-carousel-track" class="h-full transition-transform duration-700 ease-out">
+                                <!-- Slides will be inserted here by JavaScript -->
+                            </div>
+
+                            <!-- Navigation Arrows -->
+                            <button id="hero-prev" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/60 backdrop-blur-sm border-2 border-white/20 flex items-center justify-center hover:bg-black/80 hover:border-orange-500 transition-all hover:scale-110 group">
+                                <svg class="w-6 h-6 text-white group-hover:text-orange-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"></path>
+                                </svg>
+                            </button>
+                            <button id="hero-next" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/60 backdrop-blur-sm border-2 border-white/20 flex items-center justify-center hover:bg-black/80 hover:border-orange-500 transition-all hover:scale-110 group">
+                                <svg class="w-6 h-6 text-white group-hover:text-orange-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+
+                            <!-- Indicators -->
+                            <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2" id="hero-indicators">
+                                <!-- Indicators will be inserted here by JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Auto-play progress bar -->
+                        <div class="absolute bottom-0 left-0 right-0 h-1 bg-white/10 z-20">
+                            <div id="hero-progress" class="h-full bg-gradient-to-r from-orange-500 to-purple-500 transition-all duration-100 ease-linear" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hot Games Carousel -->
+    <section id="hot-games" class="py-16 bg-surface-dark/50 border-y-2 border-purple-900/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-10">
+                <div>
+                    <div class="inline-flex items-center gap-2 mb-3">
+                        <svg class="w-6 h-6 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="text-sm font-bold text-orange-500 uppercase tracking-wider">Trending Now</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-black text-white mb-3">Most Popular Games</h2>
+                    <p class="text-base text-secondary max-w-2xl">
+                        Top-rated endless runners with massive player engagement. Jump in and see why everyone's playing these hits.
+                    </p>
+                </div>
+                <a href="#all-games" class="px-6 py-3 rounded-lg border-2 border-orange-500 text-orange-500 font-bold hover:bg-orange-500 hover:text-white transition-all">View All Games</a>
+            </div>
+            <div class="hot-slider">
+                <div class="hot-track-wrapper">
+                    <div id="hot-track" class="hot-track"></div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Featured Games -->
-    <section id="featured" class="py-16 bg-white">
+    <section id="featured" class="py-16 bg-surface-darker">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-                🔥 Featured Games
-            </h2>
+            <div class="mb-10">
+                <span class="inline-block px-4 py-2 rounded-full bg-purple-500/20 border border-purple-500/30 text-purple-400 text-xs font-bold uppercase tracking-wider mb-4">Editor's Choice</span>
+                <h2 class="text-4xl md:text-5xl font-black text-white mb-3">
+                    Featured Games
+                </h2>
+                <p class="text-base text-secondary max-w-3xl">Handpicked selections combining thrilling gameplay, stunning visuals, and addictive mechanics. These are our absolute favorites.</p>
+            </div>
             <div id="featured-games" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Featured games will be loaded here -->
             </div>
@@ -157,11 +593,15 @@
     </section>
 
     <!-- Collections Preview -->
-    <section id="collections" class="py-16 bg-gray-50">
+    <section id="collections" class="py-16 bg-surface-dark/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-                Game Collections
-            </h2>
+            <div class="mb-10">
+                <span class="inline-block px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 text-cyan-400 text-xs font-bold uppercase tracking-wider mb-4">Browse by Theme</span>
+                <h2 class="text-4xl md:text-5xl font-black text-white mb-3">
+                    Game Collections
+                </h2>
+                <p class="text-base text-secondary max-w-3xl">Discover games organized by environment and style. From icy slopes to neon tunnels, find your perfect gaming vibe.</p>
+            </div>
             <div id="collections-grid" class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Collections will be loaded here -->
             </div>
@@ -169,11 +609,15 @@
     </section>
 
     <!-- All Games Section -->
-    <section id="all-games" class="py-16 bg-white">
+    <section id="all-games" class="py-16 bg-surface-darker">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-                All Games
-            </h2>
+            <div class="mb-10">
+                <span class="inline-block px-4 py-2 rounded-full bg-orange-500/20 border border-orange-500/30 text-orange-400 text-xs font-bold uppercase tracking-wider mb-4">Full Catalog</span>
+                <h2 class="text-4xl md:text-5xl font-black text-white mb-3">
+                    All Games Library
+                </h2>
+                <p class="text-base text-secondary max-w-3xl">Browse our complete collection. Use filters to find exactly what you're looking for—by theme, difficulty, or game type.</p>
+            </div>
 
             <!-- Search and Filters -->
             <div class="mb-8 space-y-4">
@@ -183,17 +627,17 @@
                         type="text"
                         id="search-input"
                         class="search-input"
-                        placeholder="🔍 Search games by name, theme, or tag..."
+                        placeholder="Search games by title, theme, or tag"
                     >
                 </div>
 
                 <!-- Filter Buttons -->
                 <div class="flex flex-wrap gap-3">
                     <button class="filter-btn active" data-filter="all">All Games</button>
-                    <button class="filter-btn" data-filter="snow">❄️ Snow</button>
-                    <button class="filter-btn" data-filter="tunnel">🌀 Tunnel</button>
-                    <button class="filter-btn" data-filter="forest">🏔️ Forest</button>
-                    <button class="filter-btn" data-filter="city">🏙️ City</button>
+                    <button class="filter-btn" data-filter="snow">Snow</button>
+                    <button class="filter-btn" data-filter="tunnel">Tunnel</button>
+                    <button class="filter-btn" data-filter="forest">Forest</button>
+                    <button class="filter-btn" data-filter="city">City</button>
                     <button class="filter-btn" data-filter="easy">Easy</button>
                     <button class="filter-btn" data-filter="medium">Medium</button>
                     <button class="filter-btn" data-filter="hard">Hard</button>
@@ -207,32 +651,75 @@
 
             <!-- No Results Message -->
             <div id="no-results" class="hidden text-center py-12">
-                <p class="text-gray-500 text-lg">No games found. Try different search terms or filters.</p>
+                <p class="text-slate-500 text-lg">No games match your filters. Adjust search terms or reset the filters to view the full library.</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-surface-darker border-t-2 border-purple-900/30 py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-8 mb-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">🎮 LavaCloud Parkour</h3>
-                    <p class="text-gray-400">The ultimate destination for endless runner and parkour games. Play free online, no download required!</p>
-                    <p class="text-gray-400 mt-3">🔥 18+ Premium Games | ⚡ Instant Play | 📱 Mobile Friendly</p>
+            <div class="grid md:grid-cols-4 gap-10 mb-12">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-purple-600 flex items-center justify-center">
+                            <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-black text-white">LavaCloud</h3>
+                            <p class="text-xs text-muted">Endless Runner Games</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-secondary max-w-md leading-relaxed">
+                        Your ultimate destination for browser-based endless runner games. No downloads, no waiting—just pure gaming action across all your devices.
+                    </p>
+                    <div class="flex gap-3 mt-6">
+                        <a href="#all-games" class="px-6 py-3 rounded-lg bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold text-sm hover:shadow-lg hover:shadow-orange-500/50 transition-all hover:scale-105">
+                            Start Playing
+                        </a>
+                    </div>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#featured" class="hover:text-white transition">🔥 Featured Games</a></li>
-                        <li><a href="#collections" class="hover:text-white transition">📂 Collections</a></li>
-                        <li><a href="#all-games" class="hover:text-white transition">🎯 All Games</a></li>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#featured" class="text-secondary hover:text-orange-400 transition-colors flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 bg-orange-500 rounded-full"></span>Featured Games
+                        </a></li>
+                        <li><a href="#collections" class="text-secondary hover:text-orange-400 transition-colors flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 bg-purple-500 rounded-full"></span>Collections
+                        </a></li>
+                        <li><a href="#all-games" class="text-secondary hover:text-orange-400 transition-colors flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 bg-cyan-500 rounded-full"></span>All Games
+                        </a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Game Stats</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center justify-between">
+                            <span class="text-secondary">Total Games</span>
+                            <span class="font-bold text-white">18+</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span class="text-secondary">Collections</span>
+                            <span class="font-bold text-white">4</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span class="text-secondary">Cost</span>
+                            <span class="font-bold text-green-400">FREE</span>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 LavaCloud Parkour. All rights reserved.</p>
-                <p class="mt-2 text-sm">Games are embedded from authorized platforms. All trademarks belong to their respective owners.</p>
+            <div class="border-t-2 border-purple-900/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-muted">
+                    &copy; 2024 LavaCloud Games. All Rights Reserved.
+                </p>
+                <div class="flex gap-6 text-xs text-muted">
+                    <span>Free browser-based gaming platform</span>
+                </div>
             </div>
         </div>
     </footer>
@@ -243,6 +730,15 @@
         let collectionsData = [];
         let currentFilter = 'all';
         let searchTerm = '';
+        let hotGames = [];
+        let hotTrack = null;
+
+        // Hero Carousel Variables
+        let heroCarouselGames = [];
+        let currentHeroSlide = 0;
+        let heroAutoplayInterval = null;
+        let heroProgressInterval = null;
+        let heroAutoplayDuration = 5000; // 5 seconds per slide
 
         // Load games data
         async function loadGamesData() {
@@ -251,10 +747,19 @@
                 const data = await response.json();
                 gamesData = data.games;
                 collectionsData = data.collections;
+                hotGames = [...gamesData].sort((a, b) => (b.popularity || 0) - (a.popularity || 0)).slice(0, 6);
+
+                // Get top 5 games for hero carousel
+                heroCarouselGames = [...gamesData]
+                    .sort((a, b) => (b.popularity || 0) - (a.popularity || 0))
+                    .slice(0, 5);
 
                 renderFeaturedGames();
                 renderCollections();
                 renderAllGames();
+                renderHotGames();
+                renderHeroCarousel();
+                updateStructuredData();
             } catch (error) {
                 console.error('Error loading games:', error);
             }
@@ -266,45 +771,105 @@
             const featuredGames = gamesData.filter(game => game.featured);
 
             container.innerHTML = featuredGames.map(game => `
-                <a href="game/${game.slug}.html" class="game-card bg-white rounded-xl shadow-lg overflow-hidden block">
-                    <div class="h-48 bg-gray-900 relative overflow-hidden">
-                        <img src="${game.imageUrl}" alt="${game.title}" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-start justify-between mb-2">
-                            <h3 class="text-xl font-bold text-gray-900">${game.title}</h3>
+                <a href="game/${game.slug}.html" class="game-card rounded-xl overflow-hidden block">
+                    <div class="h-52 relative overflow-hidden">
+                        <img src="${game.imageUrl}" alt="${game.title}" class="w-full h-full object-cover transition duration-500 transform hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="absolute top-4 right-4">
                             <span class="badge badge-${game.difficulty}">${game.difficulty}</span>
                         </div>
-                        <p class="text-gray-600 mb-4 line-clamp-2">${game.shortDesc}</p>
-                        <div class="flex items-center justify-between">
+                    </div>
+                    <div class="p-6 flex flex-col gap-4 relative z-10">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">${game.title}</h3>
+                            <p class="text-sm text-secondary line-clamp-2">${game.shortDesc}</p>
+                        </div>
+                        <div class="flex items-center justify-between pt-3 border-t border-purple-900/20">
                             <div class="flex gap-2">
-                                <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">🎮 ${game.theme}</span>
-                                <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">⚡ ${game.speed}</span>
+                                <span class="px-3 py-1.5 rounded-lg bg-purple-500/10 border border-purple-500/30 text-xs font-bold text-purple-400 uppercase tracking-wide">${game.theme}</span>
                             </div>
-                            <div class="bg-[#007AFF] hover:bg-[#0051D5] text-white px-4 py-2 rounded-lg font-semibold text-sm transition">
-                                Play Now
-                            </div>
+
                         </div>
                     </div>
                 </a>
             `).join('');
+        }
+        
+
+        function renderHotGames() {
+            hotTrack = document.getElementById('hot-track');
+            if (!hotTrack) return;
+
+            if (!hotGames.length) {
+                hotTrack.innerHTML = '<div class="text-sm text-slate-400">Hot games will appear here once titles are added.</div>';
+                return;
+            }
+
+            // Create card HTML template
+            const createCard = (game) => `
+                <a href="game/${game.slug}.html" class="hot-card block">
+                    <div class="relative">
+                        <img src="${game.imageUrl}" alt="${game.title}" class="w-full h-48 object-cover">
+                        <div class="absolute top-3 left-3">
+                            <span class="px-3 py-1.5 rounded-lg bg-black/60 backdrop-blur-sm text-xs font-bold text-orange-400 uppercase tracking-wide">${game.theme}</span>
+                        </div>
+                        <div class="absolute top-3 right-3">
+                            <span class="badge badge-${game.difficulty}">${game.difficulty}</span>
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col gap-3 relative z-10">
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-2">${game.title}</h3>
+                            <p class="text-sm text-secondary line-clamp-2">${game.shortDesc}</p>
+                        </div>
+                        <div class="flex items-center justify-between pt-3 border-t border-purple-900/20 text-xs">
+                            <span class="text-muted uppercase tracking-wide">Speed: <span class="text-white font-bold">${game.speed}</span></span>
+                            <span class="text-orange-400 font-bold flex items-center gap-1">
+                                Play
+                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"></path>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            `;
+
+            // Duplicate the games array to create seamless loop
+            const duplicatedGames = [...hotGames, ...hotGames];
+            hotTrack.innerHTML = duplicatedGames.map(game => createCard(game)).join('');
         }
 
         // Render collections
         function renderCollections() {
             const container = document.getElementById('collections-grid');
 
-            container.innerHTML = collectionsData.map(collection => `
-                <a href="collections/${collection.slug}.html" class="collection-card block p-6 rounded-xl border-2 border-gray-200">
-                    <div class="text-5xl mb-4">${collection.icon}</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">${collection.name}</h3>
-                    <p class="text-gray-600 text-sm mb-4">${collection.description}</p>
-                    <div class="flex items-center justify-between">
-                        <span class="text-[#007AFF] font-semibold">${collection.games.length} Games</span>
-                        <span class="text-[#007AFF]">→</span>
-                    </div>
-                </a>
-            `).join('');
+            const toneMap = {
+                'snow': { gradient: 'from-cyan-500/15 to-blue-500/10', icon: '<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m9-9H3m6.364-6.364l11.272 11.272M6.364 17.364L17.636 6.092M3 12l9-9 9 9-9 9-9-9z"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/><circle cx="12" cy="5" r="1" fill="currentColor"/><circle cx="12" cy="19" r="1" fill="currentColor"/><circle cx="5" cy="12" r="1" fill="currentColor"/><circle cx="19" cy="12" r="1" fill="currentColor"/><circle cx="7.5" cy="7.5" r="0.8" fill="currentColor"/><circle cx="16.5" cy="16.5" r="0.8" fill="currentColor"/><circle cx="7.5" cy="16.5" r="0.8" fill="currentColor"/><circle cx="16.5" cy="7.5" r="0.8" fill="currentColor"/></svg>', color: 'cyan' },
+                'tunnel': { gradient: 'from-purple-500/15 to-fuchsia-500/10', icon: '<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><circle cx="12" cy="12" r="10" stroke-width="2"/><circle cx="12" cy="12" r="7" stroke-width="1.5" stroke-dasharray="2 2"/><circle cx="12" cy="12" r="4" stroke-width="1.5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/><path stroke-linecap="round" d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M4.93 19.07l1.41-1.41m11.32-11.32l1.41-1.41"/></svg>', color: 'purple' },
+                'forest': { gradient: 'from-green-500/15 to-emerald-500/10', icon: '<svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L8 8h3v4H8l-4 6h7v4h2v-4h7l-4-6h-3V8h3l-4-6z" opacity="0.9"/><path d="M11 18h2v4h-2v-4z"/><circle cx="9" cy="9" r="0.8" fill="white" opacity="0.6"/><circle cx="15" cy="11" r="0.8" fill="white" opacity="0.6"/><circle cx="12" cy="13" r="0.8" fill="white" opacity="0.6"/></svg>', color: 'green' },
+                'city': { gradient: 'from-orange-500/15 to-amber-500/10', icon: '<svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M3 20h4V10H3v10zm6 0h4V4H9v16zm6 0h4v-8h-4v8z" opacity="0.9"/><rect x="4" y="12" width="2" height="2" fill="white" opacity="0.7"/><rect x="4" y="16" width="2" height="2" fill="white" opacity="0.7"/><rect x="10" y="6" width="2" height="2" fill="white" opacity="0.7"/><rect x="10" y="10" width="2" height="2" fill="white" opacity="0.7"/><rect x="10" y="14" width="2" height="2" fill="white" opacity="0.7"/><rect x="16" y="14" width="2" height="2" fill="white" opacity="0.7"/><rect x="16" y="18" width="2" height="2" fill="white" opacity="0.7"/></svg>', color: 'orange' }
+            };
+
+            container.innerHTML = collectionsData.map(collection => {
+                const theme = toneMap[collection.slug] || toneMap['tunnel'];
+                return `
+                    <a href="collections/${collection.slug}.html" class="collection-card group block p-6 rounded-xl bg-gradient-to-br ${theme.gradient}">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl">${theme.icon}</span>
+                            <span class="px-3 py-1 rounded-lg bg-white/10 text-xs font-bold text-white uppercase tracking-wide">${collection.games.length} Games</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-white mb-3">${collection.name}</h3>
+                        <p class="text-sm text-secondary line-clamp-2 mb-4">${collection.description}</p>
+                        <div class="flex items-center gap-2 text-${theme.color}-400 font-bold text-sm group-hover:gap-3 transition-all">
+                            <span>Explore Collection</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </div>
+                    </a>
+                `;
+            }).join('');
         }
 
         // Render all games with filters
@@ -340,26 +905,27 @@
                 noResults.classList.add('hidden');
 
                 container.innerHTML = filteredGames.map(game => `
-                    <a href="game/${game.slug}.html" class="game-card bg-white rounded-xl shadow-md overflow-hidden block">
-                        <div class="h-40 bg-gray-900 relative overflow-hidden">
-                            <img src="${game.imageUrl}" alt="${game.title}" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-5">
-                            <div class="flex items-start justify-between mb-2">
-                                <h3 class="text-lg font-bold text-gray-900">${game.title}</h3>
+                    <a href="game/${game.slug}.html" class="game-card rounded-xl overflow-hidden block">
+                        <div class="h-48 relative overflow-hidden">
+                            <img src="${game.imageUrl}" alt="${game.title}" class="w-full h-full object-cover transition duration-500 transform hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                            <div class="absolute top-3 right-3">
                                 <span class="badge badge-${game.difficulty}">${game.difficulty}</span>
                             </div>
-                            <p class="text-gray-600 text-sm mb-3 line-clamp-2">${game.shortDesc}</p>
-                            <div class="flex flex-wrap gap-1 mb-3">
-                                ${game.tags.slice(0, 3).map(tag =>
-                                    `<span class="text-xs bg-gray-100 px-2 py-1 rounded">${tag}</span>`
+                        </div>
+                        <div class="p-5 flex flex-col gap-3 relative z-10">
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-2">${game.title}</h3>
+                                <p class="text-sm text-secondary line-clamp-2">${game.shortDesc}</p>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                ${game.tags.slice(0, 2).map(tag =>
+                                    `<span class="text-xs px-2.5 py-1 rounded-md bg-purple-500/10 border border-purple-500/30 text-purple-400 font-semibold">${tag}</span>`
                                 ).join('')}
                             </div>
-                            <div class="flex items-center justify-between">
-                                <span class="text-xs text-gray-500">🎯 ${game.difficulty} level</span>
-                                <div class="bg-[#007AFF] hover:bg-[#0051D5] text-white px-4 py-2 rounded-lg font-semibold text-sm transition">
-                                    Play
-                                </div>
+                            <div class="flex items-center justify-between pt-3 border-t border-purple-900/20 text-xs">
+                                <span class="text-muted uppercase tracking-wide">${game.theme} • ${game.speed}</span>
+                                <span class="text-orange-400 font-bold">Play</span>
                             </div>
                         </div>
                     </a>
@@ -367,25 +933,165 @@
             }
         }
 
-        // Helper functions
-        function getThemeIcon(theme) {
-            const icons = {
-                'snow': '❄️',
-                'tunnel': '🌀',
-                'forest': '🏔️',
-                'city': '🏙️'
+        function updateStructuredData() {
+            const script = document.getElementById('homepage-structured-data');
+            if (!script) return;
+
+            const popularGames = [...gamesData].sort((a, b) => (b.popularity || 0) - (a.popularity || 0)).slice(0, 10);
+
+            const structuredData = {
+                "@context": "https://schema.org",
+                "@type": "ItemList",
+                "name": "LavaCloud Games Endless Runner Catalog",
+                "description": "Endless runner games grouped by theme with instant play, strategy guides, and structured metadata.",
+                "numberOfItems": popularGames.length,
+                "itemListElement": popularGames.map((game, index) => ({
+                    "@type": "ListItem",
+                    "position": index + 1,
+                    "item": {
+                        "@type": "VideoGame",
+                        "name": game.title,
+                        "url": `https://lavacloud.online/game/${game.slug}`,
+                        "genre": game.tags,
+                        "gamePlatform": "Web Browser",
+                        "description": game.shortDesc
+                    }
+                }))
             };
-            return icons[theme] || '🎮';
+
+            script.textContent = JSON.stringify(structuredData, null, 2);
         }
 
-        function getThemeGradient(theme) {
-            const gradients = {
-                'snow': 'from-blue-300 to-cyan-400',
-                'tunnel': 'from-purple-400 to-pink-500',
-                'forest': 'from-green-400 to-teal-500',
-                'city': 'from-orange-400 to-red-500'
-            };
-            return gradients[theme] || 'from-gray-400 to-gray-500';
+
+        // Hero Carousel Functions
+        function renderHeroCarousel() {
+            const track = document.getElementById('hero-carousel-track');
+            const indicators = document.getElementById('hero-indicators');
+
+            if (!track || !heroCarouselGames.length) return;
+
+            // Render slides
+            track.innerHTML = heroCarouselGames.map((game, index) => `
+                <div class="hero-slide ${index === 0 ? 'active' : ''}" data-index="${index}">
+                    <div class="hero-slide-bg" style="background-image: url('${game.imageUrl}')"></div>
+                    <div class="hero-slide-overlay"></div>
+                    <div class="hero-slide-content">
+                        <div class="inline-flex items-center gap-2 mb-3">
+                            <span class="badge badge-${game.difficulty}">${game.difficulty}</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-black/40 backdrop-blur-sm text-xs font-bold text-orange-400 uppercase tracking-wide">${game.theme}</span>
+                        </div>
+                        <h3 class="text-4xl md:text-5xl font-black text-white mb-4 leading-tight max-w-lg">${game.title}</h3>
+                        <p class="text-lg text-secondary max-w-xl line-clamp-2">${game.shortDesc}</p>
+                    </div>
+                </div>
+            `).join('');
+
+            // Render indicators
+            indicators.innerHTML = heroCarouselGames.map((_, index) => `
+                <button class="hero-indicator ${index === 0 ? 'active' : ''}" data-index="${index}"></button>
+            `).join('');
+
+            // Add click listeners to slides
+            document.querySelectorAll('.hero-slide').forEach((slide, index) => {
+                slide.addEventListener('click', (e) => {
+                    // If clicking on buttons, don't navigate
+                    if (e.target.closest('a')) return;
+                    window.location.href = `game/${heroCarouselGames[index].slug}.html`;
+                });
+            });
+
+            // Add click listeners to indicators
+            document.querySelectorAll('.hero-indicator').forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    goToHeroSlide(index);
+                });
+            });
+
+            // Start autoplay
+            startHeroAutoplay();
+        }
+
+        function goToHeroSlide(index) {
+            if (index < 0 || index >= heroCarouselGames.length) return;
+
+            currentHeroSlide = index;
+            const track = document.getElementById('hero-carousel-track');
+            const indicators = document.querySelectorAll('.hero-indicator');
+            const slides = document.querySelectorAll('.hero-slide');
+
+            if (track) {
+                track.style.transform = `translateX(-${index * 100}%)`;
+            }
+
+            // Update active states
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+
+            indicators.forEach((ind, i) => {
+                if (i === index) {
+                    ind.classList.add('active');
+                } else {
+                    ind.classList.remove('active');
+                }
+            });
+
+            // Reset autoplay
+            resetHeroAutoplay();
+        }
+
+        function nextHeroSlide() {
+            const nextIndex = (currentHeroSlide + 1) % heroCarouselGames.length;
+            goToHeroSlide(nextIndex);
+        }
+
+        function prevHeroSlide() {
+            const prevIndex = (currentHeroSlide - 1 + heroCarouselGames.length) % heroCarouselGames.length;
+            goToHeroSlide(prevIndex);
+        }
+
+        function startHeroAutoplay() {
+            stopHeroAutoplay();
+
+            let progress = 0;
+            const progressBar = document.getElementById('hero-progress');
+            const interval = 50; // Update every 50ms
+            const increment = (interval / heroAutoplayDuration) * 100;
+
+            heroProgressInterval = setInterval(() => {
+                progress += increment;
+                if (progressBar) {
+                    progressBar.style.width = `${progress}%`;
+                }
+                if (progress >= 100) {
+                    progress = 0;
+                }
+            }, interval);
+
+            heroAutoplayInterval = setInterval(nextHeroSlide, heroAutoplayDuration);
+        }
+
+        function stopHeroAutoplay() {
+            if (heroAutoplayInterval) {
+                clearInterval(heroAutoplayInterval);
+                heroAutoplayInterval = null;
+            }
+            if (heroProgressInterval) {
+                clearInterval(heroProgressInterval);
+                heroProgressInterval = null;
+            }
+            const progressBar = document.getElementById('hero-progress');
+            if (progressBar) {
+                progressBar.style.width = '0%';
+            }
+        }
+
+        function resetHeroAutoplay() {
+            startHeroAutoplay();
         }
 
         // Event listeners for filters
@@ -407,6 +1113,37 @@
             searchInput.addEventListener('input', (e) => {
                 searchTerm = e.target.value;
                 renderAllGames();
+            });
+
+
+            // Hero carousel navigation
+            const heroPrev = document.getElementById('hero-prev');
+            const heroNext = document.getElementById('hero-next');
+            if (heroPrev && heroNext) {
+                heroPrev.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    prevHeroSlide();
+                });
+                heroNext.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    nextHeroSlide();
+                });
+            }
+
+            // Pause autoplay on hover
+            const heroCarousel = document.getElementById('hero-carousel-track');
+            if (heroCarousel) {
+                heroCarousel.parentElement.addEventListener('mouseenter', stopHeroAutoplay);
+                heroCarousel.parentElement.addEventListener('mouseleave', startHeroAutoplay);
+            }
+
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    prevHeroSlide();
+                } else if (e.key === 'ArrowRight') {
+                    nextHeroSlide();
+                }
             });
         });
     </script>
