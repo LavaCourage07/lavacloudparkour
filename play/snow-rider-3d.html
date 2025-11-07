@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Play Game - LavaCloud Parkour</title>
+    <meta name="description" id="page-desc" content="">
+    <meta name="robots" content="noindex, follow">
+    <meta property="og:title" id="og-title" content="">
+    <meta property="og:description" id="og-desc" content="">
+    <meta property="og:image" content="https://lavacloud.online/og-image.png">
+    <link rel="canonical" id="canonical-url" href="">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary-blue: #007AFF;
+        }
+
+        body {
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .game-iframe-container {
+            width: 100%;
+            height: calc(100vh - 64px);
+            position: relative;
+            background: #000;
+        }
+
+        .game-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        .fullscreen-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: rgba(0, 122, 255, 0.95);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            z-index: 100;
+            transition: all 0.2s;
+            box-shadow: 0 4px 12px rgba(0, 122, 255, 0.4);
+        }
+
+        .fullscreen-btn:hover {
+            background: rgba(0, 81, 213, 0.95);
+            transform: scale(1.05);
+        }
+
+        .loading-screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            z-index: 10;
+            transition: opacity 0.5s;
+        }
+
+        .loading-screen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .quick-info {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 16px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+            max-width: 300px;
+        }
+
+        .quick-info.collapsed {
+            transform: translateY(calc(100% + 24px));
+        }
+
+        @media (max-width: 768px) {
+            .quick-info {
+                display: none;
+            }
+        }
+    </style>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RK4Z12C7B2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RK4Z12C7B2');
+    </script>
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="bg-white shadow-sm h-16 flex items-center px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto w-full flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <a href="../index.html" class="text-xl font-bold text-[#007AFF]">LavaCloud Parkour</a>
+                <span class="text-gray-400">|</span>
+                <span id="game-title-nav" class="text-gray-700 font-semibold truncate max-w-xs">Game</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a id="info-link" href="#" class="hidden sm:inline-block text-gray-700 hover:text-[#007AFF] transition text-sm">
+                    📋 Info
+                </a>
+                <a id="guide-link" href="#" class="hidden sm:inline-block text-gray-700 hover:text-[#007AFF] transition text-sm">
+                    📖 Guide
+                </a>
+                <a href="/" class="text-gray-700 hover:text-[#007AFF] transition text-sm">
+                    🏠 Home
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Game Container -->
+    <div class="game-iframe-container">
+        <!-- Loading Screen -->
+        <div id="loading-screen" class="loading-screen">
+            <div class="spinner mb-6"></div>
+            <h2 class="text-2xl font-bold mb-2">Loading Game...</h2>
+            <p id="loading-game-title" class="text-lg opacity-90"></p>
+        </div>
+
+        <!-- Game iframe -->
+        <iframe
+            id="game-iframe"
+            class="game-iframe"
+            src=""
+            allowfullscreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            loading="eager">
+        </iframe>
+    </div>
+
+    <!-- Quick Info Panel (Desktop only) -->
+    <div id="quick-info" class="quick-info">
+        <div class="flex items-start justify-between mb-3">
+            <h3 class="font-bold text-gray-900">Quick Tips</h3>
+            <button onclick="toggleQuickInfo()" class="text-gray-400 hover:text-gray-600">
+                <span id="toggle-icon">−</span>
+            </button>
+        </div>
+        <div id="quick-info-content">
+            <ul id="quick-tips-list" class="text-sm text-gray-700 space-y-2"></ul>
+            <a id="full-guide-link" href="#" class="inline-block mt-3 text-[#007AFF] hover:underline text-sm font-semibold">
+                Full Guide →
+            </a>
+        </div>
+    </div>
+
+    <!-- Fullscreen Button -->
+    <button id="fullscreen-btn" class="fullscreen-btn" onclick="toggleFullscreen()">
+        <span id="fullscreen-text">⛶ Fullscreen</span>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // Get game slug from URL
+        const pathParts = window.location.pathname.split('/');
+        const gameSlugWithExt = pathParts[pathParts.length - 1] || pathParts[pathParts.length - 2];
+        const gameSlug = gameSlugWithExt.replace('.html', '');
+
+        let gameData = null;
+
+        // Load game data and start iframe
+        async function loadGame() {
+            try {
+                const response = await fetch('../data/games.json');
+                const data = await response.json();
+                const game = data.games.find(g => g.slug === gameSlug);
+
+                if (!game) {
+                    window.location.href = '../index.html';
+                    return;
+                }
+
+                gameData = game;
+                setupGamePage(game);
+
+                // Hide loading screen after iframe loads
+                const iframe = document.getElementById('game-iframe');
+                iframe.src = game.iframeSrc;
+
+                iframe.addEventListener('load', () => {
+                    setTimeout(() => {
+                        document.getElementById('loading-screen').classList.add('hidden');
+                    }, 500);
+                });
+
+                // Track game play event
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'game_play', {
+                        'game_name': game.title,
+                        'game_slug': game.slug,
+                        'game_theme': game.theme
+                    });
+                }
+
+            } catch (error) {
+                console.error('Error loading game:', error);
+                alert('Failed to load game. Please try again.');
+                window.location.href = '../index.html';
+            }
+        }
+
+        function setupGamePage(game) {
+            // Update page meta
+            document.getElementById('page-title').textContent = `Play ${game.title} - LavaCloud Parkour`;
+            document.getElementById('page-desc').setAttribute('content', `Play ${game.title} online for free. ${game.shortDesc}`);
+            document.getElementById('og-title').setAttribute('content', `Play ${game.title} - LavaCloud Parkour`);
+            document.getElementById('og-desc').setAttribute('content', game.shortDesc);
+            document.getElementById('canonical-url').setAttribute('href', `https://lavacloud.online/game/${game.slug}`);
+
+            // Update navigation
+            document.getElementById('game-title-nav').textContent = game.title;
+            document.getElementById('info-link').href = `../game/${game.slug}.html`;
+            document.getElementById('guide-link').href = `../guide/${game.slug}.html`;
+
+            // Update loading screen
+            document.getElementById('loading-game-title').textContent = game.title;
+
+            // Update quick info
+            const quickTipsList = document.getElementById('quick-tips-list');
+            quickTipsList.innerHTML = game.howToPlay.tips.slice(0, 3).map(tip =>
+                `<li class="flex items-start">
+                    <span class="text-[#007AFF] mr-2">•</span>
+                    <span>${tip}</span>
+                </li>`
+            ).join('');
+
+            document.getElementById('full-guide-link').href = `../guide/${game.slug}.html`;
+        }
+
+        // Fullscreen functionality
+        function toggleFullscreen() {
+            const container = document.querySelector('.game-iframe-container');
+            const btn = document.getElementById('fullscreen-btn');
+
+            if (!document.fullscreenElement) {
+                container.requestFullscreen().catch(err => {
+                    console.error('Error attempting to enable fullscreen:', err);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+
+        // Update fullscreen button text
+        document.addEventListener('fullscreenchange', () => {
+            const text = document.getElementById('fullscreen-text');
+            if (document.fullscreenElement) {
+                text.textContent = '⛶ Exit Fullscreen';
+            } else {
+                text.textContent = '⛶ Fullscreen';
+            }
+        });
+
+        // Quick info toggle
+        function toggleQuickInfo() {
+            const panel = document.getElementById('quick-info');
+            const icon = document.getElementById('toggle-icon');
+            panel.classList.toggle('collapsed');
+            icon.textContent = panel.classList.contains('collapsed') ? '+' : '−';
+        }
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            // F key for fullscreen
+            if (e.key === 'f' || e.key === 'F') {
+                e.preventDefault();
+                toggleFullscreen();
+            }
+            // ESC to exit fullscreen
+            if (e.key === 'Escape' && document.fullscreenElement) {
+                document.exitFullscreen();
+            }
+        });
+
+        // Load game on page ready
+        document.addEventListener('DOMContentLoaded', loadGame);
+
+        // Track time spent
+        let startTime = Date.now();
+        window.addEventListener('beforeunload', () => {
+            const timeSpent = Math.floor((Date.now() - startTime) / 1000);
+            if (typeof gtag !== 'undefined' && gameData) {
+                gtag('event', 'game_session', {
+                    'game_name': gameData.title,
+                    'time_spent': timeSpent
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Game Title - LavaCloud Parkour</title>
+    <meta name="description" id="page-desc" content="">
+    <meta name="keywords" id="page-keywords" content="">
+    <meta property="og:title" id="og-title" content="">
+    <meta property="og:description" id="og-desc" content="">
+    <meta property="og:image" content="https://lavacloud.online/og-image.png">
+    <meta property="og:url" id="og-url" content="">
+    <meta property="og:type" content="website">
+    <link rel="canonical" id="canonical-url" href="">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary-blue: #007AFF;
+            --primary-hover: #0051D5;
+        }
+
+        .game-preview {
+            aspect-ratio: 16/9;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .difficulty-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .difficulty-easy { background: #34C759; color: white; }
+        .difficulty-medium { background: #FF9500; color: white; }
+        .difficulty-hard { background: #FF3B30; color: white; }
+
+        .tag-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            background: #F2F2F7;
+            color: #1C1C1E;
+        }
+
+        .control-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            background: #F9FAFB;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+
+        .related-game-card {
+            transition: transform 0.2s;
+        }
+
+        .related-game-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .ad-placeholder {
+            background: linear-gradient(135deg, #F2F2F7 0%, #E5E5EA 100%);
+            border: 2px dashed #C7C7CC;
+            border-radius: 12px;
+            padding: 40px 20px;
+            text-align: center;
+            color: #8E8E93;
+        }
+    </style>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RK4Z12C7B2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RK4Z12C7B2');
+    </script>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json" id="game-schema">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "",
+      "description": "",
+      "genre": [],
+      "gamePlatform": ["Web Browser"],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-bold text-[#007AFF]">LavaCloud Parkour</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="/" class="text-gray-700 hover:text-[#007AFF] transition">Home</a>
+                    <a href="/#collections" class="text-gray-700 hover:text-[#007AFF] transition">Collections</a>
+                    <a href="/#all-games" class="text-gray-700 hover:text-[#007AFF] transition">All Games</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <nav class="text-sm">
+                <a href="/" class="text-[#007AFF] hover:underline">Home</a>
+                <span class="mx-2 text-gray-400">/</span>
+                <a href="/#all-games" class="text-[#007AFF] hover:underline">Games</a>
+                <span class="mx-2 text-gray-400">/</span>
+                <span id="breadcrumb-title" class="text-gray-600">Game</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid lg:grid-cols-3 gap-12">
+            <!-- Left Column: Main Content -->
+            <div class="lg:col-span-2">
+                <!-- Game Header -->
+                <div class="mb-8">
+                    <div class="flex items-start justify-between mb-4">
+                        <h1 id="game-title" class="text-4xl md:text-5xl font-bold text-gray-900">Game Title</h1>
+                        <span id="difficulty-badge" class="difficulty-badge">Medium</span>
+                    </div>
+                    <p id="game-short-desc" class="text-xl text-gray-600 mb-4"></p>
+                    <div class="flex flex-wrap gap-2 mb-6" id="tags-container"></div>
+                    <div class="flex gap-4">
+                        <a id="play-now-btn" href="#" class="bg-[#007AFF] hover:bg-[#0051D5] text-white px-8 py-3 rounded-lg font-semibold text-lg transition inline-block">
+                            ▶ Play Now
+                        </a>
+                        <a id="guide-btn" href="#" class="border-2 border-[#007AFF] text-[#007AFF] hover:bg-[#007AFF] hover:text-white px-8 py-3 rounded-lg font-semibold text-lg transition inline-block">
+                            📖 Strategy Guide
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game Preview -->
+                <div class="mb-8">
+                    <div class="game-preview bg-gray-900 rounded-xl overflow-hidden mx-auto relative">
+                        <img id="game-image" src="" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-center text-sm text-gray-500 mt-4">Click "Play Now" to start the game</p>
+                </div>
+
+                <!-- Ad Placeholder 1 -->
+                <div class="ad-placeholder mb-8">
+                    <p class="font-semibold">Advertisement Space</p>
+                    <p class="text-sm">Responsive Ad Unit (728x90 / 336x280)</p>
+                </div>
+
+                <!-- Game Description -->
+                <section class="bg-white rounded-xl p-8 shadow-md mb-8">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">About This Game</h2>
+                    <p id="game-full-desc" class="text-gray-700 leading-relaxed"></p>
+                </section>
+
+                <!-- How to Play -->
+                <section class="bg-white rounded-xl p-8 shadow-md mb-8">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">How to Play</h2>
+
+                    <div class="mb-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">🎯 Objective</h3>
+                        <p id="how-objective" class="text-gray-700"></p>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">🎮 Controls</h3>
+                        <p id="how-controls" class="text-gray-700 mb-3"></p>
+                        <div id="controls-list"></div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">💡 Tips</h3>
+                        <ul id="tips-list" class="space-y-2"></ul>
+                    </div>
+                </section>
+
+                <!-- Strategy Guide Preview -->
+                <section class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-8 shadow-md mb-8">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">Strategy Guide</h2>
+
+                    <div class="space-y-4 mb-6">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Basic Strategy</h3>
+                            <p id="guide-basics" class="text-gray-700"></p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Scoring System</h3>
+                            <p id="guide-scoring" class="text-gray-700"></p>
+                        </div>
+                    </div>
+
+                    <a id="full-guide-link" href="#" class="inline-block bg-[#007AFF] hover:bg-[#0051D5] text-white px-6 py-3 rounded-lg font-semibold transition">
+                        View Full Strategy Guide →
+                    </a>
+                </section>
+            </div>
+
+            <!-- Right Sidebar -->
+            <div class="lg:col-span-1">
+                <!-- Game Info Card -->
+                <div class="bg-white rounded-xl p-6 shadow-md mb-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Game Info</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">🎮 Theme</span>
+                            <span id="info-theme" class="font-semibold text-gray-900"></span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">🎯 Difficulty</span>
+                            <span id="info-difficulty" class="font-semibold text-gray-900"></span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">⚡ Speed</span>
+                            <span id="info-speed" class="font-semibold text-gray-900"></span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">📱 Mobile</span>
+                            <span id="info-mobile" class="font-semibold text-gray-900"></span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">⭐ Popularity</span>
+                            <span id="info-popularity" class="font-semibold text-gray-900"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ad Placeholder 2 -->
+                <div class="ad-placeholder mb-6">
+                    <p class="font-semibold">Advertisement</p>
+                    <p class="text-sm">300x250 / 336x280</p>
+                </div>
+
+                <!-- Related Games -->
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Related Games</h3>
+                    <div id="related-games" class="space-y-4"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">🎮 LavaCloud Parkour</h3>
+                    <p class="text-gray-400">The ultimate destination for endless runner and parkour games. Play free online, no download required!</p>
+                    <p class="text-gray-400 mt-3">🔥 18+ Premium Games | ⚡ Instant Play | 📱 Mobile Friendly</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="../index.html" class="hover:text-white transition">🏠 Home</a></li>
+                        <li><a href="../index.html#collections" class="hover:text-white transition">📂 Collections</a></li>
+                        <li><a href="../index.html#all-games" class="hover:text-white transition">🎯 All Games</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 LavaCloud Parkour. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Get game slug from URL
+        const pathParts = window.location.pathname.split('/');
+        const gameSlugWithExt = pathParts[pathParts.length - 1] || pathParts[pathParts.length - 2];
+        const gameSlug = gameSlugWithExt.replace('.html', '');
+
+        // Load game data
+        async function loadGameData() {
+            try {
+                const response = await fetch('../data/games.json');
+                const data = await response.json();
+                const game = data.games.find(g => g.slug === gameSlug);
+                const allGames = data.games;
+
+                if (!game) {
+                    window.location.href = '../index.html';
+                    return;
+                }
+
+                renderGamePage(game, allGames);
+            } catch (error) {
+                console.error('Error loading game data:', error);
+            }
+        }
+
+        function renderGamePage(game, allGames) {
+            // Update page meta
+            document.getElementById('page-title').textContent = `${game.title} - Play Free Online | LavaCloud Parkour`;
+            document.getElementById('page-desc').setAttribute('content', game.shortDesc);
+            document.getElementById('page-keywords').setAttribute('content', `${game.title}, ${game.tags.join(', ')}, endless runner, parkour game`);
+            document.getElementById('og-title').setAttribute('content', `${game.title} - LavaCloud Parkour`);
+            document.getElementById('og-desc').setAttribute('content', game.shortDesc);
+            document.getElementById('og-url').setAttribute('content', `https://lavacloud.online/game/${game.slug}`);
+            document.getElementById('canonical-url').setAttribute('href', `https://lavacloud.online/game/${game.slug}`);
+
+            // Update schema
+            const schema = {
+                "@context": "https://schema.org",
+                "@type": "VideoGame",
+                "name": game.title,
+                "description": game.fullDesc,
+                "genre": game.tags,
+                "gamePlatform": ["Web Browser"],
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD",
+                    "availability": "https://schema.org/InStock"
+                }
+            };
+            document.getElementById('game-schema').textContent = JSON.stringify(schema, null, 2);
+
+            // Update breadcrumb
+            document.getElementById('breadcrumb-title').textContent = game.title;
+
+            // Update game header
+            document.getElementById('game-title').textContent = game.title;
+            document.getElementById('game-short-desc').textContent = game.shortDesc;
+            document.getElementById('difficulty-badge').textContent = game.difficulty.charAt(0).toUpperCase() + game.difficulty.slice(1);
+            document.getElementById('difficulty-badge').className = `difficulty-badge difficulty-${game.difficulty}`;
+
+            // Update game image
+            document.getElementById('game-image').src = `../${game.imageUrl}`;
+            document.getElementById('game-image').alt = game.title;
+
+            // Update tags
+            const tagsContainer = document.getElementById('tags-container');
+            tagsContainer.innerHTML = game.tags.map(tag =>
+                `<span class="tag-badge">${tag}</span>`
+            ).join('');
+
+            // Update buttons
+            document.getElementById('play-now-btn').href = `../play/${game.slug}.html`;
+            document.getElementById('guide-btn').href = `../guide/${game.slug}.html`;
+            document.getElementById('full-guide-link').href = `../guide/${game.slug}.html`;
+
+            // Update description
+            document.getElementById('game-full-desc').textContent = game.fullDesc;
+
+            // Update how to play
+            document.getElementById('how-objective').textContent = game.howToPlay.objective;
+            document.getElementById('how-controls').textContent = game.howToPlay.basicControls;
+
+            const controlsList = document.getElementById('controls-list');
+            controlsList.innerHTML = game.controls.map(control =>
+                `<div class="control-item">
+                    <span class="text-2xl mr-3">🎮</span>
+                    <span class="text-gray-700">${control}</span>
+                </div>`
+            ).join('');
+
+            const tipsList = document.getElementById('tips-list');
+            tipsList.innerHTML = game.howToPlay.tips.map(tip =>
+                `<li class="flex items-start">
+                    <span class="text-[#007AFF] mr-2">✓</span>
+                    <span class="text-gray-700">${tip}</span>
+                </li>`
+            ).join('');
+
+            // Update guide preview
+            document.getElementById('guide-basics').textContent = game.guide.basics;
+            document.getElementById('guide-scoring').textContent = game.guide.scoring;
+
+            // Update game info
+            document.getElementById('info-theme').textContent = game.theme.charAt(0).toUpperCase() + game.theme.slice(1);
+            document.getElementById('info-difficulty').textContent = game.difficulty.charAt(0).toUpperCase() + game.difficulty.slice(1);
+            document.getElementById('info-speed').textContent = game.speed.charAt(0).toUpperCase() + game.speed.slice(1);
+            document.getElementById('info-mobile').textContent = game.mobileFriendly ? 'Yes ✓' : 'No ✗';
+            document.getElementById('info-popularity').textContent = `${game.popularity}%`;
+
+            // Update related games
+            const relatedGames = allGames.filter(g => game.relatedGames.includes(g.slug)).slice(0, 4);
+            const relatedContainer = document.getElementById('related-games');
+            relatedContainer.innerHTML = relatedGames.map(g => `
+                <a href="${g.slug}.html" class="related-game-card block bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition">
+                    <h4 class="font-semibold text-gray-900 mb-1">${g.title}</h4>
+                    <p class="text-sm text-gray-600 mb-2">${g.shortDesc.slice(0, 60)}...</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs text-gray-500">${g.theme}</span>
+                        <span class="text-[#007AFF] text-sm">→</span>
+                    </div>
+                </a>
+            `).join('');
+        }
+
+        // Load data on page load
+        document.addEventListener('DOMContentLoaded', loadGameData);
+    </script>
+</body>
+</html>

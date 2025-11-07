@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Game Strategy Guide - LavaCloud Parkour</title>
+    <meta name="description" id="page-desc" content="">
+    <meta name="keywords" id="page-keywords" content="">
+    <meta property="og:title" id="og-title" content="">
+    <meta property="og:description" id="og-desc" content="">
+    <meta property="og:image" content="https://lavacloud.online/og-image.png">
+    <meta property="og:url" id="og-url" content="">
+    <meta property="og:type" content="article">
+    <link rel="canonical" id="canonical-url" href="">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary-blue: #007AFF;
+            --primary-hover: #0051D5;
+        }
+
+        .guide-section {
+            scroll-margin-top: 80px;
+        }
+
+        .toc-link {
+            transition: all 0.2s;
+        }
+
+        .toc-link:hover {
+            color: var(--primary-blue);
+            transform: translateX(4px);
+        }
+
+        .toc-link.active {
+            color: var(--primary-blue);
+            font-weight: 600;
+            border-left: 3px solid var(--primary-blue);
+            padding-left: 9px;
+            margin-left: -12px;
+        }
+
+        .strategy-card {
+            background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
+            border-left: 4px solid var(--primary-blue);
+        }
+
+        .tip-box {
+            background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+            border-left: 4px solid #3B82F6;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+            border-left: 4px solid #F59E0B;
+        }
+
+        .faq-item {
+            transition: all 0.2s;
+        }
+
+        .faq-item:hover {
+            background: #F9FAFB;
+        }
+
+        .ad-placeholder {
+            background: linear-gradient(135deg, #F2F2F7 0%, #E5E5EA 100%);
+            border: 2px dashed #C7C7CC;
+            border-radius: 12px;
+            padding: 40px 20px;
+            text-align: center;
+            color: #8E8E93;
+        }
+
+        .sticky-toc {
+            position: sticky;
+            top: 80px;
+            max-height: calc(100vh - 100px);
+            overflow-y: auto;
+        }
+    </style>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RK4Z12C7B2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RK4Z12C7B2');
+    </script>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json" id="howto-schema">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "",
+      "description": "",
+      "step": []
+    }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-bold text-[#007AFF]">LavaCloud Parkour</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="/" class="text-gray-700 hover:text-[#007AFF] transition">Home</a>
+                    <a href="/#collections" class="text-gray-700 hover:text-[#007AFF] transition">Collections</a>
+                    <a href="/#all-games" class="text-gray-700 hover:text-[#007AFF] transition">All Games</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <nav class="text-sm">
+                <a href="/" class="text-[#007AFF] hover:underline">Home</a>
+                <span class="mx-2 text-gray-400">/</span>
+                <a href="/#all-games" class="text-[#007AFF] hover:underline">Games</a>
+                <span class="mx-2 text-gray-400">/</span>
+                <a id="breadcrumb-game" href="#" class="text-[#007AFF] hover:underline">Game</a>
+                <span class="mx-2 text-gray-400">/</span>
+                <span class="text-gray-600">Strategy Guide</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid lg:grid-cols-4 gap-8">
+            <!-- Table of Contents (Sidebar) -->
+            <aside class="lg:col-span-1 hidden lg:block">
+                <div class="sticky-toc bg-white rounded-xl p-6 shadow-md">
+                    <h3 class="text-lg font-bold text-gray-900 mb-4">Table of Contents</h3>
+                    <nav class="space-y-2 text-sm">
+                        <a href="#overview" class="toc-link block text-gray-600">Overview</a>
+                        <a href="#basics" class="toc-link block text-gray-600">Basic Strategy</a>
+                        <a href="#scoring" class="toc-link block text-gray-600">Scoring System</a>
+                        <a href="#advanced" class="toc-link block text-gray-600">Advanced Techniques</a>
+                        <a href="#mistakes" class="toc-link block text-gray-600">Common Mistakes</a>
+                        <a href="#faq" class="toc-link block text-gray-600">FAQ</a>
+                    </nav>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="lg:col-span-3">
+                <!-- Header -->
+                <div class="mb-8">
+                    <h1 id="guide-title" class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                        Game Strategy Guide
+                    </h1>
+                    <p id="guide-subtitle" class="text-xl text-gray-600 mb-6">
+                        Master every aspect of this game with our comprehensive strategy guide
+                    </p>
+                    <div class="flex gap-4">
+                        <a id="play-btn" href="#" class="bg-[#007AFF] hover:bg-[#0051D5] text-white px-6 py-3 rounded-lg font-semibold transition inline-block">
+                            ▶ Play Now
+                        </a>
+                        <a id="info-btn" href="#" class="border-2 border-[#007AFF] text-[#007AFF] hover:bg-[#007AFF] hover:text-white px-6 py-3 rounded-lg font-semibold transition inline-block">
+                            📋 Game Info
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Ad Placeholder 1 -->
+                <div class="ad-placeholder mb-8">
+                    <p class="font-semibold">Advertisement Space</p>
+                    <p class="text-sm">Responsive Ad Unit (728x90 / 336x280)</p>
+                </div>
+
+                <!-- Overview Section -->
+                <section id="overview" class="guide-section bg-white rounded-xl p-8 shadow-md mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">📖 Game Overview</h2>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Game Description</h3>
+                        <p id="overview-desc" class="text-gray-700 leading-relaxed mb-4"></p>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">🎯 Objective</h3>
+                        <p id="overview-objective" class="text-gray-700"></p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">🎮 Controls</h3>
+                        <div id="overview-controls" class="space-y-2"></div>
+                    </div>
+                </section>
+
+                <!-- Basic Strategy -->
+                <section id="basics" class="guide-section bg-white rounded-xl p-8 shadow-md mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">🎯 Basic Strategy</h2>
+                    <div class="strategy-card rounded-lg p-6">
+                        <p id="basics-content" class="text-gray-700 leading-relaxed"></p>
+                    </div>
+                </section>
+
+                <!-- Scoring System -->
+                <section id="scoring" class="guide-section bg-white rounded-xl p-8 shadow-md mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">🏆 Scoring System</h2>
+                    <div class="tip-box rounded-lg p-6">
+                        <p id="scoring-content" class="text-gray-700 leading-relaxed"></p>
+                    </div>
+                </section>
+
+                <!-- Ad Placeholder 2 -->
+                <div class="ad-placeholder mb-8">
+                    <p class="font-semibold">Advertisement Space</p>
+                    <p class="text-sm">Responsive Ad Unit (336x280)</p>
+                </div>
+
+                <!-- Advanced Techniques -->
+                <section id="advanced" class="guide-section bg-white rounded-xl p-8 shadow-md mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">⚡ Advanced Techniques</h2>
+                    <div id="advanced-list" class="space-y-4"></div>
+                </section>
+
+                <!-- Common Mistakes -->
+                <section id="mistakes" class="guide-section bg-white rounded-xl p-8 shadow-md mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">⚠️ Common Mistakes to Avoid</h2>
+                    <div id="mistakes-list" class="space-y-4"></div>
+                </section>
+
+                <!-- FAQ Section -->
+                <section id="faq" class="guide-section bg-white rounded-xl p-8 shadow-md mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">❓ Frequently Asked Questions</h2>
+                    <div id="faq-list" class="space-y-4"></div>
+                </section>
+
+                <!-- Call to Action -->
+                <div class="bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl p-8 text-white text-center">
+                    <h3 class="text-2xl font-bold mb-4">Ready to Master This Game?</h3>
+                    <p class="text-lg mb-6 opacity-90">Put these strategies into practice and dominate the leaderboard!</p>
+                    <a id="cta-play-btn" href="#" class="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-bold text-lg hover:bg-opacity-90 transition">
+                        ▶ Play Now
+                    </a>
+                </div>
+
+                <!-- Related Guides -->
+                <div class="mt-12">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Related Strategy Guides</h3>
+                    <div id="related-guides" class="grid md:grid-cols-2 gap-6"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">🎮 LavaCloud Parkour</h3>
+                    <p class="text-gray-400">🔥 18+ Premium Games | ⚡ Instant Play | 📱 Mobile Friendly</p>
+                    <p class="text-gray-400 mt-2">有趣的无限游戏合集，免费在线玩</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/" class="hover:text-white transition">Home</a></li>
+                        <li><a href="/#collections" class="hover:text-white transition">Collections</a></li>
+                        <li><a href="/#all-games" class="hover:text-white transition">All Games</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 LavaCloud Parkour. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Get game slug from URL
+        const pathParts = window.location.pathname.split('/');
+        const gameSlugWithExt = pathParts[pathParts.length - 1] || pathParts[pathParts.length - 2];
+        const gameSlug = gameSlugWithExt.replace('.html', '');
+
+        // Load game data
+        async function loadGuide() {
+            try {
+                const response = await fetch('../data/games.json');
+                const data = await response.json();
+                const game = data.games.find(g => g.slug === gameSlug);
+                const allGames = data.games;
+
+                if (!game) {
+                    window.location.href = '../index.html';
+                    return;
+                }
+
+                renderGuidePage(game, allGames);
+                setupScrollSpy();
+            } catch (error) {
+                console.error('Error loading guide:', error);
+            }
+        }
+
+        function renderGuidePage(game, allGames) {
+            // Update page meta
+            document.getElementById('page-title').textContent = `${game.title} Strategy Guide & Tips | LavaCloud Parkour`;
+            document.getElementById('page-desc').setAttribute('content', `Complete strategy guide for ${game.title}. Learn basic tactics, advanced techniques, scoring system, and avoid common mistakes. Master the game now!`);
+            document.getElementById('page-keywords').setAttribute('content', `${game.title} guide, ${game.title} tips, ${game.title} strategy, how to play ${game.title}, ${game.title} walkthrough`);
+            document.getElementById('og-title').setAttribute('content', `${game.title} Strategy Guide - LavaCloud Parkour`);
+            document.getElementById('og-desc').setAttribute('content', `Master ${game.title} with our comprehensive strategy guide`);
+            document.getElementById('og-url').setAttribute('content', `https://lavacloud.online/guide/${game.slug}`);
+            document.getElementById('canonical-url').setAttribute('href', `https://lavacloud.online/guide/${game.slug}`);
+
+            // Update HowTo schema
+            const steps = [
+                { name: "Basic Strategy", text: game.guide.basics },
+                { name: "Scoring System", text: game.guide.scoring },
+                ...game.guide.advanced.map((adv, i) => ({ name: `Advanced Technique ${i + 1}`, text: adv }))
+            ];
+
+            const schema = {
+                "@context": "https://schema.org",
+                "@type": "HowTo",
+                "name": `How to Master ${game.title}`,
+                "description": game.fullDesc,
+                "step": steps.map(step => ({
+                    "@type": "HowToStep",
+                    "name": step.name,
+                    "text": step.text
+                }))
+            };
+            document.getElementById('howto-schema').textContent = JSON.stringify(schema, null, 2);
+
+            // Update breadcrumb
+            document.getElementById('breadcrumb-game').textContent = game.title;
+            document.getElementById('breadcrumb-game').href = `../game/${game.slug}.html`;
+
+            // Update header
+            document.getElementById('guide-title').textContent = `${game.title} Strategy Guide`;
+            document.getElementById('guide-subtitle').textContent = `Master ${game.title} with expert tips, advanced techniques, and pro strategies`;
+            document.getElementById('play-btn').href = `../play/${game.slug}.html`;
+            document.getElementById('info-btn').href = `../game/${game.slug}.html`;
+            document.getElementById('cta-play-btn').href = `../play/${game.slug}.html`;
+
+            // Update overview
+            document.getElementById('overview-desc').textContent = game.fullDesc;
+            document.getElementById('overview-objective').textContent = game.howToPlay.objective;
+
+            const controlsContainer = document.getElementById('overview-controls');
+            controlsContainer.innerHTML = game.controls.map(control =>
+                `<div class="flex items-start bg-gray-50 rounded-lg p-3">
+                    <span class="text-2xl mr-3">🎮</span>
+                    <span class="text-gray-700">${control}</span>
+                </div>`
+            ).join('');
+
+            // Update basics
+            document.getElementById('basics-content').textContent = game.guide.basics;
+
+            // Update scoring
+            document.getElementById('scoring-content').textContent = game.guide.scoring;
+
+            // Update advanced techniques
+            const advancedList = document.getElementById('advanced-list');
+            advancedList.innerHTML = game.guide.advanced.map((technique, index) =>
+                `<div class="strategy-card rounded-lg p-6">
+                    <div class="flex items-start">
+                        <span class="text-2xl font-bold text-[#007AFF] mr-4">${index + 1}</span>
+                        <p class="text-gray-700 flex-1">${technique}</p>
+                    </div>
+                </div>`
+            ).join('');
+
+            // Update common mistakes
+            const mistakesList = document.getElementById('mistakes-list');
+            mistakesList.innerHTML = game.guide.commonMistakes.map(mistake =>
+                `<div class="warning-box rounded-lg p-6">
+                    <div class="flex items-start">
+                        <span class="text-2xl mr-3">⚠️</span>
+                        <p class="text-gray-700 flex-1">${mistake}</p>
+                    </div>
+                </div>`
+            ).join('');
+
+            // Update FAQ
+            const faqList = document.getElementById('faq-list');
+            faqList.innerHTML = game.guide.faq.map(item =>
+                `<div class="faq-item border-l-4 border-[#007AFF] bg-gray-50 rounded-lg p-6">
+                    <h4 class="font-bold text-gray-900 mb-2">Q: ${item.q}</h4>
+                    <p class="text-gray-700">A: ${item.a}</p>
+                </div>`
+            ).join('');
+
+            // Update related guides
+            const relatedGames = allGames.filter(g => game.relatedGames.includes(g.slug)).slice(0, 4);
+            const relatedContainer = document.getElementById('related-guides');
+            relatedContainer.innerHTML = relatedGames.map(g => `
+                <a href="${g.slug}.html" class="block bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition">
+                    <h4 class="font-bold text-gray-900 mb-2">${g.title} Guide</h4>
+                    <p class="text-sm text-gray-600 mb-3">${g.shortDesc.slice(0, 80)}...</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs text-gray-500">${g.difficulty} • ${g.theme}</span>
+                        <span class="text-[#007AFF] font-semibold text-sm">Read Guide →</span>
+                    </div>
+                </a>
+            `).join('');
+        }
+
+        // Scroll spy for TOC
+        function setupScrollSpy() {
+            const sections = document.querySelectorAll('.guide-section');
+            const tocLinks = document.querySelectorAll('.toc-link');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        tocLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, { rootMargin: '-100px 0px -70% 0px' });
+
+            sections.forEach(section => observer.observe(section));
+        }
+
+        // Load guide on page ready
+        document.addEventListener('DOMContentLoaded', loadGuide);
+    </script>
+</body>
+</html>

@@ -3,103 +3,412 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LavaCloudParkour - Infinite Kaleidoscope Parkour Puzzle Game | Endless Running Challenge Online</title>
-    <meta name="description" content="LavaCloudParkour is an infinite loop parkour puzzle game. Run endlessly through a vibrant kaleidoscope tunnel, dodge obstacles, and test your reflexes. Play for free online and experience the ultimate endless parkour adventure!">
-    <meta name="keywords" content="parkour, puzzle game, endless runner, kaleidoscope, obstacles, reflex, LavaCloudParkour, online game, free game, infinite running">
-    <meta property="og:title" content="LavaCloudParkour - Infinite Kaleidoscope Parkour Puzzle Game" />
-    <meta property="og:description" content="Run endlessly through a colorful kaleidoscope tunnel, dodge obstacles, and challenge your reflexes! Play LavaCloudParkour for free online." />
-    <meta property="og:image" content="https://lavacloud.online/og-image.png" />
-    <meta property="og:url" content="https://lavacloud.online" />
-    <meta property="og:type" content="website" />
-    <link rel="canonical" href="https://lavacloud.online" />
+    <title>LavaCloud Parkour - Best Endless Runner Games Collection | Free Online</title>
+    <meta name="description" content="Play the best endless parkour games online for free! Featuring high-speed tunnel runners, snowy skiing adventures, forest parkour, and urban challenges. Test your reflexes with 18+ premium games.">
+    <meta name="keywords" content="endless runner games, parkour games, tunnel rush, skiing games, free online games, reaction games, infinite games, arcade games">
+    <meta property="og:title" content="LavaCloud Parkour - Best Endless Runner Games Collection">
+    <meta property="og:description" content="Play 18+ premium endless parkour games. High-speed tunnels, snowy slopes, forest adventures, and urban challenges. Free online, no download required!">
+    <meta property="og:image" content="https://lavacloud.online/og-image.png">
+    <meta property="og:url" content="https://lavacloud.online">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://lavacloud.online">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         :root {
-            --apple-blue: #007AFF;
-            --apple-gray: #8E8E93;
-            --apple-red: #FF3B30;
+            --primary-blue: #007AFF;
+            --primary-hover: #0051D5;
+            --gray-text: #8E8E93;
         }
-        .game-container {
-            aspect-ratio: 16/9;
+
+        .game-card {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .game-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 122, 255, 0.15);
+        }
+
+        .collection-card {
+            transition: all 0.3s;
+            background: linear-gradient(135deg, rgba(0, 122, 255, 0.05) 0%, rgba(0, 122, 255, 0.02) 100%);
+        }
+
+        .collection-card:hover {
+            background: linear-gradient(135deg, rgba(0, 122, 255, 0.1) 0%, rgba(0, 122, 255, 0.05) 100%);
+            transform: scale(1.02);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .badge-easy { background: #34C759; color: white; }
+        .badge-medium { background: #FF9500; color: white; }
+        .badge-hard { background: #FF3B30; color: white; }
+
+        .filter-btn {
+            padding: 8px 16px;
+            border-radius: 8px;
+            background: white;
+            border: 2px solid #E5E5EA;
+            color: #1C1C1E;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--primary-blue);
+            color: var(--primary-blue);
+        }
+
+        .filter-btn.active {
+            background: var(--primary-blue);
+            border-color: var(--primary-blue);
+            color: white;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .search-input {
+            border: 2px solid #E5E5EA;
+            border-radius: 12px;
+            padding: 12px 20px;
             width: 100%;
-            max-width: 1200px;
+            font-size: 16px;
+            transition: border-color 0.2s;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary-blue);
         }
     </style>
-    <!-- Google tag (gtag.js) -->
+
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RK4Z12C7B2"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-RK4Z12C7B2');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RK4Z12C7B2');
+    </script>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "LavaCloud Parkour Games Collection",
+      "description": "Collection of 18+ premium endless parkour and runner games",
+      "numberOfItems": 18,
+      "itemListElement": []
+    }
     </script>
 </head>
 <body class="bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <header class="text-center mb-12">
-            <h1 class="text-4xl md:text-6xl font-bold text-[#007AFF] mb-4">
-                LavaCloudParkour
-            </h1>
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                Master the art of parkour as you navigate through challenging lava-filled courses in this exciting online adventure!
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-[#007AFF]">LavaCloud Parkour</h1>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#featured" class="text-gray-700 hover:text-[#007AFF] transition">Featured</a>
+                    <a href="#collections" class="text-gray-700 hover:text-[#007AFF] transition">Collections</a>
+                    <a href="#all-games" class="text-gray-700 hover:text-[#007AFF] transition">All Games</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-6xl font-bold mb-6">
+                Endless Parkour Adventure Awaits
+            </h2>
+            <p class="text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto">
+                Challenge your reflexes with 18+ premium endless runner games. From high-speed tunnels to snowy slopes, forest trails to urban streets—test your limits now!
             </p>
-        </header>
+            <a href="#all-games" class="inline-block bg-white text-[#667eea] px-8 py-4 rounded-full font-semibold text-lg hover:bg-opacity-90 transition">
+                Start Playing →
+            </a>
+        </div>
+    </section>
 
-        <main>
-            <section class="mb-16">
-                <div class="game-container mx-auto shadow-2xl rounded-xl overflow-hidden">
-                    <iframe 
-                        src="https://www.onlinegames.io/games/2023/mjs/electron-dash/index.html"
-                        class="w-full h-full border-0"
-                        allowfullscreen
-                        loading="lazy">
-                    </iframe>
+    <!-- Featured Games -->
+    <section id="featured" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+                🔥 Featured Games
+            </h2>
+            <div id="featured-games" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Featured games will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections Preview -->
+    <section id="collections" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+                Game Collections
+            </h2>
+            <div id="collections-grid" class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Collections will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- All Games Section -->
+    <section id="all-games" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+                All Games
+            </h2>
+
+            <!-- Search and Filters -->
+            <div class="mb-8 space-y-4">
+                <!-- Search Bar -->
+                <div class="max-w-2xl">
+                    <input
+                        type="text"
+                        id="search-input"
+                        class="search-input"
+                        placeholder="🔍 Search games by name, theme, or tag..."
+                    >
                 </div>
-            </section>
 
-            <section class="max-w-4xl mx-auto">
-                <h2 class="text-2xl font-bold text-[#007AFF] mb-6">
-                    Game Features: Endless Parkour & Puzzle Challenges
-                </h2>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="bg-white p-6 rounded-xl shadow-md">
-                        <h2 class="text-xl font-semibold mb-3 text-[#007AFF]">
-                            Challenging Gameplay
-                        </h2>
-                        <p class="text-gray-600">
-                            Test your reflexes and timing skills as you jump between platforms and avoid dangerous lava obstacles.
-                        </p>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-md">
-                        <h2 class="text-xl font-semibold mb-3 text-[#007AFF]">
-                            Progressive Difficulty
-                        </h2>
-                        <p class="text-gray-600">
-                            Face increasingly challenging levels that will put your parkour skills to the ultimate test.
-                        </p>
-                    </div>
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap gap-3">
+                    <button class="filter-btn active" data-filter="all">All Games</button>
+                    <button class="filter-btn" data-filter="snow">❄️ Snow</button>
+                    <button class="filter-btn" data-filter="tunnel">🌀 Tunnel</button>
+                    <button class="filter-btn" data-filter="forest">🏔️ Forest</button>
+                    <button class="filter-btn" data-filter="city">🏙️ City</button>
+                    <button class="filter-btn" data-filter="easy">Easy</button>
+                    <button class="filter-btn" data-filter="medium">Medium</button>
+                    <button class="filter-btn" data-filter="hard">Hard</button>
                 </div>
-            </section>
+            </div>
 
-            <section class="mt-16 max-w-4xl mx-auto">
-                <h2 class="text-2xl font-bold text-[#007AFF] mb-6">
-                    How to Play in the Kaleidoscope Tunnel
-                </h2>
-                <div class="bg-white p-6 rounded-xl shadow-md">
-                    <ul class="list-disc list-inside text-gray-600 space-y-3">
-                        <li>Use arrow keys or WASD to move your character</li>
-                        <li>Press spacebar to jump</li>
-                        <li>Time your jumps carefully to avoid falling into lava</li>
-                        <li>Collect power-ups to enhance your abilities</li>
-                        <li>Reach the endpoint to complete each level</li>
+            <!-- Games Grid -->
+            <div id="all-games-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- All games will be loaded here -->
+            </div>
+
+            <!-- No Results Message -->
+            <div id="no-results" class="hidden text-center py-12">
+                <p class="text-gray-500 text-lg">No games found. Try different search terms or filters.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">🎮 LavaCloud Parkour</h3>
+                    <p class="text-gray-400">The ultimate destination for endless runner and parkour games. Play free online, no download required!</p>
+                    <p class="text-gray-400 mt-3">🔥 18+ Premium Games | ⚡ Instant Play | 📱 Mobile Friendly</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#featured" class="hover:text-white transition">🔥 Featured Games</a></li>
+                        <li><a href="#collections" class="hover:text-white transition">📂 Collections</a></li>
+                        <li><a href="#all-games" class="hover:text-white transition">🎯 All Games</a></li>
                     </ul>
                 </div>
-            </section>
-        </main>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 LavaCloud Parkour. All rights reserved.</p>
+                <p class="mt-2 text-sm">Games are embedded from authorized platforms. All trademarks belong to their respective owners.</p>
+            </div>
+        </div>
+    </footer>
 
-        <footer class="mt-16 text-center text-gray-500 text-sm">
-            <p>&copy; 2024 LavaCloudParkour. All rights reserved.</p>
-        </footer>
-    </div>
+    <!-- JavaScript -->
+    <script>
+        let gamesData = [];
+        let collectionsData = [];
+        let currentFilter = 'all';
+        let searchTerm = '';
+
+        // Load games data
+        async function loadGamesData() {
+            try {
+                const response = await fetch('/data/games.json');
+                const data = await response.json();
+                gamesData = data.games;
+                collectionsData = data.collections;
+
+                renderFeaturedGames();
+                renderCollections();
+                renderAllGames();
+            } catch (error) {
+                console.error('Error loading games:', error);
+            }
+        }
+
+        // Render featured games
+        function renderFeaturedGames() {
+            const container = document.getElementById('featured-games');
+            const featuredGames = gamesData.filter(game => game.featured);
+
+            container.innerHTML = featuredGames.map(game => `
+                <a href="game/${game.slug}.html" class="game-card bg-white rounded-xl shadow-lg overflow-hidden block">
+                    <div class="h-48 bg-gray-900 relative overflow-hidden">
+                        <img src="${game.imageUrl}" alt="${game.title}" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-start justify-between mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">${game.title}</h3>
+                            <span class="badge badge-${game.difficulty}">${game.difficulty}</span>
+                        </div>
+                        <p class="text-gray-600 mb-4 line-clamp-2">${game.shortDesc}</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex gap-2">
+                                <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">🎮 ${game.theme}</span>
+                                <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">⚡ ${game.speed}</span>
+                            </div>
+                            <div class="bg-[#007AFF] hover:bg-[#0051D5] text-white px-4 py-2 rounded-lg font-semibold text-sm transition">
+                                Play Now
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            `).join('');
+        }
+
+        // Render collections
+        function renderCollections() {
+            const container = document.getElementById('collections-grid');
+
+            container.innerHTML = collectionsData.map(collection => `
+                <a href="collections/${collection.slug}.html" class="collection-card block p-6 rounded-xl border-2 border-gray-200">
+                    <div class="text-5xl mb-4">${collection.icon}</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">${collection.name}</h3>
+                    <p class="text-gray-600 text-sm mb-4">${collection.description}</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-[#007AFF] font-semibold">${collection.games.length} Games</span>
+                        <span class="text-[#007AFF]">→</span>
+                    </div>
+                </a>
+            `).join('');
+        }
+
+        // Render all games with filters
+        function renderAllGames() {
+            const container = document.getElementById('all-games-grid');
+            const noResults = document.getElementById('no-results');
+
+            let filteredGames = gamesData;
+
+            // Apply theme/difficulty filter
+            if (currentFilter !== 'all') {
+                filteredGames = filteredGames.filter(game =>
+                    game.theme === currentFilter || game.difficulty === currentFilter
+                );
+            }
+
+            // Apply search filter
+            if (searchTerm) {
+                const term = searchTerm.toLowerCase();
+                filteredGames = filteredGames.filter(game =>
+                    game.title.toLowerCase().includes(term) ||
+                    game.shortDesc.toLowerCase().includes(term) ||
+                    game.theme.toLowerCase().includes(term) ||
+                    game.tags.some(tag => tag.toLowerCase().includes(term))
+                );
+            }
+
+            if (filteredGames.length === 0) {
+                container.classList.add('hidden');
+                noResults.classList.remove('hidden');
+            } else {
+                container.classList.remove('hidden');
+                noResults.classList.add('hidden');
+
+                container.innerHTML = filteredGames.map(game => `
+                    <a href="game/${game.slug}.html" class="game-card bg-white rounded-xl shadow-md overflow-hidden block">
+                        <div class="h-40 bg-gray-900 relative overflow-hidden">
+                            <img src="${game.imageUrl}" alt="${game.title}" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-start justify-between mb-2">
+                                <h3 class="text-lg font-bold text-gray-900">${game.title}</h3>
+                                <span class="badge badge-${game.difficulty}">${game.difficulty}</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-3 line-clamp-2">${game.shortDesc}</p>
+                            <div class="flex flex-wrap gap-1 mb-3">
+                                ${game.tags.slice(0, 3).map(tag =>
+                                    `<span class="text-xs bg-gray-100 px-2 py-1 rounded">${tag}</span>`
+                                ).join('')}
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs text-gray-500">🎯 ${game.difficulty} level</span>
+                                <div class="bg-[#007AFF] hover:bg-[#0051D5] text-white px-4 py-2 rounded-lg font-semibold text-sm transition">
+                                    Play
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                `).join('');
+            }
+        }
+
+        // Helper functions
+        function getThemeIcon(theme) {
+            const icons = {
+                'snow': '❄️',
+                'tunnel': '🌀',
+                'forest': '🏔️',
+                'city': '🏙️'
+            };
+            return icons[theme] || '🎮';
+        }
+
+        function getThemeGradient(theme) {
+            const gradients = {
+                'snow': 'from-blue-300 to-cyan-400',
+                'tunnel': 'from-purple-400 to-pink-500',
+                'forest': 'from-green-400 to-teal-500',
+                'city': 'from-orange-400 to-red-500'
+            };
+            return gradients[theme] || 'from-gray-400 to-gray-500';
+        }
+
+        // Event listeners for filters
+        document.addEventListener('DOMContentLoaded', () => {
+            loadGamesData();
+
+            // Filter buttons
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    currentFilter = btn.dataset.filter;
+                    renderAllGames();
+                });
+            });
+
+            // Search input
+            const searchInput = document.getElementById('search-input');
+            searchInput.addEventListener('input', (e) => {
+                searchTerm = e.target.value;
+                renderAllGames();
+            });
+        });
+    </script>
 </body>
-</html> 
+</html>

@@ -1,0 +1,1088 @@
+{
+  "games": [
+    {
+      "slug": "groovy-ski",
+      "title": "Groovy Ski",
+      "theme": "snow",
+      "source": "Gamezop",
+      "iframeSrc": "https://zv1y2i8p.play.gamezop.com/g/EJaG_JfW9l",
+      "shortDesc": "Speed down snowy slopes, dodge trees and rocks in this endless skiing game.",
+      "fullDesc": "Groovy Ski is a fast-paced HTML5 skiing game. Your core objective is to maintain your line and dodge obstacles (trees, rocks, etc.) on constantly changing slopes, sliding as far as possible for higher scores. The challenge lies in line corrections and lateral evasion timing at high speeds—easy to pick up, quick rounds, perfect for mobile play during downtime.",
+      "controls": [
+        "Tap/touch to switch direction or dodge",
+        "Desktop: mouse click or arrow keys (varies by implementation)"
+      ],
+      "tags": [
+        "Endless",
+        "Skiing",
+        "Reaction",
+        "HTML5"
+      ],
+      "difficulty": "easy",
+      "speed": "medium",
+      "featured": false,
+      "popularity": 75,
+      "mobileFriendly": true,
+      "relatedGames": [
+        "snow-rider-3d",
+        "penguin-skip",
+        "yeti-sensation"
+      ],
+      "howToPlay": {
+        "objective": "Keep sliding downhill and avoid obstacles to achieve greater distance and higher scores.",
+        "basicControls": "Mobile: tap left/right to change direction; Desktop: use mouse or directional controls.",
+        "tips": [
+          "Anticipate the line of trees and rocks ahead and plan your turn route in advance.",
+          "Maintain small, continuous adjustments rather than sharp, large turns.",
+          "In denser obstacle zones, reduce turn amplitude rather than swinging frequently."
+        ]
+      },
+      "guide": {
+        "basics": "Score increases with distance; key is stable line control and dodging feel.",
+        "scoring": "The farther you go, the higher your score. Continuous collision-free skiing steadily boosts performance.",
+        "advanced": [
+          "Lock onto a \"safe corridor\"—find a continuous passable lane between trees/rocks.",
+          "Keep your vision 2-3 obstacles ahead to reduce errors from sudden turns.",
+          "Moderate speed up on straight sections, reduce turn amplitude early in dense sections."
+        ],
+        "commonMistakes": [
+          "Staring at the character instead of ahead causes delayed reactions.",
+          "Frequent sharp swerves in dense obstacles, getting stuck in gaps.",
+          "Ignoring mobile touch delay, clicking too rapidly causing misoperations."
+        ],
+        "faq": [
+          {
+            "q": "Does it work on mobile?",
+            "a": "Yes, Gamezop games are HTML5 and playable on mobile devices."
+          },
+          {
+            "q": "Is there an end point?",
+            "a": "No, it's endless mode—aim to refresh your farthest distance/highest score."
+          }
+        ]
+      },
+      "imageUrl": "images/games/groovy-ski.jpg"
+    },
+    {
+      "slug": "snow-rider-3d",
+      "title": "Snow Rider 3D",
+      "theme": "snow",
+      "source": "Y8",
+      "iframeSrc": "https://y8.com/embed/snow_rider_3d",
+      "shortDesc": "Ride a sled downhill, jump over obstacles and collect gifts to unlock more sleds.",
+      "fullDesc": "Snow Rider 3D is a 3D sled racing/dodging game. Players control a sled speeding downhill on snowy tracks; the key is timing—steering or jumping before obstacles (logs, rocks) appear. Gifts along the path unlock more sled appearances and styles. As speed increases, trajectories become harder to control, testing reactions and line choices.",
+      "controls": [
+        "Steer (directional control)",
+        "Jump",
+        "Fullscreen"
+      ],
+      "tags": [
+        "Endless",
+        "Sled",
+        "Dodging",
+        "3D"
+      ],
+      "difficulty": "medium",
+      "speed": "fast",
+      "featured": true,
+      "popularity": 92,
+      "mobileFriendly": true,
+      "relatedGames": [
+        "groovy-ski",
+        "yeti-sensation",
+        "slope"
+      ],
+      "howToPlay": {
+        "objective": "Control the sled downhill, avoid obstacles, collect gifts and set distance records.",
+        "basicControls": "Arrow keys/AD for steering, designated key for jump (see page hint); fullscreen toggle available.",
+        "tips": [
+          "When facing consecutive obstacles, pre-align your angle for ramps to reduce post-landing corrections.",
+          "Gifts are usually on safer routes—ensure you won't crash before grabbing more gifts.",
+          "Maintain a smooth line upon jump landing; avoid sharp turns immediately after touchdown."
+        ]
+      },
+      "guide": {
+        "basics": "Speed increases, obstacles get denser—focus on \"survive first, score second\".",
+        "scoring": "Distance is the main scoring factor; collected gifts unlock sleds (appearance/styles).",
+        "advanced": [
+          "Use small S-curve lines to bypass rows of obstacles.",
+          "On continuous bumpy terrain, prioritize \"jumping over hard spots,\" but reserve turn space for landing.",
+          "On long straightaways, stay near the center line to reserve dodging room on both sides."
+        ],
+        "commonMistakes": [
+          "Jumping too late, crashing into pre-ramp obstacles.",
+          "Greed for gifts while abandoning safe routes.",
+          "Making large-angle swerves at high speed, losing control."
+        ],
+        "faq": [
+          {
+            "q": "What are gifts for?",
+            "a": "Use them in-game to purchase/unlock different sleds."
+          },
+          {
+            "q": "Why don't controls respond?",
+            "a": "Click the game area for focus first; on mobile, use touch/virtual buttons."
+          }
+        ]
+      },
+      "imageUrl": "images/games/snow-rider-3d.webp"
+    },
+    {
+      "slug": "penguin-skip",
+      "title": "Penguin Skip",
+      "theme": "snow",
+      "source": "Gamezop",
+      "iframeSrc": "https://zv1y2i8p.play.gamezop.com/g/HJee0YHZ_E",
+      "shortDesc": "Control a little penguin hopping across floating ice, collect fish but don't fall in the water.",
+      "fullDesc": "Penguin Skip is a lightweight endless jumping game. The core loop: \"judge landing spot → jump → collect fish → keep advancing.\" Master the rhythm and jump angle to avoid mistakes and falling into water. Simple rhythm yet highly addictive, perfect for mobile single-finger operation.",
+      "controls": [
+        "Tap/touch to jump or change landing point"
+      ],
+      "tags": [
+        "Endless",
+        "Jumping",
+        "Casual",
+        "Mobile-friendly"
+      ],
+      "difficulty": "easy",
+      "speed": "medium",
+      "featured": false,
+      "popularity": 70,
+      "mobileFriendly": true,
+      "relatedGames": [
+        "jom-jom-jump",
+        "groovy-ski",
+        "enchanted-waters"
+      ],
+      "howToPlay": {
+        "objective": "Jump across floating ice and collect fish, traveling as far as possible.",
+        "basicControls": "Tap screen to complete jumps and movement; desktop uses mouse clicks.",
+        "tips": [
+          "Prioritize larger, closer ice blocks for a safe rhythm.",
+          "Consecutive small hops are more stable than large jumps; avoid overly wide gaps.",
+          "When collecting fish, don't deviate too far from the safe route."
+        ]
+      },
+      "guide": {
+        "basics": "Simple one-button rhythm gameplay; focus on \"survival first\".",
+        "scoring": "Distance and collectibles contribute to performance; falling in water ends the round.",
+        "advanced": [
+          "Observe 2-3 ice blocks ahead to plan double-jumps or triple-jumps.",
+          "Even when fish are dense, confirm safe landing before collecting.",
+          "Maintain continuous tapping when rhythm is right to avoid disruption."
+        ],
+        "commonMistakes": [
+          "Making overly long jumps for fish, falling into water.",
+          "Only watching current landing spot, not predicting next two steps.",
+          "Rushing with continuous mistaps, rhythm chaos."
+        ],
+        "faq": [
+          {
+            "q": "Can I pause?",
+            "a": "Most embedded versions are instant loops, usually no pause (depends on page version)."
+          },
+          {
+            "q": "Does it support landscape?",
+            "a": "Supports mobile adaptive layout; landscape recommended for larger view."
+          }
+        ]
+      },
+      "imageUrl": "images/games/penguin-skip.jpg"
+    },
+    {
+      "slug": "color-tunnel",
+      "title": "Color Tunnel",
+      "theme": "tunnel",
+      "source": "Y8",
+      "iframeSrc": "https://y8.com/embed/color_tunnel",
+      "shortDesc": "Dodge obstacles of different shapes in a high-speed colorful tunnel, testing your reaction limits.",
+      "fullDesc": "Color Tunnel is a classic high-speed dodging tunnel runner. You move at high speed inside (and sometimes outside) a vividly colored tunnel, continuously avoiding obstacles with different shapes/rhythms. As sections progress, speed and complexity increase, testing your quick identification of \"gaps\" and lane-switching ability.",
+      "controls": [
+        "Directional movement (keyboard arrows or AD)",
+        "Fullscreen"
+      ],
+      "tags": [
+        "Endless",
+        "Tunnel",
+        "Dodging",
+        "High-speed"
+      ],
+      "difficulty": "medium",
+      "speed": "very-fast",
+      "featured": true,
+      "popularity": 95,
+      "mobileFriendly": true,
+      "relatedGames": [
+        "tunnel-rush",
+        "death-run-3d",
+        "blue-vortex"
+      ],
+      "howToPlay": {
+        "objective": "Keep advancing in the tunnel and dodge all obstacles to refresh higher mileage/stage progress.",
+        "basicControls": "Move left/right to align with gaps or openings; toggle fullscreen when needed for better visibility.",
+        "tips": [
+          "Focus attention on \"gaps\" rather than \"obstacles\".",
+          "When patterns rotate/shift, reach the safe sector early to wait for the gap to arrive.",
+          "Maintain smooth continuous movement; avoid large-amplitude switches at high speed."
+        ]
+      },
+      "guide": {
+        "basics": "Speed ramps up quickly; establish a stable \"see gap—micro-move\" rhythm early.",
+        "scoring": "Mileage/stage progression is primary; obstacles become more complex as you advance.",
+        "advanced": [
+          "When facing outer tracks, slide along visible \"groove lines\" to reduce visual misalignment.",
+          "Identify common patterns (bar blockades, rotating blocks, contracting tunnels) and establish fixed responses.",
+          "In variable-speed sections, minimize full-width lateral moves to avoid over-displacement."
+        ],
+        "commonMistakes": [
+          "Staring at obstacles instead of gaps, causing delayed movement.",
+          "Chasing gaps counter-clockwise on rotating obstacles, easily blocked.",
+          "Sharp direction changes at high speed, causing overshoot."
+        ],
+        "faq": [
+          {
+            "q": "Which platforms are supported?",
+            "a": "Web (WebGL/HTML5); mobile compatibility depends on specific page implementation."
+          },
+          {
+            "q": "How is it different from Tunnel Rush?",
+            "a": "Both are high-speed tunnel dodgers; graphics and stage layout differ, operation thinking is similar."
+          }
+        ]
+      },
+      "imageUrl": "images/games/color-tunnel.webp"
+    },
+    {
+      "slug": "death-run-3d",
+      "title": "Death Run 3D",
+      "theme": "tunnel",
+      "source": "Y8",
+      "iframeSrc": "https://y8.com/embed/death_run_3d",
+      "shortDesc": "Fly through pipes dodging movable blocks in this hardcore reaction game with global leaderboards.",
+      "fullDesc": "Death Run 3D is a veteran hardcore tunnel dodger. You fly at high speed through pipes filled with movable blocks; gaps are extremely narrow, requiring ultra-short reaction times for line adjustments. It features global leaderboards (Y8 Highscore), perfect for players chasing extreme scores.",
+      "controls": [
+        "Move (directional movement)",
+        "Fullscreen"
+      ],
+      "tags": [
+        "Endless",
+        "Leaderboard",
+        "Reaction",
+        "Hardcore"
+      ],
+      "difficulty": "hard",
+      "speed": "very-fast",
+      "featured": true,
+      "popularity": 90,
+      "mobileFriendly": false,
+      "relatedGames": [
+        "color-tunnel",
+        "tunnel-rush",
+        "slope"
+      ],
+      "howToPlay": {
+        "objective": "Navigate all movable blocks in the high-speed pipe, fly as far as possible, and challenge leaderboards.",
+        "basicControls": "Move left/right (or up/down) to align with gaps; fullscreen recommended for better observation.",
+        "tips": [
+          "Stay near the pipe centerline to reserve correction room on both sides.",
+          "Predict block movement direction, enter target tunnel \"queue\" early.",
+          "When vision is obscured, keep current direction with slight corrections; avoid large swerves."
+        ]
+      },
+      "guide": {
+        "basics": "Challenge: \"movable obstacles + narrow gaps\"—requires aggressive prediction.",
+        "scoring": "Primarily distance/survival time; submit to global leaderboards.",
+        "advanced": [
+          "Establish fixed positioning for recurring patterns (e.g., \"dual-column offset\" prioritize outer lane).",
+          "Minimize back-and-forth lateral jumps; keep line stable after choosing a tunnel.",
+          "When facing consecutive tight gaps, use minimal \"shake\" micro-adjustments to pass."
+        ],
+        "commonMistakes": [
+          "Turning only at the gap mouth—reactions too late.",
+          "Sharp direction changes after being obscured, causing collision.",
+          "Ignoring stability for speed, scores actually drop."
+        ],
+        "faq": [
+          {
+            "q": "Is there a leaderboard?",
+            "a": "Yes, supports global leaderboards (requires Y8 account system)."
+          },
+          {
+            "q": "Can I pause or save?",
+            "a": "Depends on embedded version; typically instant challenge, no mid-run save."
+          }
+        ]
+      },
+      "imageUrl": "images/games/death-run-3d.webp"
+    },
+    {
+      "slug": "tunnel-rush",
+      "title": "Tunnel Rush",
+      "theme": "tunnel",
+      "source": "Y8",
+      "iframeSrc": "https://y8.com/embed/tunnel_rush_",
+      "shortDesc": "Classic high-speed tunnel dodger with continuous geometric obstacles.",
+      "fullDesc": "Tunnel Rush shares the high-speed tunnel dodging genre with Color Tunnel, featuring distinct geometric shapes and intense speed variations. Players must find usable gaps in constantly appearing polygon tunnels, enhanced challenge rhythm through stage-based pattern combinations.",
+      "controls": [
+        "Left/right movement (keyboard/touch)",
+        "Fullscreen"
+      ],
+      "tags": [
+        "Endless",
+        "Tunnel",
+        "Dodging",
+        "High-speed"
+      ],
+      "difficulty": "medium",
+      "speed": "fast",
+      "featured": false,
+      "popularity": 88,
+      "mobileFriendly": true,
+      "relatedGames": [
+        "color-tunnel",
+        "death-run-3d",
+        "blue-vortex"
+      ],
+      "howToPlay": {
+        "objective": "Navigate different-shaped obstacles in high-speed tunnels, advancing through as many stages as possible.",
+        "basicControls": "Move left/right to align with gaps; observe pattern rhythm to decide switching timing.",
+        "tips": [
+          "Brief buffer before pattern switches—seize the moment to complete movement.",
+          "Prioritize positioning to \"next segment's safe zone\" rather than current segment's end.",
+          "When outer tunnel is passable, sliding along edge grooves is more stable."
+        ]
+      },
+      "guide": {
+        "basics": "Rhythm driven by pattern combinations; learning to read them improves stability.",
+        "scoring": "More stages advanced = faster speed, higher scores.",
+        "advanced": [
+          "Common combos: rotating bars, contracting holes, broom-type sweeps—respond with \"early positioning / center waiting / smooth switching\".",
+          "Avoid large lateral moves during transition frames; easily hit by closing gaps.",
+          "When visuals are chaotic, reduce movement frequency; prioritize \"coarse-grain\" decisions."
+        ],
+        "commonMistakes": [
+          "Over-correcting when pattern interference is strong.",
+          "Not pre-positioning, getting caught by sudden closing.",
+          "Making full-width sharp turns during stage switches."
+        ],
+        "faq": [
+          {
+            "q": "Which is harder, Color Tunnel or this?",
+            "a": "Styles are similar; Tunnel Rush has more aggressive speed and variations in certain stages, feeling more \"hardcore\"."
+          },
+          {
+            "q": "Can I customize keybinds?",
+            "a": "Depends on embedded version; typically no keybind customization."
+          }
+        ]
+      },
+      "imageUrl": "images/games/tunnel-rush.webp"
+    },
+    {
+      "slug": "slope",
+      "title": "Slope",
+      "theme": "tunnel",
+      "source": "Y8",
+      "iframeSrc": "https://y8.com/embed/slope",
+      "shortDesc": "Control a ball speeding downhill on steep tracks, avoid red obstacles and challenge high scores.",
+      "fullDesc": "Slope is the classic ball downhill dodger. Tracks are slanted geometric slopes; players use left/right movement to make the ball avoid red obstacles and continuously slide down the slope. Slope combinations and speed gradually increase; key is \"look far—small continuous corrections\".",
+      "controls": [
+        "Move (directional movement)",
+        "Fullscreen"
+      ],
+      "tags": [
+        "Endless",
+        "Ball",
+        "Downhill",
+        "Reaction"
+      ],
+      "difficulty": "medium",
+      "speed": "progressive",
+      "featured": true,
+      "popularity": 98,
+      "mobileFriendly": true,
+      "relatedGames": [
+        "color-tunnel",
+        "snow-rider-3d",
+        "death-run-3d"
+      ],
+      "howToPlay": {
+        "objective": "Keep the ball from touching red obstacles and continuously slide down, going as far as possible.",
+        "basicControls": "Move left/right; prioritize sliding along centerline to reserve correction space.",
+        "tips": [
+          "When facing consecutive red pillars, choose outer wider passages.",
+          "Short quick adjustments are safer than large swerves.",
+          "Complete alignment before slope segments break to avoid falling off."
+        ]
+      },
+      "guide": {
+        "basics": "Core is \"vision far ahead + small continuous corrections\".",
+        "scoring": "Further distance = higher score; later segments significantly more difficult.",
+        "advanced": [
+          "For foreseeable slope gaps, complete \"pre-alignment\" in advance.",
+          "In narrow passages, maintain slight shake-style correction movements.",
+          "For consecutive right/left corner combos, use \"half-width → center → half-width\" rhythm."
+        ],
+        "commonMistakes": [
+          "Staring at ball instead of track, causing delayed judgment.",
+          "Attempting large-angle sharp turns to remedy, getting more off-course.",
+          "Not centering after landing before entering next obstacle segment."
+        ],
+        "faq": [
+          {
+            "q": "Can I play fullscreen?",
+            "a": "Supports fullscreen; helps judge slopes and obstacles."
+          },
+          {
+            "q": "Mobile playable?",
+            "a": "Depends on page implementation; some sites support touch operations."
+          }
+        ]
+      },
+      "imageUrl": "images/games/slope.webp"
+    },
+    {
+      "slug": "yeti-sensation",
+      "title": "Yeti Sensation",
+      "theme": "forest",
+      "source": "Y8",
+      "iframeSrc": "https://y8.com/embed/yeti_sensation",
+      "shortDesc": "Three-lane endless runner, collect fruits and unlock upgrades in the shop.",
+      "fullDesc": "Yeti Sensation uses a three-lane endless runner structure: avoid traps and obstacles, collect fruits and berries, and use accumulated currency to unlock upgrades in the shop. Controls include jump, hold-slide, and lane-switching—upbeat rhythm, suitable for long-term score grinding.",
+      "controls": [
+        "Jump",
+        "(Hold) Slide",
+        "Select Path (lane switch)",
+        "Fullscreen"
+      ],
+      "tags": [
+        "Endless",
+        "Runner",
+        "Three-lane",
+        "Collect"
+      ],
+      "difficulty": "medium",
+      "speed": "medium",
+      "featured": false,
+      "popularity": 78,
+      "mobileFriendly": true,
+      "relatedGames": [
+        "escape-run",
+        "ninja-speed-runner",
+        "skate-hooligans"
+      ],
+      "howToPlay": {
+        "objective": "Avoid traps and obstacles, collect as many fruits as possible and run farther.",
+        "basicControls": "Jump over obstacles; hold slide to pass through low spaces; switch lanes left/right to dodge.",
+        "tips": [
+          "Before consecutive obstacles, determine if you need to \"jump\" or \"slide\" and pre-position.",
+          "Shop upgrades prioritize error tolerance/revenue-related items.",
+          "Learn to combine lane switching with jump/slide to reduce multiple operations."
+        ]
+      },
+      "guide": {
+        "basics": "Standard three-lane design; upgrades improve experience.",
+        "scoring": "Distance and collectibles are main performance metrics; speed increases as you advance.",
+        "advanced": [
+          "In obstacle sequences, handle \"deadly\" threats before \"slowdown\" ones.",
+          "When fruits are dense, use small zigzag lane changes to sweep-collect.",
+          "Use slide as a \"low-profile\" passing method; avoid blind jumping."
+        ],
+        "commonMistakes": [
+          "Still choosing jump when facing low obstacles, causing collision.",
+          "Only focusing on collecting, ignoring upcoming chain traps.",
+          "Lane switching too late, getting \"clipped\" by obstacles at lane edge."
+        ],
+        "faq": [
+          {
+            "q": "What are collected fruits for?",
+            "a": "Purchase upgrade items in shop to improve survival and revenue efficiency."
+          },
+          {
+            "q": "Touch screen support?",
+            "a": "Supports touch; keyboard operation also available."
+          }
+        ]
+      },
+      "imageUrl": "images/games/yeti-sensation.webp"
+    },
+    {
+      "slug": "ninja-speed-runner",
+      "title": "Ninja Speed Runner",
+      "theme": "forest",
+      "source": "Gamezop",
+      "iframeSrc": "https://zv1y2i8p.play.gamezop.com/g/QPcVkaHi1",
+      "shortDesc": "High-speed running through enemy territory, dodging shurikens in endless parkour.",
+      "fullDesc": "Ninja Speed Runner is an endless runner centered on \"high-speed running + dodging projectiles (like shurikens)\". Simple rules but tight rhythm; the farther you run, the denser the threats, lower error tolerance.",
+      "controls": [
+        "Tap/touch to jump or change line (by page implementation)"
+      ],
+      "tags": [
+        "Endless",
+        "Ninja",
+        "Runner",
+        "Dodge"
+      ],
+      "difficulty": "medium",
+      "speed": "fast",
+      "featured": false,
+      "popularity": 72,
+      "mobileFriendly": true,
+      "relatedGames": [
+        "escape-run",
+        "skate-hooligans",
+        "yeti-sensation"
+      ],
+      "howToPlay": {
+        "objective": "Keep advancing and dodge shurikens and other threats, running as far as possible.",
+        "basicControls": "Tap/click to complete jumps or repositioning; desktop uses mouse/keyboard (depends on page).",
+        "tips": [
+          "Projectiles usually appear in pairs or strings; prioritize finding \"gaps\".",
+          "When facing low terrain obstacles, jump early to reserve landing correction space.",
+          "Keep vision two beats ahead, act by rhythm rather than instant reaction."
+        ]
+      },
+      "guide": {
+        "basics": "Core is \"beat sense\"; fixed rhythm is more stable than frequent micro-adjustments.",
+        "scoring": "Further distance = higher difficulty; record-breaking requires stable positioning.",
+        "advanced": [
+          "Learn to use terrain elevation \"jump with terrain slope\" for more stable landings.",
+          "When facing consecutive projectiles, first \"position\" to safe track, then minor corrections.",
+          "Minimize second commands during landing frames to prevent mistaps."
+        ],
+        "commonMistakes": [
+          "Only watching current projectile, not predicting second one's path.",
+          "Immediately making large position changes during downhill landing, causing errors.",
+          "Over-tapping causing character action interruption."
+        ],
+        "faq": [
+          {
+            "q": "Is there an end point?",
+            "a": "No, it's endless challenge mode."
+          },
+          {
+            "q": "Keyboard support?",
+            "a": "Most versions are touch-primary; keyboard support depends on web implementation."
+          }
+        ]
+      },
+      "imageUrl": "images/games/ninja-speed-runner.jpg"
+    },
+    {
+      "slug": "escape-run",
+      "title": "Escape Run",
+      "theme": "forest",
+      "source": "Gamezop",
+      "iframeSrc": "https://zv1y2i8p.play.gamezop.com/g/Skz4pzkDqyX",
+      "shortDesc": "Three-lane ski/snowy escape runner, collect fruits and unlock power-ups.",
+      "fullDesc": "Escape Run is a classic three-lane runner: swipe left/right to change lanes, swipe up to jump over obstacles, continuously collect berries on the road for points or to unlock power-ups. Smooth rhythm, clear progression, suitable for long-term grinding and incremental improvement.",
+      "controls": [
+        "Swipe to change lane/jump (mobile)",
+        "Desktop: direction/space keys (see page hints)"
+      ],
+      "tags": [
+        "Endless",
+        "Runner",
+        "Lane-switch",
+        "Collect"
+      ],
+      "difficulty": "medium",
+      "speed": "medium",
+      "featured": false,
+      "popularity": 76,
+      "mobileFriendly": true,
+      "relatedGames": [
+        "yeti-sensation",
+        "ninja-speed-runner",
+        "cross-the-road"
+      ],
+      "howToPlay": {
+        "objective": "Navigate through obstacles collecting berries, purchase/trigger power-ups, run as far as possible.",
+        "basicControls": "Swipe left/right to change lanes, swipe up to jump; mind rhythm, avoid multi-finger mistaps.",
+        "tips": [
+          "In consecutive obstacle segments, position first then jump to reduce mid-air lane-change risk.",
+          "Prioritize survival routes, then consider collection efficiency.",
+          "Use power-ups to increase error tolerance or revenue, forming \"stable—fast—stable\" cycles."
+        ]
+      },
+      "guide": {
+        "basics": "Three-lane runner paradigm; action combinations (lane-switch/jump/slide) are key.",
+        "scoring": "Distance + collectibles combined performance; unlocking power-ups speeds up scoring.",
+        "advanced": [
+          "In curved consecutive obstacles, use \"two-step lane change\" to reduce risk.",
+          "Return to center after landing before next action.",
+          "In dense segments, reduce tap frequency, execute by rhythm."
+        ],
+        "commonMistakes": [
+          "Forcing through dense obstacles for collectibles.",
+          "Jumping too late, landing into second-segment obstacles.",
+          "Multi-finger swipes causing repeated commands."
+        ],
+        "faq": [
+          {
+            "q": "How to get power-ups?",
+            "a": "Collect berries to gain points/currency, then exchange or trigger power-ups (depends on version)."
+          },
+          {
+            "q": "Controller support?",
+            "a": "Usually no controller mapping."
+          }
+        ]
+      },
+      "imageUrl": "images/games/escape-run.jpg"
+    },
+    {
+      "slug": "jom-jom-jump",
+      "title": "Jom Jom Jump",
+      "theme": "forest",
+      "source": "Gamezop",
+      "iframeSrc": "https://zv1y2i8p.play.gamezop.com/g/SyjAFr-dE",
+      "shortDesc": "Control a little monster jumping upward between platforms, collecting apples in endless vertical jumping.",
+      "fullDesc": "Jom Jom Jump is a vertical endless jumping game. Players must time jumps to advance upward between platforms while collecting apples as much as possible. Platform types and spacings create rhythm variations; core is stable \"consecutive jump\" feel and landing spot prediction.",
+      "controls": [
+        "Tap/touch to jump and move (by page implementation)"
+      ],
+      "tags": [
+        "Endless",
+        "Jumping",
+        "Collect",
+        "Vertical"
+      ],
+      "difficulty": "easy",
+      "speed": "medium",
+      "featured": false,
+      "popularity": 68,
+      "mobileFriendly": true,
+      "relatedGames": [
+        "penguin-skip",
+        "enchanted-waters",
+        "groovy-ski"
+      ],
+      "howToPlay": {
+        "objective": "Advance upward through consecutive jumps between platforms, avoid falling and collect as many apples as possible.",
+        "basicControls": "Tap to complete jumps and adjustments; mind continuous landing spots.",
+        "tips": [
+          "Prioritize choosing larger, closer platforms to establish rhythm.",
+          "Two to three consecutive small jumps usually more stable than one large jump.",
+          "Jumping at platform edge gains greater effective upward space."
+        ]
+      },
+      "guide": {
+        "basics": "Rhythm sense and landing judgment determine upper limit.",
+        "scoring": "Height and collectibles together form scores.",
+        "advanced": [
+          "Identify special platforms (moving/fragile) and adjust rhythm.",
+          "In multi-platform clusters, plan \"two-step moves\" to reduce pauses.",
+          "Avoid repeated adjustments on extremely narrow platforms, easy to slide off."
+        ],
+        "commonMistakes": [
+          "Abandoning safe platforms for apples.",
+          "Jumping too early/late causing under-distance or over-distance.",
+          "Consecutive large jumps causing rhythm collapse."
+        ],
+        "faq": [
+          {
+            "q": "Is there an end point?",
+            "a": "No, climb as high as possible and refresh records."
+          },
+          {
+            "q": "Mobile support?",
+            "a": "Supports touch controls; experience is good."
+          }
+        ]
+      },
+      "imageUrl": "images/games/jom-jom-jump.jpg"
+    },
+    {
+      "slug": "enchanted-waters",
+      "title": "Enchanted Waters",
+      "theme": "forest",
+      "source": "Gamezop",
+      "iframeSrc": "https://zv1y2i8p.play.gamezop.com/g/HJskh679Cr",
+      "shortDesc": "Strong rhythm water-jumping/maze-style challenge; one wrong step and you fall in the lake.",
+      "fullDesc": "Enchanted Waters' core is \"precise stepping\". Move and jump between narrow platforms/stakes; wrong timing directly leads to falling into the lake. As stages progress, platform spacing and beat become more demanding, requiring quick decisions after observation.",
+      "controls": [
+        "Tap/touch to jump or move (by page implementation)"
+      ],
+      "tags": [
+        "Runner",
+        "Rhythm",
+        "Water",
+        "Stages"
+      ],
+      "difficulty": "medium",
+      "speed": "medium",
+      "featured": false,
+      "popularity": 74,
+      "mobileFriendly": true,
+      "relatedGames": [
+        "jom-jom-jump",
+        "penguin-skip",
+        "escape-run"
+      ],
+      "howToPlay": {
+        "objective": "Move/jump at correct timing between water platforms, consecutively passing harder segments.",
+        "basicControls": "Tap for movement and jumping; grasp the beat, avoid hesitation and double commands.",
+        "tips": [
+          "Prioritize observing if target platform is at reachable position before deciding jump timing.",
+          "Consecutive triple-jump rhythm usually \"short—short—medium\".",
+          "Before long-distance jumps, test with small movements to correct angle."
+        ]
+      },
+      "guide": {
+        "basics": "One wrong step = lake fall; beat sense most important.",
+        "scoring": "Consecutively passing platforms achieves steady progress.",
+        "advanced": [
+          "Through \"stand—jump—land—jump again\" fixed loop to reduce errors.",
+          "When moving platforms appear, reach intersection early to wait.",
+          "For rotating/reciprocating platforms, focus on \"landing spot\" rather than platform body."
+        ],
+        "commonMistakes": [
+          "Forcing jumps outside reachable window.",
+          "Consecutive rapid taps causing mistaps.",
+          "Over-correcting causing step-outs."
+        ],
+        "faq": [
+          {
+            "q": "How's the difficulty?",
+            "a": "Rhythm-type challenge; early is forgiving, later windows narrower, needs proficiency support."
+          },
+          {
+            "q": "Touch support?",
+            "a": "Supports touch; mobile experience is good."
+          }
+        ]
+      },
+      "imageUrl": "images/games/enchanted-waters.jpg"
+    },
+    {
+      "slug": "highway-traffic",
+      "title": "Highway Traffic",
+      "theme": "city",
+      "source": "OnlineGames.io",
+      "iframeSrc": "https://www.onlinegames.io/games/2022/unity/highway-traffic/index.html",
+      "shortDesc": "Drive on busy highways, responding to traffic speed changes and sudden braking.",
+      "fullDesc": "Highway Traffic's goal is to keep advancing on crowded highways while avoiding collisions. Other vehicles randomly change speed, suddenly slow down or brake, requiring focus and quick decisions. Game becomes more challenging as you progress, emphasizing stability and prediction.",
+      "controls": [
+        "Direction control (keyboard/touch)",
+        "(By version) accelerate/brake",
+        "Fullscreen available"
+      ],
+      "tags": [
+        "Endless",
+        "Driving",
+        "Traffic",
+        "Reaction"
+      ],
+      "difficulty": "medium",
+      "speed": "fast",
+      "featured": false,
+      "popularity": 80,
+      "mobileFriendly": true,
+      "relatedGames": [
+        "cross-the-road",
+        "skate-hooligans",
+        "escape-run"
+      ],
+      "howToPlay": {
+        "objective": "Navigate safely through traffic, avoid collisions and achieve higher distance/scores.",
+        "basicControls": "Left/right for lane changes; some versions offer throttle/brake; mobile uses swipe/touch.",
+        "tips": [
+          "Prioritize maintaining safe distance from front vehicle to avoid rear-end from sudden stops.",
+          "Use oncoming lanes cautiously on two-way roads; only attempt overtaking in controlled windows.",
+          "Stay centered between two lanes for easier dodging to either side."
+        ]
+      },
+      "guide": {
+        "basics": "Steady driving prioritized; blind overtaking risks are extremely high.",
+        "scoring": "Distance primary; close-proximity overtaking may bring extra rewards (depends on version).",
+        "advanced": [
+          "In dense traffic, use \"pulse throttle\" to control speed, avoid sustained tailgating.",
+          "When seeing chain brake signs, decisively merge early to empty lane.",
+          "Use brake lights at farthest visible range as prediction signals."
+        ],
+        "commonMistakes": [
+          "Following too closely, lacking reaction distance.",
+          "Forcing lane changes without sufficient observation.",
+          "Oncoming lane rush too long, hard to return to safe lane timely."
+        ],
+        "faq": [
+          {
+            "q": "Different modes available?",
+            "a": "Similar traffic games often have one-way/two-way/timed modes; specifics depend on this version."
+          },
+          {
+            "q": "Mobile playable?",
+            "a": "OnlineGames.io mostly HTML5/WebGL; mobile usually playable (depends on device performance)."
+          }
+        ]
+      },
+      "imageUrl": "images/games/highway-traffic.jpg"
+    },
+    {
+      "slug": "cross-the-road",
+      "title": "Cross the Road",
+      "theme": "city",
+      "source": "OnlineGames.io",
+      "iframeSrc": "https://www.onlinegames.io/games/2023/unity/cross-the-road/index.html",
+      "shortDesc": "Guide a frog across traffic and obstacles, collect coins to unlock new animals.",
+      "fullDesc": "Cross the Road is a 3D road-crossing game paying tribute to Crossy Road. Players must seize traffic gaps to cross roads, avoid oncoming vehicles and environmental obstacles while collecting coins. Coins unlock new animal characters; game rhythm is short and addictive with strong \"one more round\" appeal.",
+      "controls": [
+        "Directional movement (keyboard/touch)",
+        "Tap forward/left/right (device varies)"
+      ],
+      "tags": [
+        "Endless",
+        "Road-crossing",
+        "Reaction",
+        "Collect"
+      ],
+      "difficulty": "easy",
+      "speed": "medium",
+      "featured": true,
+      "popularity": 85,
+      "mobileFriendly": true,
+      "relatedGames": [
+        "highway-traffic",
+        "penguin-skip",
+        "jom-jom-jump"
+      ],
+      "howToPlay": {
+        "objective": "Cross roads safely and collect coins as much as possible to unlock more characters.",
+        "basicControls": "Catch traffic gaps to complete movement; mind river/obstacle rhythms.",
+        "tips": [
+          "Don't linger in lane center too long; prioritize advancing to safe zones.",
+          "Use traffic beat for \"consecutive two-step crosses\" more stable.",
+          "Coins are mostly near safe routes; survive first, collect second."
+        ]
+      },
+      "guide": {
+        "basics": "Beat recognition + position management is key.",
+        "scoring": "Forward grid count and collectibles primary; coins unlock new animals.",
+        "advanced": [
+          "When facing multiple lanes, choose \"consecutive cross + pause\" combo rhythm.",
+          "In river segments, observe log/platform loop cycles, position early to wait.",
+          "Avoid lingering in vehicle shadow zones, easily obscured vision."
+        ],
+        "commonMistakes": [
+          "Hesitating too long in road center, forced back or hit.",
+          "Ignoring river vehicle loop beats, blind jumping into water.",
+          "Stopping in dangerous positions for coins."
+        ],
+        "faq": [
+          {
+            "q": "Coin usage?",
+            "a": "Unlock new animal appearances/characters."
+          },
+          {
+            "q": "Controller support?",
+            "a": "Usually not supported; keyboard/touch recommended."
+          }
+        ]
+      },
+      "imageUrl": "images/games/cross-the-road.jpg"
+    },
+    {
+      "slug": "stack-fire-ball",
+      "title": "Stack Fire Ball",
+      "theme": "city",
+      "source": "OnlineGames.io",
+      "iframeSrc": "https://www.onlinegames.io/games/2021/unity/stack-fire-ball/index.html",
+      "shortDesc": "Fall and smash colored layers while avoiding forbidden blocks in this 3D casual falling game.",
+      "fullDesc": "Stack Fire Ball's gameplay: hold to fall and smash colored layers; release or dodge when encountering forbidden-color blocks. Rhythm switches between \"consecutive fall—pause judgment—continue fall\". This version supports camera angle switch key (C) shown in page hints, helpful when viewing angle is poor.",
+      "controls": [
+        "Hold/tap to make ball fall",
+        "Release to stop",
+        "C key to switch camera (desktop)"
+      ],
+      "tags": [
+        "Endless",
+        "Rhythm",
+        "Falling",
+        "3D"
+      ],
+      "difficulty": "easy",
+      "speed": "controlled",
+      "featured": false,
+      "popularity": 82,
+      "mobileFriendly": true,
+      "relatedGames": [
+        "jom-jom-jump",
+        "cross-the-road",
+        "penguin-skip"
+      ],
+      "howToPlay": {
+        "objective": "Penetrate downward through colored platforms as much as possible while avoiding forbidden blocks.",
+        "basicControls": "Long-press to fall, release to stop; use C key to switch angle when needed (desktop).",
+        "tips": [
+          "Use \"short press—observe—press again\" rhythm to advance downward.",
+          "Switch with C key promptly when angle is poor; helps see forbidden blocks clearly.",
+          "In safe-color continuous zones, moderately tap rapidly for speed."
+        ]
+      },
+      "guide": {
+        "basics": "Core is beat control and forbidden-block recognition.",
+        "scoring": "Layer count and coherent falling efficiency determine performance.",
+        "advanced": [
+          "Memorize relative positions of forbidden zones within one circle ahead.",
+          "When encountering dense forbidden blocks, switch to \"pulse\" rhythm for steady progress.",
+          "At high layers/high density, prioritize finding \"widest safe sector\"."
+        ],
+        "commonMistakes": [
+          "Continuous long-press without release, hitting forbidden blocks.",
+          "Poor angle yet still forcing progress without switching C key.",
+          "Rhythm chaos causing frequent pauses."
+        ],
+        "faq": [
+          {
+            "q": "What's C key for?",
+            "a": "Switch camera angle; helps see forbidden zones clearly."
+          },
+          {
+            "q": "Mobile controls?",
+            "a": "Long-press/tap completes falling and pausing, no keyboard needed."
+          }
+        ]
+      },
+      "imageUrl": "images/games/stack-fire-ball.jpg"
+    },
+    {
+      "slug": "skate-hooligans",
+      "title": "Skate Hooligans",
+      "theme": "city",
+      "source": "Y8",
+      "iframeSrc": "https://y8.com/embed/skate_hooligans",
+      "shortDesc": "Three-lane skateboard runner; switch lanes/jump/slide to dodge urban obstacles.",
+      "fullDesc": "Skate Hooligans is an urban-themed three-lane endless runner. Players speed forward on skateboards in street scenes, using lane switching, jumping over railings, and sliding under low spaces to keep advancing and collect reward items.",
+      "controls": [
+        "Move (lane switch)",
+        "Jump",
+        "Slide",
+        "Pause"
+      ],
+      "tags": [
+        "Endless",
+        "Runner",
+        "Skateboard",
+        "Urban"
+      ],
+      "difficulty": "medium",
+      "speed": "fast",
+      "featured": true,
+      "popularity": 88,
+      "mobileFriendly": true,
+      "relatedGames": [
+        "escape-run",
+        "ninja-speed-runner",
+        "yeti-sensation"
+      ],
+      "howToPlay": {
+        "objective": "Dodge obstacles between city roads and facilities, keep advancing for higher scores.",
+        "basicControls": "Left/right lane switch, jump and slide combo to handle different-height obstacles.",
+        "tips": [
+          "When encountering \"railing + low passage\" sequences, jump first then quickly slide.",
+          "If obstacles are dense on item routes, prioritize survival routes.",
+          "Return to centerline in open-vision areas to reserve maneuvering space for later changes."
+        ]
+      },
+      "guide": {
+        "basics": "Standard three-lane action combos; smooth rhythm.",
+        "scoring": "Distance and collected items increase scores; speed rises with progression.",
+        "advanced": [
+          "Use \"jump—land—slide\" triple-action to pass complex combo obstacles.",
+          "When viewpoint shifts at turns, return to centerline before changing lanes.",
+          "For randomly spawning items, prioritize low-risk acquisition methods."
+        ],
+        "commonMistakes": [
+          "Lane switching at landing instant causing judgment failure.",
+          "Still choosing jump instead of slide when facing low spaces.",
+          "Crossing full width for items causing errors."
+        ],
+        "faq": [
+          {
+            "q": "Can I pause?",
+            "a": "Supports pause (Pause), but performance may differ in some embedded versions."
+          },
+          {
+            "q": "Feels too fast?",
+            "a": "Reduce lane-switch frequency, prioritize straight steady advance, then collect items in safe windows."
+          }
+        ]
+      },
+      "imageUrl": "images/games/skate-hooligans.webp"
+    }
+  ],
+  "collections": [
+    {
+      "slug": "snow",
+      "name": "Snow & Ice",
+      "description": "Challenge your limits in the snowy wonderland! These games bring you the thrill of skiing, sledding, and polar jumping, testing your reaction speed and control skills in frigid environments.",
+      "games": [
+        "groovy-ski",
+        "snow-rider-3d",
+        "penguin-skip"
+      ],
+      "icon": "❄️"
+    },
+    {
+      "slug": "tunnel",
+      "name": "Tunnel & Space",
+      "description": "Enter high-speed rotating tunnels and neon-lit space pipes! Extreme speed and dense obstacles test your reaction limits—this is the true arena for hardcore challengers.",
+      "games": [
+        "color-tunnel",
+        "death-run-3d",
+        "tunnel-rush",
+        "slope"
+      ],
+      "icon": "🌀"
+    },
+    {
+      "slug": "forest",
+      "name": "Forest & Mountain",
+      "description": "Traverse mysterious forests and climb treacherous mountains! These parkour games blend natural beauty with intense thrills, collecting resources and unlocking upgrades—strategy meets skill.",
+      "games": [
+        "yeti-sensation",
+        "ninja-speed-runner",
+        "escape-run",
+        "jom-jom-jump",
+        "enchanted-waters"
+      ],
+      "icon": "🏔️"
+    },
+    {
+      "slug": "city",
+      "name": "City & Traffic",
+      "description": "Navigate bustling urban streets and crowded traffic! From road-crossing to skateboard parkour, from traffic weaving to street chases—experience the endless parkour charm of the city.",
+      "games": [
+        "highway-traffic",
+        "cross-the-road",
+        "stack-fire-ball",
+        "skate-hooligans"
+      ],
+      "icon": "🏙️"
+    }
+  ],
+  "metadata": {
+    "totalGames": 18,
+    "lastUpdated": "2025-10-08",
+    "version": "1.0-EN",
+    "language": "en",
+    "sources": [
+      {
+        "name": "Y8",
+        "count": 8,
+        "url": "https://www.y8.com"
+      },
+      {
+        "name": "Gamezop",
+        "count": 6,
+        "url": "https://www.gamezop.com"
+      },
+      {
+        "name": "OnlineGames.io",
+        "count": 4,
+        "url": "https://www.onlinegames.io"
+      }
+    ]
+  }
+}

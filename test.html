@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LavaCloud Arcade — Endless Runner Collection | Play Online</title>
+  <meta name="description" content="A curated collection of endless/tunnel/runner web games from OnlineGames.io, Y8 (Games for your website), and Gamezop. Click a card to play fullscreen above. Mobile-friendly and fast." />
+  <link rel="canonical" href="https://lavacloud.online" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="LavaCloud Arcade — Endless Runner Collection" />
+  <meta property="og:description" content="Endless tunnel, slope and runner games in one place. Fullscreen and mobile-friendly." />
+  <meta property="og:image" content="https://lavacloud.online/og-image.png" />
+  <meta property="og:url" content="https://lavacloud.online" />
+  <meta property="og:type" content="website" />
+
+  <!-- Preconnect for faster first paint -->
+  <link rel="preconnect" href="https://www.onlinegames.io" crossorigin>
+  <link rel="preconnect" href="https://y8.com" crossorigin>
+  <link rel="preconnect" href="https://zv1y2i8p.play.gamezop.com" crossorigin>
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{ --brand:#007aff; }
+    .game-stage{ position:relative; padding-top:56.25%; border-radius:14px; overflow:hidden; }
+    .game-stage iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
+    .tag{ font-size:.75rem; padding:.125rem .5rem; border:1px solid #e5e7eb; border-radius:999px; }
+  </style>
+
+  <!-- Google Analytics (保持你原有的 ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RK4Z12C7B2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date()); gtag('config','G-RK4Z12C7B2');
+  </script>
+
+  <!-- JSON-LD：网站 + 合集页 -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"LavaCloud Arcade",
+    "url":"https://lavacloud.online",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://lavacloud.online/?q={query}",
+      "query-input":"required name=query"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    "name":"Endless Runner Collection",
+    "about":["endless runner","tunnel rush","slope","no download games"],
+    "isPartOf":{"@type":"WebSite","name":"LavaCloud Arcade","url":"https://lavacloud.online"}
+  }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+    <!-- Header -->
+    <header class="mb-8 text-center">
+      <h1 class="text-4xl md:text-6xl font-extrabold text-[var(--brand)]">LavaCloud Arcade</h1>
+      <p class="mt-3 text-gray-600 max-w-2xl mx-auto">
+        Endless / Tunnel / Slope — curated light-weight games from OnlineGames.io, Y8 (Games for your website), and Gamezop.
+      </p>
+    </header>
+
+    <!-- Player -->
+    <section class="mb-6">
+      <div class="flex items-center justify-between mb-2">
+        <div>
+          <h2 id="current-title" class="text-xl font-semibold">
+            Color Tunnel — Tunnel (Y8)
+          </h2>
+          <div class="text-sm text-gray-500">Tip: click “Fullscreen” for best experience.</div>
+        </div>
+        <div class="flex gap-2">
+          <button id="btn-full" class="px-3 py-1.5 rounded-lg border text-sm hover:bg-gray-100">Fullscreen</button>
+          <button id="btn-reload" class="px-3 py-1.5 rounded-lg border text-sm hover:bg-gray-100">Reload</button>
+          <button id="btn-copy" class="px-3 py-1.5 rounded-lg border text-sm hover:bg-gray-100">Copy Link</button>
+        </div>
+      </div>
+      <div id="stage" class="game-stage bg-black shadow-2xl">
+        <iframe id="player"
+          src="https://y8.com/embed/color_tunnel"
+          allow="fullscreen; autoplay; encrypted-media; pointer-lock; cross-origin-isolated"
+          sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-orientation-lock allow-popups allow-forms"
+          loading="lazy" referrerpolicy="no-referrer">
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="mb-4 flex flex-col md:flex-row gap-3 items-stretch md:items-center">
+      <div class="flex-1">
+        <input id="search" placeholder="Search: tunnel, slope, penguin..." class="w-full rounded-lg border border-gray-200 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--brand)]" />
+      </div>
+      <select id="filter-source" class="rounded-lg border border-gray-200 px-3 py-2">
+        <option value="">All sources</option>
+        <option value="onlinegames">OnlineGames.io</option>
+        <option value="y8">Y8</option>
+        <option value="gamezop">Gamezop</option>
+      </select>
+      <select id="filter-theme" class="rounded-lg border border-gray-200 px-3 py-2">
+        <option value="">All themes</option>
+        <option value="snow">Snow/Ice</option>
+        <option value="tunnel">Tunnel/Space</option>
+        <option value="forest">Forest/Mountain</option>
+        <option value="city">City/Street</option>
+        <option value="arcade">Arcade</option>
+      </select>
+    </section>
+
+    <!-- Grid (严格按你列的清单) -->
+    <main>
+      <h3 class="text-2xl font-bold text-[var(--brand)] mb-4">Pick a Game</h3>
+      <div id="grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <!-- 冰雪 / 滑雪 / 极地 -->
+        <article class="p-4 bg-white rounded-xl shadow game-card" data-name="Groovy Ski" data-source="gamezop" data-theme="snow" data-src="https://zv1y2i8p.play.gamezop.com/g/EJaG_JfW9l">
+          <div class="flex items-center justify-between"><h4 class="font-semibold">Groovy Ski</h4><span class="tag">Gamezop</span></div>
+          <p class="mt-2 text-sm text-gray-600">Endless ski slalom.</p>
+          <div class="mt-3 flex gap-2"><span class="tag">Snow</span><span class="tag">Endless</span></div>
+          <button class="mt-4 w-full px-3 py-2 rounded-lg bg-[var(--brand)] text-white play-btn">Play</button>
+        </article>
+
+        <article class="p-4 bg-white rounded-xl shadow game-card" data-name="Snow Rider 3D" data-source="y8" data-theme="snow" data-src="https://y8.com/embed/snow_rider_3d">
+          <div class="flex items-center justify-between"><h4 class="font-semibold">Snow Rider 3D</h4><span class="tag">Y8</span></div>
+          <p class="mt-2 text-sm text-gray-600">Sleigh down an endless slope.</p>
+          <div class="mt-3 flex gap-2"><span class="tag">Snow</span><span class="tag">Slope</span></div>
+          <button class="mt-4 w-full px-3 py-2 rounded-lg bg-[var(--brand)] text-white play-btn">Play</button>
+        </article>
+
+        <article class="p-4 bg-white rounded-xl shadow game-card" data-name="Penguin Skip" data-source="gamezop" data-theme="snow" data-src="https://zv1y2i8p.play.gamezop.com/g/HJee0YHZ_E">
+          <div class="flex items-center justify-between"><h4 class="font-semibold">Penguin Skip</h4><span class="tag">Gamezop</span></div>
+          <p class="mt-2 text-sm text-gray-600">Hop across ice endlessly.</p>
+          <div class="mt-3 flex gap-2"><span class="tag">Snow</span><span class="tag">Arcade</span></div>
+          <button class="mt-4 w-full px-3 py-2 rounded-lg bg-[var(--brand)] text-white play-btn">Play</button>
+        </article>
+
+        <!-- 隧道 / 太空 & 高速反应 -->
+        <article class="p-4 bg-white rounded-xl shadow game-card" data-name="Color Tunnel" data-source="y8" data-theme="tunnel" data-src="https://y8.com/embed/color_tunnel">
+          <div class="flex items-center justify-between"><h4 class="font-semibold">Color Tunnel</h4><span class="tag">Y8</span></div>
+          <p class="mt-2 text-sm text-gray-600">Classic high-speed tunnel runner.</p>
+          <div class="mt-3 flex gap-2"><span class="tag">Tunnel</span><span class="tag">Endless</span></div>
+          <button class="mt-4 w-full px-3 py-2 rounded-lg bg-[var(--brand)] text-white play-btn">Play</button>
+        </article>
+
+        <article class="p-4 bg-white rounded-xl shadow game-card" data-name="Death Run 3D" data-source="y8" data-theme="tunnel" data-src="https://y8.com/embed/death_run_3d">
+          <div class="flex items-center justify-between"><h4 class="font-semibold">Death Run 3D</h4><span class="tag">Y8</span></div>
+          <p class="mt-2 text-sm text-gray-600">Reflex-heavy neon tunnel.</p>
+          <div class="mt-3 flex gap-2"><span class="tag">Tunnel</span><span class="tag">Hard</span></div>
+          <button class="mt-4 w-full px-3 py-2 rounded-lg bg-[var(--brand)] text-white play-btn">Play</button>
+        </article>
+
+        <article class="p-4 bg-white rounded-xl shadow game-card" data-name="Tunnel Rush" data-source="y8" data-theme="tunnel" data-src="https://y8.com/embed/tunnel_rush_">
+          <div class="flex items-center justify-between"><h4 class="font-semibold">Tunnel Rush</h4><span class="tag">Y8</span></div>
+          <p class="mt-2 text-sm text-gray-600">Dodge shapes at extreme speed.</p>
+          <div class="mt-3 flex gap-2"><span class="tag">Tunnel</span><span class="tag">Fast</span></div>
+          <button class="mt-4 w-full px-3 py-2 rounded-lg bg-[var(--brand)] text-white play-btn">Play</button>
+        </article>
+
+        <article class="p-4 bg-white rounded-xl shadow game-card" data-name="Blue Vortex" data-source="y8" data-theme="tunnel" data-src="https://y8.com/embed/blue_vortex">
+          <div class="flex items-center justify-between"><h4 class="font-semibold">Blue Vortex</h4><span class="tag">Y8</span></div>
+          <p class="mt-2 text-sm text-gray-600">Hypnotic blue tunnel challenge.</p>
+          <div class="mt-3 flex gap-2"><span class="tag">Tunnel</span><span class="tag">Fast</span></div>
+          <button class="mt-4 w-full px-3 py-2 rounded-lg bg-[var(--brand)] text-white play-btn">Play</button>
+        </article>
+
+        <article class="p-4 bg-white rounded-xl shadow game-card" data-name="Slope" data-source="y8" data-theme="arcade" data-src="https://y8.com/embed/slope">
+          <div class="flex items-center justify-between"><h4 class="font-semibold">Slope</h4><span class="tag">Y8</span></div>
+          <p class="mt-2 text-sm text-gray-600">Endless downhill, precision turns.</p>
+          <div class="mt-3 flex gap-2"><span class="tag">Arcade</span><span class="tag">Endless</span></div>
+          <button class="mt-4 w-full px-3 py-2 rounded-lg bg-[var(--brand)] text-white play-btn">Play</button>
+        </article>
+
+        <!-- 森林 / 山地 / 跑酷 -->
+        <article class="p-4 bg-white rounded-xl shadow game-card" data-name="Yeti Sensation" data-source="y8" data-theme="forest" data-src="https://y8.com/embed/yeti_sensation">
+          <div class="flex items-center justify-between"><h4 class="font-semibold">Yeti Sensation</h4><span class="tag">Y8</span></div>
+          <p class="mt-2 text-sm text-gray-600">Snowy obstacle runner.</p>
+          <div class="mt-3 flex gap-2"><span class="tag">Forest</span><span class="tag">Runner</span></div>
+          <button class="mt-4 w-full px-3 py-2 rounded-lg bg-[var(--brand)] text-white play-btn">Play</button>
+        </article>
+
+        <article class="p-4 bg-white rounded-xl shadow game-card" data-name="Ninja Speed Runner" data-source="gamezop" data-theme="forest" data-src="https://zv1y2i8p.play.gamezop.com/g/QPcVkaHi1">
+          <div class="flex items-center justify-between"><h4 class="font-semibold">Ninja Speed Runner</h4><span class="tag">Gamezop</span></div>
+          <p class="mt-2 text-sm text-gray-600">Fast paced side-scrolling run.</p>
+          <div class="mt-3 flex gap-2"><span class="tag">Forest</span><span class="tag">Runner</span></div>
+          <button class="mt-4 w-full px-3 py-2 rounded-lg bg-[var(--brand)] text-white play-btn">Play</button>
+        </article>
+
+        <article class="p-4 bg-white rounded-xl shadow game-card" data-name="Escape Run" data-source="gamezop" data-theme="forest" data-src="https://zv1y2i8p.play.gamezop.com/g/Skz4pzkDqyX">
+          <div class="flex items-center justify-between"><h4 class="font-semibold">Escape Run</h4><span class="tag">Gamezop</span></div>
+          <p class="mt-2 text-sm text-gray-600">Temple-style endless escape.</p>
+          <div class="mt-3 flex gap-2"><span class="tag">Forest</span><span class="tag">Runner</span></div>
+          <button class="mt-4 w-full px-3 py-2 rounded-lg bg-[var(--brand)] text-white play-btn">Play</button>
+        </article>
+
+        <article class="p-4 bg-white rounded-xl shadow game-card" data-name="Jom Jom Jump" data-source="gamezop" data-theme="arcade" data-src="https://zv1y2i8p.play.gamezop.com/g/SyjAFr-dE">
+          <div class="flex items-center justify-between"><h4 class="font-semibold">Jom Jom Jump</h4><span class="tag">Gamezop</span></div>
+          <p class="mt-2 text-sm text-gray-600">Vertical endless jump.</p>
+          <div class="mt-3 flex gap-2"><span class="tag">Arcade</span><span class="tag">Endless</span></div>
+          <button class="mt-4 w-full px-3 py-2 rounded-lg bg-[var(--brand)] text-white play-btn">Play</button>
+        </article>
+
+        <article class="p-4 bg-white rounded-xl shadow game-card" data-name="Enchanted Waters" data-source="gamezop" data-theme="arcade" data-src="https://zv1y2i8p.play.gamezop.com/g/HJskh679Cr">
+          <div class="flex items-center justify-between"><h4 class="font-semibold">Enchanted Waters</h4><span class="tag">Gamezop</span></div>
+          <p class="mt-2 text-sm text-gray-600">Endless maze-like dodging.</p>
+          <div class="mt-3 flex gap-2"><span class="tag">Arcade</span><span class="tag">Endless</span></div>
+          <button class="mt-4 w-full px-3 py-2 rounded-lg bg-[var(--brand)] text-white play-btn">Play</button>
+        </article>
+
+        <!-- 城市 / 交通 / 街道 -->
+        <article class="p-4 bg-white rounded-xl shadow game-card" data-name="Highway Traffic" data-source="onlinegames" data-theme="city" data-src="https://www.onlinegames.io/games/2022/unity/highway-traffic/index.html">
+          <div class="flex items-center justify-between"><h4 class="font-semibold">Highway Traffic</h4><span class="tag">OnlineGames.io</span></div>
+          <p class="mt-2 text-sm text-gray-600">Endless traffic dodge on highway.</p>
+          <div class="mt-3 flex gap-2"><span class="tag">City</span><span class="tag">Endless</span></div>
+          <button class="mt-4 w-full px-3 py-2 rounded-lg bg-[var(--brand)] text-white play-btn">Play</button>
+        </article>
+
+        <article class="p-4 bg-white rounded-xl shadow game-card" data-name="Cross the Road" data-source="onlinegames" data-theme="city" data-src="https://www.onlinegames.io/games/2023/unity/cross-the-road/index.html">
+          <div class="flex items-center justify-between"><h4 class="font-semibold">Cross the Road</h4><span class="tag">OnlineGames.io</span></div>
+          <p class="mt-2 text-sm text-gray-600">Crossy-road style endless crossing.</p>
+          <div class="mt-3 flex gap-2"><span class="tag">City</span><span class="tag">Endless</span></div>
+          <button class="mt-4 w-full px-3 py-2 rounded-lg bg-[var(--brand)] text-white play-btn">Play</button>
+        </article>
+
+        <article class="p-4 bg-white rounded-xl shadow game-card" data-name="Stack Fire Ball" data-source="onlinegames" data-theme="arcade" data-src="https://www.onlinegames.io/games/2021/unity/stack-fire-ball/index.html">
+          <div class="flex items-center justify-between"><h4 class="font-semibold">Stack Fire Ball</h4><span class="tag">OnlineGames.io</span></div>
+          <p class="mt-2 text-sm text-gray-600">Helix/stack smash style endless drop.</p>
+          <div class="mt-3 flex gap-2"><span class="tag">Arcade</span><span class="tag">Endless</span></div>
+          <button class="mt-4 w-full px-3 py-2 rounded-lg bg-[var(--brand)] text-white play-btn">Play</button>
+        </article>
+
+        <article class="p-4 bg-white rounded-xl shadow game-card" data-name="Skate Hooligans" data-source="y8" data-theme="city" data-src="https://y8.com/embed/skate_hooligans">
+          <div class="flex items-center justify-between"><h4 class="font-semibold">Skate Hooligans</h4><span class="tag">Y8</span></div>
+          <p class="mt-2 text-sm text-gray-600">City runner with obstacles.</p>
+          <div class="mt-3 flex gap-2"><span class="tag">City</span><span class="tag">Runner</span></div>
+          <button class="mt-4 w-full px-3 py-2 rounded-lg bg-[var(--brand)] text-white play-btn">Play</button>
+        </article>
+
+      </div>
+    </main>
+
+    <!-- 小提示 / FAQ -->
+    <section class="mt-12 max-w-3xl mx-auto">
+      <h3 class="text-2xl font-bold text-[var(--brand)] mb-4">How to Play</h3>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <ul class="list-disc list-inside space-y-2 text-gray-700">
+          <li>Keyboard: Arrow keys or A/D to steer. Space/Up to jump (varies by game).</li>
+          <li>Mobile: Swipe/tilt on supported titles.</li>
+          <li>Click once inside the game if sound/fullscreen is blocked by the browser.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Footer / Legal -->
+    <footer class="mt-12 text-center text-gray-500 text-sm">
+      <p>&copy; 2025 LavaCloud Arcade. All rights reserved.</p>
+      <p class="mt-2">Games are embedded from authorized platforms (OnlineGames.io, Y8, Gamezop). Content is hosted by the respective owners.</p>
+      <p class="mt-1"><a class="underline" href="mailto:contact@lavacloud.online">DMCA / Takedown</a></p>
+    </footer>
+  </div>
+
+  <!-- 交互逻辑：搜索 / 筛选 / 切换播放 -->
+  <script>
+    const player = document.getElementById('player');
+    const stage = document.getElementById('stage');
+    const title = document.getElementById('current-title');
+    const grid  = document.getElementById('grid');
+    const search = document.getElementById('search');
+    const fSource = document.getElementById('filter-source');
+    const fTheme = document.getElementById('filter-theme');
+
+    function setGame(card){
+      const src = card.dataset.src;
+      const name = card.dataset.name;
+      const source = card.dataset.source;
+      const theme = card.dataset.theme;
+      player.src = src;
+      title.textContent = `${name} — ${theme[0].toUpperCase()+theme.slice(1)} (${source === 'y8' ? 'Y8' : source === 'onlinegames' ? 'OnlineGames.io' : 'Gamezop'})`;
+      if (window.gtag) gtag('event','click_play',{ game_name:name, source, theme });
+      stage.scrollIntoView({behavior:'smooth', block:'start'});
+    }
+
+    grid.addEventListener('click', (e)=>{
+      const btn = e.target.closest('.play-btn');
+      if(!btn) return;
+      const card = e.target.closest('.game-card');
+      setGame(card);
+    });
+
+    function applyFilters(){
+      const q = (search.value||'').toLowerCase();
+      const s = fSource.value; const t = fTheme.value;
+      const cards = grid.querySelectorAll('.game-card');
+      cards.forEach(c=>{
+        const okQ = !q || c.dataset.name.toLowerCase().includes(q);
+        const okS = !s || c.dataset.source === s;
+        const okT = !t || c.dataset.theme === t;
+        c.style.display = (okQ && okS && okT) ? '' : 'none';
+      });
+    }
+    search.addEventListener('input', applyFilters);
+    fSource.addEventListener('change', applyFilters);
+    fTheme.addEventListener('change', applyFilters);
+
+    document.getElementById('btn-reload').onclick = ()=> { const src = player.src; player.src=''; player.src=src; };
+    document.getElementById('btn-full').onclick = async ()=>{
+      try { if (stage.requestFullscreen) await stage.requestFullscreen(); else if (stage.webkitRequestFullscreen) stage.webkitRequestFullscreen(); } catch(e){}
+    };
+    document.getElementById('btn-copy').onclick = async ()=>{
+      try { await navigator.clipboard.writeText(location.href); } catch(e){}
+    };
+
+    // 支持 #play=xxx 深链（可选）
+    window.addEventListener('load', ()=>{
+      const h = location.hash;
+      if(h && h.startsWith('#play=')){
+        const name = decodeURIComponent(h.split('=')[1]).replace(/-/g,' ');
+        const card = [...grid.querySelectorAll('.game-card')].find(c=>c.dataset.name.toLowerCase() === name.toLowerCase());
+        if(card) setGame(card);
+      }
+    });
+  </script>
+</body>
+</html>

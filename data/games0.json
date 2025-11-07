@@ -1,0 +1,947 @@
+{
+  "games": [
+    {
+      "slug": "groovy-ski",
+      "title": "Groovy Ski",
+      "titleCN": "律动滑雪",
+      "theme": "ice-snow",
+      "source": "Gamezop",
+      "iframeSrc": "https://zv1y2i8p.play.gamezop.com/g/EJaG_JfW9l",
+      "shortDesc": "节奏明快的滑雪类无尽小游戏,在危险雪道上持续避障",
+      "fullDesc": "这是一款节奏明快的滑雪类无尽小游戏:核心目标是"在快速下坡中持续避障"。你需要根据前方障碍的密度和雪道的走向,连续做出左右修正。由于没有关卡切换的停顿,连贯性与"提前半秒观察路线"非常关键。",
+      "controls": ["触屏左右移动", "键盘方向键"],
+      "tags": ["无尽", "滑雪", "反应", "休闲"],
+      "difficulty": "easy",
+      "speed": "medium",
+      "featured": false,
+      "popularity": 75,
+      "mobileFriendly": true,
+      "relatedGames": ["snow-rider-3d", "penguin-skip", "yeti-sensation"],
+      "howToPlay": {
+        "objective": "在最危险的雪道上持续下坡,避开所有路障,跑得越远分数越高",
+        "basicControls": "点击屏幕左右两侧或使用方向键控制滑雪方向",
+        "tips": [
+          "在视野开阔的直道段,建议小幅微调保持中心线",
+          "进入弯折/密集路段前,预判到安全带宽更大的走线",
+          "提前半秒观察路线,不要临时急转"
+        ]
+      },
+      "guide": {
+        "basics": "整体上更考验手眼协调与节奏把控,而非复杂的成长系统,适合"上手即玩"的休闲场景。",
+        "scoring": "距离即分数,连续避障无撞击可获得更高评分。",
+        "advanced": [
+          "保持连贯路线,优先避让近处硬障碍",
+          "利用视线前探提早修正角度,避免急拐致死",
+          "早期保守躲避,叠高距离与容错"
+        ],
+        "commonMistakes": [
+          "过度依赖急转,导致失控",
+          "不提前观察,总是被动应对障碍",
+          "追求速度而忽略稳定性"
+        ],
+        "faq": [
+          {
+            "q": "如何获得高分?",
+            "a": "关键在于连贯性和预判。提前观察雪道走向,小幅调整而非大幅急转,保持稳定节奏比追求速度更重要。"
+          },
+          {
+            "q": "支持移动端吗?",
+            "a": "完全支持!在移动端通过点击屏幕左右两侧控制方向,操作简单流畅。"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "snow-rider-3d",
+      "title": "Snow Rider 3D",
+      "titleCN": "3D雪橇骑手",
+      "theme": "ice-snow",
+      "source": "Y8",
+      "iframeSrc": "https://y8.com/embed/snow_rider_3d",
+      "shortDesc": "写实风格的雪橇下坡,躲避障碍并收集礼物解锁新雪橇",
+      "fullDesc": "写实风格的雪橇下坡挑战:一边高速滑行,一边躲避树木、岩石、小木屋等障碍,并收集礼物;收集到的礼物可在游戏内用于购买不同的雪橇。玩法是标准的无尽生存:距离越远、速度越快、失误即结束。",
+      "controls": ["Steer", "Jump", "Fullscreen"],
+      "tags": ["无尽", "3D", "雪橇", "收集"],
+      "difficulty": "medium",
+      "speed": "fast",
+      "featured": true,
+      "popularity": 92,
+      "mobileFriendly": true,
+      "relatedGames": ["groovy-ski", "yeti-sensation", "slope"],
+      "howToPlay": {
+        "objective": "在雪山坡道上驾驶雪橇尽可能跑远,同时收集礼物解锁更多雪橇",
+        "basicControls": "方向键或AD控制转向,空格键跳跃,支持全屏模式",
+        "tips": [
+          "前期稳中求进,在可视范围内提早换线",
+          "礼物的收集以不破坏节奏为先",
+          "待熟悉物件刷新节奏后,再以更激进的走线冲击高分"
+        ]
+      },
+      "guide": {
+        "basics": "这是一款结合收集与生存的3D雪橇游戏,写实的画面和流畅的操作让人沉浸其中。",
+        "scoring": "距离积分+礼物奖励,礼物可用于解锁新雪橇,不同雪橇有不同手感。",
+        "advanced": [
+          "礼物→商店→解锁更高性能雪橇后再挑战高分",
+          "障碍密集区提前切线减小转向幅度",
+          "坡段盲区用小幅摆动保持中心"
+        ],
+        "commonMistakes": [
+          "贪图收集礼物而撞上障碍",
+          "转向过猛导致失控",
+          "不熟悉雪橇性能就挑战高难度"
+        ],
+        "faq": [
+          {
+            "q": "如何解锁新雪橇?",
+            "a": "收集游戏中的礼物,在商店用礼物购买不同外观和性能的雪橇。"
+          },
+          {
+            "q": "哪种雪橇最好用?",
+            "a": "没有绝对最好,每种雪橇手感略有差异,建议多尝试找到最适合自己节奏的。"
+          },
+          {
+            "q": "如何全屏游戏?",
+            "a": "点击游戏内的全屏按钮,或按F11键进入浏览器全屏模式。"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "penguin-skip",
+      "title": "Penguin Skip",
+      "titleCN": "企鹅跳跃",
+      "theme": "ice-snow",
+      "source": "Gamezop",
+      "iframeSrc": "https://zv1y2i8p.play.gamezop.com/g/HJee0YHZ_E",
+      "shortDesc": "控制小企鹅在浮冰间跳跃,收集鱼并避免落水",
+      "fullDesc": "玩法要点清晰:控制小企鹅在浮冰间跳跃,一边尽量收集鱼,一边避免落入冰水。这类"短节拍跳跃"的endless设计,强在节奏:跳得太早可能距离不够,太晚则容易在接缝处失误。",
+      "controls": ["点击跳跃"],
+      "tags": ["无尽", "跳跃", "可爱", "节奏"],
+      "difficulty": "easy",
+      "speed": "medium",
+      "featured": false,
+      "popularity": 70,
+      "mobileFriendly": true,
+      "relatedGames": ["jom-jom-jump", "groovy-ski", "enchanted-waters"],
+      "howToPlay": {
+        "objective": "帮助小企鹅在浮冰间跳跃,收集尽可能多的鱼,不要掉进冰水",
+        "basicControls": "点击或按空格键让企鹅跳跃",
+        "tips": [
+          "优先保证落点安全再去追逐鱼群",
+          "看准下一块稳固浮冰再启动",
+          "不要在空中临时改判,提前计划好路线"
+        ]
+      },
+      "guide": {
+        "basics": "轻量上手、易于嵌入、移动端友好的小体量作品,画风可爱,节奏明快。",
+        "scoring": "每收集一条鱼得分,连续跳跃无失误有额外奖励。",
+        "advanced": [
+          "观察浮冰间距再起跳,优先稳落点",
+          "鱼的路线不要回头贪吃,以连贯为先",
+          "掌握跳跃节奏,形成肌肉记忆"
+        ],
+        "commonMistakes": [
+          "为了鱼而冒险跳远",
+          "不观察间距盲目起跳",
+          "节奏不稳定导致频繁失误"
+        ],
+        "faq": [
+          {
+            "q": "如何跳得更远?",
+            "a": "长按跳跃键可以跳得更远,但要注意控制力度,避免跳过头。"
+          },
+          {
+            "q": "鱼有什么用?",
+            "a": "鱼可以增加分数,收集越多分数越高,是冲击排行榜的关键。"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "color-tunnel",
+      "title": "Color Tunnel",
+      "titleCN": "彩色隧道",
+      "theme": "tunnel",
+      "source": "Y8",
+      "iframeSrc": "https://y8.com/embed/color_tunnel",
+      "shortDesc": "高人气的彩色隧道闪避,在色块变幻的管道里极高速前进",
+      "fullDesc": "高人气的彩色隧道闪避:以一镜到底的第一人称视角,在色块变幻的管道里以极高速度前进,障碍形状多变,需要迅速判断开口位置并横向位移通过。官方页说明它受Slope/Run 3等经典作品启发。",
+      "controls": ["Move", "Fullscreen"],
+      "tags": ["无尽", "隧道", "反应", "高速"],
+      "difficulty": "medium",
+      "speed": "very-fast",
+      "featured": true,
+      "popularity": 95,
+      "mobileFriendly": true,
+      "relatedGames": ["tunnel-rush", "death-run-3d", "blue-vortex"],
+      "howToPlay": {
+        "objective": "在彩色隧道中以极高速度前进,躲避各种形状的障碍,跑得越远分数越高",
+        "basicControls": "方向键或AD键左右移动,支持全屏模式",
+        "tips": [
+          "把移动节奏和障碍刷新频率同步",
+          "在屏幕出现提示性阴影时就先占位到安全象限",
+          "减少大幅度急救式横移,保持稳定节奏"
+        ]
+      },
+      "guide": {
+        "basics": "经典的第一人称高速隧道游戏,视觉冲击力强,节奏紧张刺激,是测试反应速度的绝佳选择。",
+        "scoring": "距离即分数,速度越快难度越高,分数增长也越快。",
+        "advanced": [
+          "把握障碍开口的相对位移,先移动到安全象限",
+          "以节拍控制移动频率,减少过度摆动",
+          "稳过一批、再切下一批的节拍感是后期分数稳定增长的关键"
+        ],
+        "commonMistakes": [
+          "只看眼前,不提前预判",
+          "移动幅度过大,导致连续撞击",
+          "速度提升后节奏跟不上"
+        ],
+        "faq": [
+          {
+            "q": "如何在高速下保持稳定?",
+            "a": "关键是建立节奏感,不要临时反应,而是提前半秒看到障碍就开始移动。"
+          },
+          {
+            "q": "移动端能玩吗?",
+            "a": "可以,通过左右滑动屏幕控制,但建议在较大屏幕设备上游玩以获得更好体验。"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "death-run-3d",
+      "title": "Death Run 3D",
+      "titleCN": "死亡狂奔3D",
+      "theme": "tunnel",
+      "source": "Y8",
+      "iframeSrc": "https://y8.com/embed/death_run_3d",
+      "shortDesc": "极高速硬核向管道飞行,方块几乎都在移动,缝隙极窄",
+      "fullDesc": "定位明确:极高速、硬核向。你在封闭管道中飞行,管内布满几乎都在移动的方块,缝隙极窄,反应稍慢即撞击。它提供全球排行榜,属于不断复盘、磨成绩的类型。",
+      "controls": ["Move", "Fullscreen"],
+      "tags": ["无尽", "硬核", "高速", "隧道"],
+      "difficulty": "hard",
+      "speed": "very-fast",
+      "featured": true,
+      "popularity": 90,
+      "mobileFriendly": false,
+      "relatedGames": ["color-tunnel", "tunnel-rush", "slope"],
+      "howToPlay": {
+        "objective": "在高速移动的管道中飞行,躲避密集的移动方块,挑战全球排行榜",
+        "basicControls": "WASD或方向键移动,支持全屏模式",
+        "tips": [
+          "盯下一格而非当前格,优先预判会动的方块",
+          "用小幅短促的修正抵消漂移",
+          "避免大幅横甩带来的额外风险"
+        ]
+      },
+      "guide": {
+        "basics": "这是一款极度考验反应和预判的硬核游戏,适合追求挑战和刺激的玩家。",
+        "scoring": "纯距离积分,全球排行榜让你与世界玩家竞技。",
+        "advanced": [
+          "先把握同类障碍的刷新节奏",
+          "习惯后再追求速度与贴边通过",
+          "每次失败后复盘路线,逐步优化"
+        ],
+        "commonMistakes": [
+          "看当前格而不看下一格",
+          "修正幅度过大",
+          "心态急躁,没有耐心复盘"
+        ],
+        "faq": [
+          {
+            "q": "这个游戏太难了怎么办?",
+            "a": "Death Run 3D确实是高难度游戏,建议先从Color Tunnel等较简单的隧道游戏练起,培养预判能力后再挑战。"
+          },
+          {
+            "q": "有什么诀窍吗?",
+            "a": "核心是预判+小幅修正。不要等障碍到眼前才反应,要提前看到下一格的障碍并预先移动。"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "tunnel-rush",
+      "title": "Tunnel Rush",
+      "titleCN": "隧道冲刺",
+      "theme": "tunnel",
+      "source": "Y8",
+      "iframeSrc": "https://y8.com/embed/tunnel_rush_",
+      "shortDesc": "隧道闪避同时拾取增益道具,保命型增益优先",
+      "fullDesc": "同为隧道类,但强调一边躲避障碍、一边拾取增益(power-ups)。这意味着除了活得更久,你还要在安全前提下争取道具,形成保命型增益优先的策略(如临时护盾/清场类)。",
+      "controls": ["Move", "Fullscreen", "Fire", "Bomb"],
+      "tags": ["无尽", "隧道", "道具", "策略"],
+      "difficulty": "medium",
+      "speed": "fast",
+      "featured": false,
+      "popularity": 88,
+      "mobileFriendly": true,
+      "relatedGames": ["color-tunnel", "death-run-3d", "blue-vortex"],
+      "howToPlay": {
+        "objective": "在隧道中躲避障碍的同时收集增益道具,尽可能跑得更远",
+        "basicControls": "方向键或AD键移动,部分版本支持Fire/Bomb功能",
+        "tips": [
+          "保命型增益优先(护盾/清场类)",
+          "中后段速度提升时,提前回到管道中心",
+          "给临时拾取道具留出可退可进的余地"
+        ]
+      },
+      "guide": {
+        "basics": "在高速闪避之外增加了道具收集元素,让游戏更有策略性和变化性。",
+        "scoring": "距离分+道具加成,合理利用道具可以大幅提升分数。",
+        "advanced": [
+          "有增益时优先保命型(如护盾/清场类)",
+          "在高速段提前对齐通道中心,降低横向位移成本",
+          "熟悉不同道具的效果和使用时机"
+        ],
+        "commonMistakes": [
+          "为拾取道具而冒险",
+          "不了解道具效果就使用",
+          "忽视道具组合策略"
+        ],
+        "faq": [
+          {
+            "q": "什么是保命型增益?",
+            "a": "护盾、清场、减速等能够降低失误风险的道具,优先级高于加速、得分倍增等进攻型道具。"
+          },
+          {
+            "q": "道具如何使用?",
+            "a": "部分道具自动生效,部分需要按键触发,具体看游戏内提示。"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "blue-vortex",
+      "title": "Blue Vortex",
+      "titleCN": "蓝色漩涡",
+      "theme": "tunnel",
+      "source": "Y8",
+      "iframeSrc": "https://y8.com/embed/blue_vortex",
+      "shortDesc": "第一人称高速隧道,用鼠标控制视角追求最长距离",
+      "fullDesc": "第一人称高速隧道,追求最长行进距离。官方说明以鼠标移动控制视角,且碰撞判定在第一人称摄像机(非光标),进入游戏需先点击聚焦。它是对视野边缘判断+高速对齐的训练。",
+      "controls": ["Move", "Restart", "Menu", "Fullscreen"],
+      "tags": ["无尽", "第一人称", "隧道", "鼠标控制"],
+      "difficulty": "medium",
+      "speed": "very-fast",
+      "featured": false,
+      "popularity": 82,
+      "mobileFriendly": false,
+      "relatedGames": ["color-tunnel", "tunnel-rush", "death-run-3d"],
+      "howToPlay": {
+        "objective": "以第一人称视角在蓝色能量漩涡中飞行,尽可能跑远",
+        "basicControls": "鼠标移动控制视角方向,进入游戏前需点击聚焦",
+        "tips": [
+          "多用细微摆动调整摄像机与缺口对齐",
+          "减少临门一脚时的过度修正",
+          "稳速求远,熟悉障碍模板后再逐步贴边"
+        ]
+      },
+      "guide": {
+        "basics": "独特的鼠标控制第一人称视角,碰撞判定基于摄像机而非光标,需要适应。",
+        "scoring": "距离即分数,强调稳定性而非极限速度。",
+        "advanced": [
+          "以视野边缘比对估计旋转速度,提早移动到缺口",
+          "无限模式以稳定节奏优先,避免过度修正导致连锁失误",
+          "初期建议稳速求远,熟悉障碍模板后再冲击更高里程"
+        ],
+        "commonMistakes": [
+          "鼠标移动幅度过大",
+          "误以为碰撞判定在光标",
+          "未点击聚焦就开始游戏"
+        ],
+        "faq": [
+          {
+            "q": "为什么鼠标不起作用?",
+            "a": "需要先点击游戏区域聚焦,之后鼠标才能控制视角。"
+          },
+          {
+            "q": "碰撞判定在哪里?",
+            "a": "在第一人称摄像机中心,不是鼠标光标位置。"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "slope",
+      "title": "Slope",
+      "titleCN": "斜坡",
+      "theme": "tunnel",
+      "source": "Y8",
+      "iframeSrc": "https://y8.com/embed/slope",
+      "shortDesc": "极具代表性的无尽下坡,控制小球躲避红色方块冲击排行榜",
+      "fullDesc": "极具代表性的无尽下坡:操控小球在随机生成的坡道上加速前进,红色方块必须避开,越往后速度越快。它内置排行榜,并被官方归到Skill/Running/WebGL标签。学习曲线很干净——没有复杂成长系统,纯粹比反应与路线。",
+      "controls": ["Steer", "Fullscreen"],
+      "tags": ["无尽", "下坡", "经典", "排行榜"],
+      "difficulty": "medium",
+      "speed": "progressive",
+      "featured": true,
+      "popularity": 98,
+      "mobileFriendly": true,
+      "relatedGames": ["color-tunnel", "snow-rider-3d", "death-run-3d"],
+      "howToPlay": {
+        "objective": "控制小球在随机坡道上加速下落,躲避红色方块,保持在赛道中,冲击排行榜",
+        "basicControls": "方向键或AD键转向,支持全屏模式",
+        "tips": [
+          "前半程控速稳线,尽量保持在赛道中轴",
+          "遇到窄口以斜切通过",
+          "后半程速度陡升,改为控线优先"
+        ]
+      },
+      "guide": {
+        "basics": "Slope是无尽跑酷游戏的标杆之作,简洁纯粹,完全考验玩家的反应和路线选择。",
+        "scoring": "距离积分,内置全球排行榜,可以与世界玩家竞技。",
+        "advanced": [
+          "红色障碍一律远离;斜切通过窄口更安全",
+          "越往后越快,前半程控速为主、后半程控线为主",
+          "提前在转角前对齐外侧线路,减少转向半径"
+        ],
+        "commonMistakes": [
+          "在高速段急转",
+          "不提前规划路线",
+          "过于贴边导致撞墙"
+        ],
+        "faq": [
+          {
+            "q": "Slope难度会一直增加吗?",
+            "a": "是的,速度会持续加快,难度呈指数级增长,这也是它的魅力所在。"
+          },
+          {
+            "q": "如何上排行榜?",
+            "a": "需要大量练习培养肌肉记忆,掌握前期稳、后期准的节奏,才能跑出高分。"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "yeti-sensation",
+      "title": "Yeti Sensation",
+      "titleCN": "雪人奔跑",
+      "theme": "forest",
+      "source": "Y8",
+      "iframeSrc": "https://y8.com/embed/yeti_sensation",
+      "shortDesc": "扮演雪人奔跑收集水果,避开陷阱并在商店购买升级",
+      "fullDesc": "你将扮演雪人一路奔跑,收集水果/莓果、避开陷阱与障碍,并可在商店购买升级。控件包含Jump/(长按)Slide/Select Path/Fullscreen;视频页也反复强调边跑边收集→商店升级的循环。",
+      "controls": ["Jump", "Slide", "Select Path", "Fullscreen"],
+      "tags": ["无尽", "跑酷", "收集", "升级"],
+      "difficulty": "medium",
+      "speed": "medium",
+      "featured": false,
+      "popularity": 78,
+      "mobileFriendly": true,
+      "relatedGames": ["escape-run", "ninja-speed-runner", "skate-hooligans"],
+      "howToPlay": {
+        "objective": "扮演雪人在雪地中奔跑,收集水果和莓果,避开障碍和陷阱,用收益升级能力",
+        "basicControls": "空格跳跃,长按下滑,左右键选择路径,支持全屏",
+        "tips": [
+          "遇到低矮障碍优先滑行通过,提高可视区",
+          "道具/货币的投资优先级放在保命/收益型",
+          "待熟悉地形组合后,再挑战高速段和更激进的换道"
+        ]
+      },
+      "guide": {
+        "basics": "结合跑酷、收集和养成元素的综合性游戏,有一定策略深度。",
+        "scoring": "水果/莓果都有分数,商店升级后收益效率更高。",
+        "advanced": [
+          "优先攒货币解锁收益相关升级,提升长线分数",
+          "熟悉不同路径的风险和收益",
+          "合理分配滑行和跳跃,保持节奏"
+        ],
+        "commonMistakes": [
+          "不升级就挑战高难度",
+          "只收集不避障",
+          "不熟悉滑行和跳跃的使用场景"
+        ],
+        "faq": [
+          {
+            "q": "商店有什么升级?",
+            "a": "包括移动速度、跳跃高度、收集范围、护盾时间等,优先投资收益和保命类。"
+          },
+          {
+            "q": "如何快速积累货币?",
+            "a": "提升收集范围和倍数,专注收集水果和莓果,避免频繁失误。"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "ninja-speed-runner",
+      "title": "Ninja Speed Runner",
+      "titleCN": "忍者极速奔跑",
+      "theme": "forest",
+      "source": "Gamezop",
+      "iframeSrc": "https://zv1y2i8p.play.gamezop.com/g/QPcVkaHi1",
+      "shortDesc": "忍者横版疾跑,穿越敌阵避开手里剑",
+      "fullDesc": "典型的忍者横版疾跑:目标是在敌阵中尽可能跑远,同时不要被手里剑击中。在机制上,它属于避让投掷物+跳跃过坑/台阶的双压力场景。",
+      "controls": ["跳跃", "移动"],
+      "tags": ["无尽", "忍者", "跑酷", "横版"],
+      "difficulty": "medium",
+      "speed": "fast",
+      "featured": false,
+      "popularity": 72,
+      "mobileFriendly": true,
+      "relatedGames": ["escape-run", "skate-hooligans", "yeti-sensation"],
+      "howToPlay": {
+        "objective": "操控忍者在敌人领地疾跑,躲避手里剑和障碍,跑得越远越好",
+        "basicControls": "空格或点击跳跃,自动奔跑",
+        "tips": [
+          "把飞来的手里剑视为最高优先级威胁",
+          "先规避抛射物,再判断起跳时机通过空隙",
+          "在连续台阶段采用短促起跳,减少空中暴露时间"
+        ]
+      },
+      "guide": {
+        "basics": "快节奏的忍者跑酷游戏,需要同时应对投掷物和地形障碍,考验多线程处理能力。",
+        "scoring": "距离积分为主,躲避手里剑有额外加分。",
+        "advanced": [
+          "平台间的空隙与飞来手里剑同屏时先避投掷物再起跳",
+          "保持最短起落减少空中暴露时间",
+          "熟悉手里剑发射节奏"
+        ],
+        "commonMistakes": [
+          "只注意地形不注意手里剑",
+          "跳跃过高暴露时间过长",
+          "节奏混乱"
+        ],
+        "faq": [
+          {
+            "q": "手里剑能躲开吗?",
+            "a": "可以,通过跳跃或移动到其他轨道躲避,关键是提前判断。"
+          },
+          {
+            "q": "有道具吗?",
+            "a": "部分版本有护盾和加速道具,拾取后临时增强能力。"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "escape-run",
+      "title": "Escape Run",
+      "titleCN": "逃亡奔跑",
+      "theme": "forest",
+      "source": "Gamezop",
+      "iframeSrc": "https://zv1y2i8p.play.gamezop.com/g/Skz4pzkDqyX",
+      "shortDesc": "山民逃离媒体视线,收集水果购买能力加成",
+      "fullDesc": "美术是寒地奔跑主题:帮助山民逃离媒体视线,一边收集水果一边购入能力加成(power-ups)。这让它从纯生存迈向轻成长:你可以通过收集→解锁→再挑战的循环,持续提高成绩。",
+      "controls": ["左右换道", "跳跃"],
+      "tags": ["无尽", "逃亡", "收集", "成长"],
+      "difficulty": "medium",
+      "speed": "medium",
+      "featured": false,
+      "popularity": 76,
+      "mobileFriendly": true,
+      "relatedGames": ["yeti-sensation", "ninja-speed-runner", "cross-the-road"],
+      "howToPlay": {
+        "objective": "帮助山民在冰地逃离追逐,收集水果购买升级,跑得更远",
+        "basicControls": "左右滑动换道,上滑跳跃",
+        "tips": [
+          "遇冰面早换道、直角障碍少急拐",
+          "优先投资保命型加成再追求速度型奖励",
+          "逐步建立稳定性后提升分数上限"
+        ]
+      },
+      "guide": {
+        "basics": "Temple Run风格的逃亡游戏,有超过2亿玩家,结合收集和养成系统。",
+        "scoring": "距离+水果收集,升级后效率更高。",
+        "advanced": [
+          "冰面打滑要提前换道,直角避让易失误",
+          "先解锁保命型加成,再追求速度类奖励",
+          "熟悉地形模式后提升激进度"
+        ],
+        "commonMistakes": [
+          "冰面急转",
+          "不升级就冲高分",
+          "贪图收集忽视避障"
+        ],
+        "faq": [
+          {
+            "q": "有多少玩家在玩?",
+            "a": "官方数据显示超过2亿游玩次数,是非常受欢迎的游戏。"
+          },
+          {
+            "q": "能力加成有哪些?",
+            "a": "包括磁铁、护盾、加速、双倍积分等,建议优先解锁磁铁和护盾。"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "jom-jom-jump",
+      "title": "Jom Jom Jump",
+      "titleCN": "Jom Jom跳跳",
+      "theme": "forest",
+      "source": "Gamezop",
+      "iframeSrc": "https://zv1y2i8p.play.gamezop.com/g/SyjAFr-dE",
+      "shortDesc": "纵向无尽跳跃,帮助小怪物蹦平台吃苹果",
+      "fullDesc": "这是一款纵向无尽跳跃:帮助小怪物在平台间不断向上,尽量吃到苹果。它强调落点判断+连续节拍的组合,适合短时专注练操作。",
+      "controls": ["点击跳跃"],
+      "tags": ["无尽", "跳跃", "竖版", "休闲"],
+      "difficulty": "easy",
+      "speed": "medium",
+      "featured": false,
+      "popularity": 68,
+      "mobileFriendly": true,
+      "relatedGames": ["penguin-skip", "enchanted-waters", "groovy-ski"],
+      "howToPlay": {
+        "objective": "帮助可爱的小怪物在平台间向上跳跃,收集苹果获得分数",
+        "basicControls": "点击屏幕或按空格让怪物跳跃",
+        "tips": [
+          "优先保证脚下平台稳定,再规划下一枚苹果",
+          "熟悉平台间距和刷新节奏后,再尝试连续吃苹果",
+          "采用先稳后快策略"
+        ]
+      },
+      "guide": {
+        "basics": "清爽、负担小,适合合集页做轻量易上手的入口,画风可爱。",
+        "scoring": "苹果即分数,跳得越高倍数越大。",
+        "advanced": [
+          "先稳后高:确保落稳再瞄下一个苹果",
+          "计时/时间道具可优先获取以延长续航",
+          "掌握节拍感,形成肌肉记忆"
+        ],
+        "commonMistakes": [
+          "贪图苹果跳偏",
+          "不观察平台就跳",
+          "节奏不稳定"
+        ],
+        "faq": [
+          {
+            "q": "如何跳得更高?",
+            "a": "连续成功跳跃会增加高度加成,保持连贯性是关键。"
+          },
+          {
+            "q": "有时间限制吗?",
+            "a": "部分版本有时间道具,拾取后延长游戏时间。"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "enchanted-waters",
+      "title": "Enchanted Waters",
+      "titleCN": "魔法水域",
+      "theme": "forest",
+      "source": "Gamezop",
+      "iframeSrc": "https://zv1y2i8p.play.gamezop.com/g/HJskh679Cr",
+      "shortDesc": "迷宫式无尽跑,时机至关重要,一步错就坠湖",
+      "fullDesc": "官方描述直白:迷宫式无尽跑,时机至关重要,一步错就坠入湖中。因此它更考验卡节拍与识别地形模板。建议把每次跳跃当作节拍器,以固定节奏穿越连续转角与断桥。",
+      "controls": ["点击跳跃"],
+      "tags": ["无尽", "迷宫", "节奏", "跳跃"],
+      "difficulty": "medium",
+      "speed": "medium",
+      "featured": false,
+      "popularity": 74,
+      "mobileFriendly": true,
+      "relatedGames": ["jom-jom-jump", "penguin-skip", "escape-run"],
+      "howToPlay": {
+        "objective": "在魔法迷宫中奔跑跳跃,精确把握时机避免坠入湖中",
+        "basicControls": "点击或空格跳跃,部分路段需要双跳",
+        "tips": [
+          "把每次跳跃当节拍器,以固定节奏穿越",
+          "先熟悉常见地形组合再追求极限速度",
+          "收集金色水晶增加分数"
+        ]
+      },
+      "guide": {
+        "basics": "节奏导向的迷宫跑酷游戏,需要精确的时机判断和节拍把控。",
+        "scoring": "距离+水晶收集,连续成功跳跃有倍数加成。",
+        "advanced": [
+          "把每次跳跃当节拍器,按固定节奏过关比随机更稳",
+          "先熟悉地形模板(例如连续拐弯→短直道→再拐)再冲分",
+          "部分缺口需要双跳,提前识别"
+        ],
+        "commonMistakes": [
+          "节奏不稳定",
+          "不熟悉地形就冲速度",
+          "单跳和双跳判断失误"
+        ],
+        "faq": [
+          {
+            "q": "什么是双跳?",
+            "a": "部分较宽缺口需要连续点击两次跳跃才能通过。"
+          },
+          {
+            "q": "如何提高稳定性?",
+            "a": "建立固定的节拍感,像打节拍器一样保持恒定的跳跃间隔。"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "highway-traffic",
+      "title": "Highway Traffic",
+      "titleCN": "高速公路车流",
+      "theme": "city",
+      "source": "OnlineGames.io",
+      "iframeSrc": "https://www.onlinegames.io/games/2022/unity/highway-traffic/index.html",
+      "shortDesc": "在车流里高速前进而不撞车,越跑越紧的无尽型",
+      "fullDesc": "典型的车流穿梭玩法:在高速公路上行驶,其他车辆会减速、加速或突然停车,因此需要持续注意并预留机动空间。它属于越跑越紧的无尽型,容错较低。",
+      "controls": ["方向控制", "加速"],
+      "tags": ["无尽", "赛车", "交通", "反应"],
+      "difficulty": "medium",
+      "speed": "fast",
+      "featured": false,
+      "popularity": 80,
+      "mobileFriendly": true,
+      "relatedGames": ["cross-the-road", "skate-hooligans", "escape-run"],
+      "howToPlay": {
+        "objective": "在高速公路车流中穿梭,避免撞车,跑得越远分数越高",
+        "basicControls": "方向键或AD控制左右换道",
+        "tips": [
+          "把前车当作动态障碍,在跟车时保持可回切的安全距离",
+          "在双向道适度借用对向车道时,要提前观察远处车流",
+          "确保回切窗口"
+        ]
+      },
+      "guide": {
+        "basics": "紧张刺激的车流穿梭游戏,需要预判和快速反应,难度随距离递增。",
+        "scoring": "距离积分+近距离超车奖励,风险越大分数越高。",
+        "advanced": [
+          "预判前车减速,留出缓冲距离",
+          "在双向道适当利用对向车道,但保持回切窗口",
+          "熟悉车辆行为模式"
+        ],
+        "commonMistakes": [
+          "跟车太近没有缓冲",
+          "借用对向车道时机不当",
+          "不观察后方就换道"
+        ],
+        "faq": [
+          {
+            "q": "如何获得高分?",
+            "a": "近距离超车有额外奖励,但要权衡风险,稳定跑远比冒险更重要。"
+          },
+          {
+            "q": "车辆会突然停车吗?",
+            "a": "会的,所以要保持安全距离,随时准备换道。"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "cross-the-road",
+      "title": "Cross the Road",
+      "titleCN": "过马路",
+      "theme": "city",
+      "source": "OnlineGames.io",
+      "iframeSrc": "https://www.onlinegames.io/games/2023/unity/cross-the-road/index.html",
+      "shortDesc": "向Crossy Road致敬的过马路玩法,收集硬币解锁新动物",
+      "fullDesc": "向经典Crossy Road致敬的过马路玩法:操控一只绿色青蛙在宽阔道路间穿梭,躲避车辆、收集硬币,并用硬币解锁新的动物。",
+      "controls": ["方向键移动"],
+      "tags": ["无尽", "过马路", "可爱", "收集"],
+      "difficulty": "easy",
+      "speed": "medium",
+      "featured": true,
+      "popularity": 85,
+      "mobileFriendly": true,
+      "relatedGames": ["highway-traffic", "penguin-skip", "jom-jom-jump"],
+      "howToPlay": {
+        "objective": "操控青蛙穿越马路和河流,收集硬币,解锁新角色",
+        "basicControls": "方向键或WASD控制四向移动",
+        "tips": [
+          "连续两步停—走节奏,保证车缝穿越",
+          "水域段优先站在稳态木桩/石头上再观察下一跳",
+          "不要等太久,会有老鹰抓走"
+        ]
+      },
+      "guide": {
+        "basics": "经典的Crossy Road玩法,简单易上手,画风可爱,适合全年龄。",
+        "scoring": "前进距离+硬币收集,可解锁新动物角色。",
+        "advanced": [
+          "连续两步停—走—停—走地与车流做相位错位",
+          "进入水域段时,优先寻找稳态木桩/石头作为临时安全点",
+          "再观察下一跳,不要长时间停留"
+        ],
+        "commonMistakes": [
+          "停留太久被老鹰抓走",
+          "水域段跳到移动木头上失误",
+          "不观察车流就冲"
+        ],
+        "faq": [
+          {
+            "q": "如何解锁新角色?",
+            "a": "收集硬币在商店购买,每个角色外观不同但玩法相同。"
+          },
+          {
+            "q": "老鹰什么时候出现?",
+            "a": "如果在一个位置停留过久,老鹰会飞来抓走角色,所以要保持前进。"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "stack-fire-ball",
+      "title": "Stack Fire Ball",
+      "titleCN": "堆栈火球",
+      "theme": "city",
+      "source": "OnlineGames.io",
+      "iframeSrc": "https://www.onlinegames.io/games/2021/unity/stack-fire-ball/index.html",
+      "shortDesc": "引导小球下落击碎彩色层,避开黑色块,支持视角切换",
+      "fullDesc": "这款3D休闲作品要求你引导小球向下击碎彩色层、避开黑色块;支持C键切换相机视角与Tap to play。它将放松感和专注度结合:当你连续穿破彩色区域,会收获良好的节奏与反馈。",
+      "controls": ["点击下落", "C键切换视角"],
+      "tags": ["无尽", "3D", "休闲", "节奏"],
+      "difficulty": "easy",
+      "speed": "controlled",
+      "featured": false,
+      "popularity": 82,
+      "mobileFriendly": true,
+      "relatedGames": ["jom-jom-jump", "cross-the-road", "penguin-skip"],
+      "howToPlay": {
+        "objective": "让小球向下穿破彩色平台,避开黑色障碍,抵达底部",
+        "basicControls": "按住鼠标或长按屏幕让球下落,松开则停止,C键切换视角",
+        "tips": [
+          "识别安全色与禁碰色,保持连击—停顿的节奏",
+          "视角不理想时按C切换",
+          "连续击破有火球模式,可短暂穿透黑色"
+        ]
+      },
+      "guide": {
+        "basics": "Helix Jump风格的下落游戏,节奏舒适,视觉反馈好,适合放松。",
+        "scoring": "击破层数+连击奖励,火球模式期间分数倍增。",
+        "advanced": [
+          "识别安全色与禁碰色,保持连击—停顿的节奏",
+          "视角不理想时按C切换",
+          "连续穿破3层以上触发火球模式,可临时穿黑色块"
+        ],
+        "commonMistakes": [
+          "不熟悉火球模式触发条件",
+          "视角不佳时不切换",
+          "节奏混乱导致撞黑色块"
+        ],
+        "faq": [
+          {
+            "q": "火球模式是什么?",
+            "a": "连续击破多层后触发,球体变火球,可以短暂穿透黑色障碍。"
+          },
+          {
+            "q": "C键有什么用?",
+            "a": "切换摄像机视角,有时可以看得更清楚。"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "skate-hooligans",
+      "title": "Skate Hooligans",
+      "titleCN": "滑板混混",
+      "theme": "city",
+      "source": "Y8",
+      "iframeSrc": "https://y8.com/embed/skate_hooligans",
+      "shortDesc": "城市跑酷+滑板,收集金币购买加成与滑板",
+      "fullDesc": "城市跑酷+滑板:选择角色,收集金币、购买加成与滑板,在街道障碍与追逐中尽量跑远。控件包含Move/Jump/Slide/Pause/Fullscreen;这类三车道结构的跑酷经典玩法。",
+      "controls": ["Move", "Jump", "Slide", "Pause", "Fullscreen"],
+      "tags": ["无尽", "跑酷", "滑板", "街头"],
+      "difficulty": "medium",
+      "speed": "fast",
+      "featured": true,
+      "popularity": 88,
+      "mobileFriendly": true,
+      "relatedGames": ["escape-run", "ninja-speed-runner", "yeti-sensation"],
+      "howToPlay": {
+        "objective": "操控滑板少年在城市街道逃离警察追逐,收集金币,解锁新滑板和角色",
+        "basicControls": "左右换道,上滑跳跃,下滑滑铲,支持暂停和全屏",
+        "tips": [
+          "连续弯道用滑行穿过低障碍更稳",
+          "先买性价比高的增益(金币吸附/持续时间),再追求外观",
+          "完成任务获得额外奖励"
+        ]
+      },
+      "guide": {
+        "basics": "经典的三车道跑酷游戏,街头风格,可玩性强,有角色和滑板收集系统。",
+        "scoring": "距离+金币+任务完成奖励,升级后效率更高。",
+        "advanced": [
+          "在连续弯道前提前滑行通过低矮障碍,保持视野与稳定节拍",
+          "金币优先用于性价比高的增益,提升存活/收益效率",
+          "熟悉道具与地形组合后,再追求更高速度与更激进的换道路线"
+        ],
+        "commonMistakes": [
+          "不用滑铲就撞低障碍",
+          "盲目购买外观忽视实用升级",
+          "不完成任务错过额外奖励"
+        ],
+        "faq": [
+          {
+            "q": "有哪些角色和滑板?",
+            "a": "有多种风格的角色和滑板可解锁,用金币购买,部分需要完成特定任务。"
+          },
+          {
+            "q": "任务有什么用?",
+            "a": "完成任务可获得额外金币和奖励,是快速解锁内容的方式。"
+          }
+        ]
+      }
+    }
+  ],
+  "collections": [
+    {
+      "slug": "ice-snow",
+      "nameCN": "冰雪极地",
+      "nameEN": "Ice & Snow",
+      "description": "在银装素裹的冰雪世界中挑战极限!这些游戏将带你体验滑雪、雪橇和极地跳跃的刺激,在寒冷的环境中测试你的反应速度和操控技巧。",
+      "games": ["groovy-ski", "snow-rider-3d", "penguin-skip"],
+      "icon": "❄️"
+    },
+    {
+      "slug": "tunnel",
+      "nameCN": "隧道太空",
+      "nameEN": "Tunnel & Space",
+      "description": "进入高速旋转的隧道和霓虹闪烁的太空管道!极致的速度感和密集的障碍将考验你的反应极限,这是真正的硬核挑战者的舞台。",
+      "games": ["color-tunnel", "death-run-3d", "tunnel-rush", "blue-vortex", "slope"],
+      "icon": "🌀"
+    },
+    {
+      "slug": "forest",
+      "nameCN": "森林山地",
+      "nameEN": "Forest & Mountain",
+      "description": "穿越神秘的森林、翻越险峻的山地!这些跑酷游戏融合了自然美景和紧张刺激,既能收集资源又能解锁升级,策略与操作并重。",
+      "games": ["yeti-sensation", "ninja-speed-runner", "escape-run", "jom-jom-jump", "enchanted-waters"],
+      "icon": "🏔️"
+    },
+    {
+      "slug": "city",
+      "nameCN": "城市交通",
+      "nameEN": "City & Traffic",
+      "description": "在繁忙的都市街道和拥挤的车流中闯荡!从过马路到滑板跑酷,从车流穿梭到街头追逐,感受城市无尽跑酷的魅力。",
+      "games": ["highway-traffic", "cross-the-road", "stack-fire-ball", "skate-hooligans"],
+      "icon": "🏙️"
+    },
+    {
+      "slug": "reaction",
+      "nameCN": "高速反应类",
+      "nameEN": "High-Speed Reaction",
+      "description": "专为反应速度狂人打造!这些游戏速度极快、难度极高,需要你具备顶级的预判能力和手眼协调,挑战人类反应极限。",
+      "games": ["death-run-3d", "color-tunnel", "tunnel-rush", "highway-traffic", "slope"],
+      "icon": "⚡"
+    },
+    {
+      "slug": "endless-runner",
+      "nameCN": "无尽跑酷",
+      "nameEN": "Endless Runner",
+      "description": "经典的无尽跑酷合集!没有终点,只有不断刷新的记录。收集、升级、冲榜,在永不停歇的奔跑中证明你的实力。",
+      "games": ["snow-rider-3d", "slope", "escape-run", "skate-hooligans", "yeti-sensation", "cross-the-road"],
+      "icon": "🏃"
+    }
+  ],
+  "metadata": {
+    "totalGames": 18,
+    "lastUpdated": "2025-10-08",
+    "version": "1.0",
+    "sources": [
+      {
+        "name": "Y8",
+        "count": 8,
+        "url": "https://www.y8.com"
+      },
+      {
+        "name": "Gamezop",
+        "count": 6,
+        "url": "https://www.gamezop.com"
+      },
+      {
+        "name": "OnlineGames.io",
+        "count": 4,
+        "url": "https://www.onlinegames.io"
+      }
+    ]
+  }
+}

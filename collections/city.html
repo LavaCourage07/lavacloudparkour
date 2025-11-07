@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Game Collection - LavaCloud Parkour</title>
+    <meta name="description" id="page-desc" content="">
+    <meta name="keywords" id="page-keywords" content="">
+    <meta property="og:title" id="og-title" content="">
+    <meta property="og:description" id="og-desc" content="">
+    <meta property="og:image" content="https://lavacloud.online/og-image.png">
+    <meta property="og:url" id="og-url" content="">
+    <meta property="og:type" content="website">
+    <link rel="canonical" id="canonical-url" href="">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary-blue: #007AFF;
+            --primary-hover: #0051D5;
+        }
+
+        .hero-gradient-snow {
+            background: linear-gradient(135deg, #667eea 0%, #4FC3F7 100%);
+        }
+
+        .hero-gradient-tunnel {
+            background: linear-gradient(135deg, #764ba2 0%, #F06292 100%);
+        }
+
+        .hero-gradient-forest {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        }
+
+        .hero-gradient-city {
+            background: linear-gradient(135deg, #FA8C16 0%, #F5222D 100%);
+        }
+
+        .game-card {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .game-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 122, 255, 0.15);
+        }
+
+        .difficulty-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .difficulty-easy { background: #34C759; color: white; }
+        .difficulty-medium { background: #FF9500; color: white; }
+        .difficulty-hard { background: #FF3B30; color: white; }
+
+        .collection-nav {
+            transition: all 0.2s;
+        }
+
+        .collection-nav:hover {
+            transform: scale(1.05);
+        }
+
+        .stats-card {
+            background: linear-gradient(135deg, rgba(0, 122, 255, 0.1) 0%, rgba(0, 122, 255, 0.05) 100%);
+        }
+    </style>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RK4Z12C7B2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RK4Z12C7B2');
+    </script>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json" id="collection-schema">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "",
+      "description": "",
+      "numberOfItems": 0,
+      "itemListElement": []
+    }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-bold text-[#007AFF]">LavaCloud Parkour</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="/" class="text-gray-700 hover:text-[#007AFF] transition">Home</a>
+                    <a href="/#collections" class="text-gray-700 hover:text-[#007AFF] transition">Collections</a>
+                    <a href="/#all-games" class="text-gray-700 hover:text-[#007AFF] transition">All Games</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <nav class="text-sm">
+                <a href="/" class="text-[#007AFF] hover:underline">Home</a>
+                <span class="mx-2 text-gray-400">/</span>
+                <a href="/#collections" class="text-[#007AFF] hover:underline">Collections</a>
+                <span class="mx-2 text-gray-400">/</span>
+                <span id="breadcrumb-title" class="text-gray-600">Collection</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="collection-hero" class="hero-gradient-snow text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="text-7xl mb-6" id="collection-icon">🎮</div>
+            <h1 id="collection-title" class="text-4xl md:text-5xl font-bold mb-4">Game Collection</h1>
+            <p id="collection-description" class="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto mb-8"></p>
+            <div id="collection-stats" class="flex justify-center gap-8 text-lg">
+                <div>
+                    <span class="font-bold text-2xl" id="stats-count">0</span>
+                    <span class="opacity-90"> Games</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Collection Navigation -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Browse All Collections</h2>
+            <div id="collection-nav" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- Collection nav items will be loaded here -->
+            </div>
+        </div>
+
+        <!-- Games Grid -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">All Games in This Collection</h2>
+            <div id="games-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Games will be loaded here -->
+            </div>
+        </div>
+
+        <!-- Stats & Info -->
+        <div class="mt-12 grid md:grid-cols-3 gap-6">
+            <div class="stats-card rounded-xl p-6 text-center">
+                <div class="text-3xl font-bold text-[#007AFF] mb-2" id="stats-avg-difficulty">-</div>
+                <div class="text-gray-600">Average Difficulty</div>
+            </div>
+            <div class="stats-card rounded-xl p-6 text-center">
+                <div class="text-3xl font-bold text-[#007AFF] mb-2" id="stats-mobile-friendly">-</div>
+                <div class="text-gray-600">Mobile Friendly</div>
+            </div>
+            <div class="stats-card rounded-xl p-6 text-center">
+                <div class="text-3xl font-bold text-[#007AFF] mb-2" id="stats-avg-popularity">-</div>
+                <div class="text-gray-600">Avg Popularity</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">🎮 LavaCloud Parkour</h3>
+                    <p class="text-gray-400">🔥 18+ Premium Games | ⚡ Instant Play | 📱 Mobile Friendly</p>
+                    <p class="text-gray-400 mt-2">有趣的无限游戏合集，免费在线玩</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/" class="hover:text-white transition">Home</a></li>
+                        <li><a href="/#collections" class="hover:text-white transition">Collections</a></li>
+                        <li><a href="/#all-games" class="hover:text-white transition">All Games</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 LavaCloud Parkour. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Get collection slug from URL
+        const pathParts = window.location.pathname.split('/');
+        const collectionSlugWithExt = pathParts[pathParts.length - 1] || pathParts[pathParts.length - 2];
+        const collectionSlug = collectionSlugWithExt.replace('.html', '');
+
+        // Load collection data
+        async function loadCollection() {
+            try {
+                const response = await fetch('../data/games.json');
+                const data = await response.json();
+                const collection = data.collections.find(c => c.slug === collectionSlug);
+                const allCollections = data.collections;
+
+                if (!collection) {
+                    window.location.href = '../index.html';
+                    return;
+                }
+
+                const collectionGames = data.games.filter(g => collection.games.includes(g.slug));
+                renderCollectionPage(collection, collectionGames, allCollections, data.games);
+            } catch (error) {
+                console.error('Error loading collection:', error);
+            }
+        }
+
+        function renderCollectionPage(collection, games, allCollections, allGames) {
+            // Update page meta
+            document.getElementById('page-title').textContent = `${collection.name} Games - Free Online Parkour Collection | LavaCloud`;
+            document.getElementById('page-desc').setAttribute('content', `${collection.description} Play ${games.length} free ${collection.name} endless runner games online.`);
+            document.getElementById('page-keywords').setAttribute('content', `${collection.name} games, ${collection.slug} parkour, endless runner, free online games`);
+            document.getElementById('og-title').setAttribute('content', `${collection.name} Games - LavaCloud Parkour`);
+            document.getElementById('og-desc').setAttribute('content', collection.description);
+            document.getElementById('og-url').setAttribute('content', `https://lavacloud.online/collections/${collection.slug}`);
+            document.getElementById('canonical-url').setAttribute('href', `https://lavacloud.online/collections/${collection.slug}`);
+
+            // Update schema
+            const schema = {
+                "@context": "https://schema.org",
+                "@type": "ItemList",
+                "name": `${collection.name} Games Collection`,
+                "description": collection.description,
+                "numberOfItems": games.length,
+                "itemListElement": games.map((game, index) => ({
+                    "@type": "ListItem",
+                    "position": index + 1,
+                    "item": {
+                        "@type": "VideoGame",
+                        "name": game.title,
+                        "description": game.shortDesc,
+                        "url": `https://lavacloud.online/game/${game.slug}`
+                    }
+                }))
+            };
+            document.getElementById('collection-schema').textContent = JSON.stringify(schema, null, 2);
+
+            // Update breadcrumb
+            document.getElementById('breadcrumb-title').textContent = collection.name;
+
+            // Update hero section
+            const heroClass = `hero-gradient-${collection.slug}`;
+            document.getElementById('collection-hero').className = `${heroClass} text-white py-16`;
+            document.getElementById('collection-icon').textContent = collection.icon;
+            document.getElementById('collection-title').textContent = collection.name + ' Games';
+            document.getElementById('collection-description').textContent = collection.description;
+            document.getElementById('stats-count').textContent = games.length;
+
+            // Update collection navigation
+            const navContainer = document.getElementById('collection-nav');
+            navContainer.innerHTML = allCollections.map(c => `
+                <a href="${c.slug}.html" class="collection-nav block ${c.slug === collection.slug ? 'bg-[#007AFF] text-white' : 'bg-white text-gray-900 hover:border-[#007AFF]'} rounded-xl p-6 text-center border-2 ${c.slug === collection.slug ? 'border-[#007AFF]' : 'border-gray-200'}">
+                    <div class="text-4xl mb-2">${c.icon}</div>
+                    <div class="font-semibold">${c.name}</div>
+                    <div class="text-sm ${c.slug === collection.slug ? 'opacity-90' : 'text-gray-500'} mt-1">${c.games.length} games</div>
+                </a>
+            `).join('');
+
+            // Render games grid
+            const gamesContainer = document.getElementById('games-grid');
+            gamesContainer.innerHTML = games.map(game => `
+                <a href="../game/${game.slug}.html" class="game-card bg-white rounded-xl shadow-md overflow-hidden block">
+                    <div class="h-48 bg-gray-900 relative overflow-hidden">
+                        <img src="../${game.imageUrl}" alt="${game.title}" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-start justify-between mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">${game.title}</h3>
+                            <span class="difficulty-badge difficulty-${game.difficulty}">${game.difficulty}</span>
+                        </div>
+                        <p class="text-gray-600 mb-4 line-clamp-2">${game.shortDesc}</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            ${game.tags.slice(0, 3).map(tag =>
+                                `<span class="text-xs bg-gray-100 px-2 py-1 rounded">${tag}</span>`
+                            ).join('')}
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">🎯 ${game.difficulty} • ⚡ ${game.speed}</span>
+                            <div class="bg-[#007AFF] hover:bg-[#0051D5] text-white px-4 py-2 rounded-lg font-semibold text-sm transition">
+                                Play
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            `).join('');
+
+            // Calculate and display stats
+            const difficultyMap = { 'easy': 1, 'medium': 2, 'hard': 3 };
+            const avgDifficulty = games.reduce((sum, g) => sum + difficultyMap[g.difficulty], 0) / games.length;
+            const avgDifficultyText = avgDifficulty < 1.5 ? 'Easy' : avgDifficulty < 2.5 ? 'Medium' : 'Hard';
+            document.getElementById('stats-avg-difficulty').textContent = avgDifficultyText;
+
+            const mobileFriendlyCount = games.filter(g => g.mobileFriendly).length;
+            const mobileFriendlyPercent = Math.round((mobileFriendlyCount / games.length) * 100);
+            document.getElementById('stats-mobile-friendly').textContent = `${mobileFriendlyPercent}%`;
+
+            const avgPopularity = Math.round(games.reduce((sum, g) => sum + g.popularity, 0) / games.length);
+            document.getElementById('stats-avg-popularity').textContent = `${avgPopularity}%`;
+        }
+
+        // Helper functions
+        function getThemeIcon(theme) {
+            const icons = {
+                'snow': '❄️',
+                'tunnel': '🌀',
+                'forest': '🏔️',
+                'city': '🏙️'
+            };
+            return icons[theme] || '🎮';
+        }
+
+        function getThemeGradient(theme) {
+            const gradients = {
+                'snow': 'from-blue-300 to-cyan-400',
+                'tunnel': 'from-purple-400 to-pink-500',
+                'forest': 'from-green-400 to-teal-500',
+                'city': 'from-orange-400 to-red-500'
+            };
+            return gradients[theme] || 'from-gray-400 to-gray-500';
+        }
+
+        // Load collection on page ready
+        document.addEventListener('DOMContentLoaded', loadCollection);
+    </script>
+</body>
+</html>
